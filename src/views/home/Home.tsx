@@ -12,7 +12,7 @@ import sausagesImg from 'assets/img/others/sausages.webp';
 import breadsImg from 'assets/img/others/breads.webp';
 import aboutUsImg from 'assets/img/others/aside.webp';
 // Components
-import { ItemListContainer } from 'components/common/itemListContainer/ItemListContainer';
+// import { ItemListContainer } from 'components/common/itemListContainer/ItemListContainer';
 // Utils
 import { isIOS } from 'utils/isIOS';
 // Styles
@@ -113,7 +113,7 @@ export const Home = () => {
                     </div>
                     
                     {/* Bestsellers Products Wrapper */}
-                    <ItemListContainer category={'bestsellers'} limit={true} />
+                    {/* <ItemListContainer category={'bestsellers'} limit={true} /> */}
                     
                     <Link className="button bs-btn" to='/shop/all'>View All Meats</Link>
 

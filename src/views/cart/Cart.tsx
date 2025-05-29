@@ -8,7 +8,7 @@ import { ReactComponent as GobackIcon } from 'assets/icons/go-back.svg';
 import { ViewHeader } from 'components/common/viewHeader/ViewHeader';
 import { Loader } from 'components/common/loader/Loader';
 import { CartResume } from './cartResume/CartResume';
-import { CartCost } from './cartCost/CartCost';
+// import { CartCost } from './cartCost/CartCost';
 // Contexts
 import { CartContext } from 'contexts/CartContext';
 // Styles
@@ -68,7 +68,7 @@ export const Cart = () => {
 
                         <CartResume />
 
-                        <CartCost />
+                        {/* <CartCost /> */}
                     </section> 
             }
 

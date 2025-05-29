@@ -7,16 +7,16 @@ import { logoutToast } from 'utils/toasts';
 import logoWhite from 'assets/img/logo/logo-white.png';
 // Icons
 import { ReactComponent as HamburguerIcon } from 'assets/icons/hamburguer-menu.svg';
-import { ReactComponent as LoginIcon } from 'assets/icons/login.svg';
-import { ReactComponent as UserIcon } from 'assets/icons/user.svg';
+// import { ReactComponent as LoginIcon } from 'assets/icons/login.svg';
+// import { ReactComponent as UserIcon } from 'assets/icons/user.svg';
 import { ReactComponent as DropdownItemIcon } from 'assets/icons/arrow-right-circle.svg';
 // Components
 import { HamburguerMenuCanvas } from './components/HamburguerMenuCanvas/HamburguerMenuCanvas';
-import { LoginModal } from './components/loginModal/LoginModal';
+// import { LoginModal } from './components/loginModal/LoginModal';
 import { CartWidget } from './components/cartWidget/CartWidget';
-import { UserInfo } from './components/userInfo/UserInfo';
+// import { UserInfo } from './components/userInfo/UserInfo';
 // Auth
-import { useAuth } from 'hooks/useAuth';
+// import { useAuth } from 'hooks/useAuth';
 // Styles
 import './NavBar.css';
 import { LSModalContext } from 'contexts/LSModalContext';
@@ -44,15 +44,15 @@ export const NavBar = () => {
 
     /* Login/Signup */
 
-    // Get the user from AuthContext
-    const { user, logout } = useAuth();
+    // // Get the user from AuthContext
+    // const { user, logout } = useAuth();
 
-    // logout() sets an empty user as logged user and closes de user info.
-    const handleLogout = () => {
-        logout();
-        closeUserInfo();
-        logoutToast();
-    };
+    // // logout() sets an empty user as logged user and closes de user info.
+    // const handleLogout = () => {
+    //     logout();
+    //     closeUserInfo();
+    //     logoutToast();
+    // };
     
     return (
         <>
@@ -60,7 +60,7 @@ export const NavBar = () => {
             <HamburguerMenuCanvas hamburguerMenuOpen={hamburguerMenuOpen} closeHamburguerMenu={closeHamburguerMenu} />
 
             {/* Login and Register Modal */}
-            <LoginModal />
+            {/* <LoginModal /> */}
 
             {/* Navbar */}
             <header className="navbar">
@@ -123,7 +123,7 @@ export const NavBar = () => {
                         {/* If there is a logged user => show the user button
                             Otherwise => show the login button */}
 
-                        { user ?
+                        {/* { user ?
                                 // User Button
                                 <div>
                                     <button className="user-btn" onClick={ () => toggleUserInfo() }>
@@ -141,7 +141,7 @@ export const NavBar = () => {
                                     onClick={ () => openModal() }
                                 >
                                     <LoginIcon className="login-icon" />
-                                </button> }
+                                </button> } */}
 
 
                         {/* Cart Button */}

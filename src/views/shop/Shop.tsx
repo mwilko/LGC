@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 // Components
-import { ItemListContainer } from 'components/common/itemListContainer/ItemListContainer';
+// import { ItemListContainer } from 'components/common/itemListContainer/ItemListContainer';
 // Css
 import './Shop.css';
 
@@ -88,7 +88,7 @@ export const Shop = () => {
                 </div>
 
                 {/* Shop Catalog */}
-                <ItemListContainer category={category as string} limit={false} />
+                {/* <ItemListContainer category={category as string} limit={false} /> */}
 
             </section>
 

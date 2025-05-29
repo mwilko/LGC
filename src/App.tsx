@@ -2,7 +2,7 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // Components
-import { NavBar } from 'components/layout/navbar/NavBar';
+import { NavBar } from 'components/layout/navbar/Navbar';
 import { Footer } from 'components/layout/footer/Footer';
 // Routes
 import { AppRoutes } from 'routes/AppRoutes';
