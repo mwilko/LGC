@@ -6,7 +6,7 @@ export const Contact = () => {
       <div className="contact-overlay">
         <div className="contact-content">
           <h1>Contact Us</h1>
-          <p>Have questions or want to work with us? Fill out the form below.</p>
+          <p>Have questions or want to work with us? Fill out the form below. <br></br>Prefer to give us a call? (+44) 07771 237211</p>
           
           <form className="contact-form">
             <input type="text" placeholder="Your Name" required />

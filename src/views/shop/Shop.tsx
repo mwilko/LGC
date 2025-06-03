@@ -41,7 +41,7 @@ export const Shop = () => {
             <section className="shop-main">
                 <div className="sm-header">
                     <div className="smh-line"></div>
-                    <h1>Meat Shop</h1>
+                    <h1>Product Catalogue</h1>
                     <div className="smh-line"></div>
                 </div>
 

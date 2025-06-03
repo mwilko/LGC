@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 // Logo
-import Logo from 'assets/img/logo/logo-white.png';
+import Logo from 'assets/images/lgc_transparent.png';
 // Router
 import { Link, useLocation } from 'react-router-dom';
 // Icons
@@ -14,10 +14,10 @@ import aboutUsImg from 'assets/img/others/aside.webp';
 // Components
 import { ItemListContainer } from 'components/common/itemListContainer/ItemListContainer';
 import { RecipeListContainer } from 'components/common/recipeListContainer/RecipeListContainer';
+import { VideoListContainer } from 'components/common/videoListContainer/VideoListContainer';
 // Utils
 import { isIOS } from 'utils/isIOS';
 // Data
-import { recipes } from 'data/recipes';
 // Styles
 import './Home.css';
 
@@ -83,7 +83,7 @@ export const Home = () => {
             {/* Loading Screen */}
             <div style={loadingScreen.loading ? {} : {opacity: '0', pointerEvents: 'none'}} className="home-loading">
                 <div className="home-loading-content">
-                    <img src={Logo} alt="Logo Meat Palace" />
+                    <img src={Logo} alt="The Lincolnshire Game Company" />
                     <span>{loadingScreen.percentage}%</span>   
                 </div>
             </div>
@@ -102,9 +102,16 @@ export const Home = () => {
                     className="hero-section"
                 >
                     <div className="hs-greeting">
-                        <h1>The best place to buy your meats</h1>
-                        <Link className="button hsg-search-meats-btn" to='/shop/all'>Search Meats</Link>    
+                        <h1>Lincolnshire's Finest Game Provider</h1>
+                        <Link className="button hsg-search-meats-btn" to='/shop/all'>Search Produce</Link>    
                     </div>
+                </section>
+
+                {/* Video Section */}
+                <section className="video-section">
+                
+                <VideoListContainer limit={2} />
+                                
                 </section>
 
                 {/* Bestsellers Section */}
@@ -123,10 +130,11 @@ export const Home = () => {
                 </section>
 
                 {/* Recipes Section */}
-                <section className="recipes-section">
+                <section className="recipe-section">
+
                     <div className="r-title">
                     {/* <ChefIcon className="chef-icon" /> */}
-                    <h2>Our Recipes</h2>
+                        <h2>Our Favourite Recipes</h2>
                     </div>
 
                     <RecipeListContainer limit={3} />

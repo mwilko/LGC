@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // Icons
 import { ReactComponent as GithubIcon } from 'assets/icons/github.svg';
 // Logo
-import logoWhite from 'assets/img/logo/logo-white.png';
+import lgcTrans from 'assets/images/lgc_transparent.png';
 // Styles
 import './Footer.css';
 
@@ -16,14 +16,14 @@ export const Footer = () => {
                 <header className="footer-header">
                     <div className="fh-line"></div>
                     <div className="fh-logo">
-                        <img src={logoWhite} alt="Meat Palace Logo" />
+                        <img src={lgcTrans} alt="Lincolnshire Game Company Logo" />
                     </div>
                     <div className="fh-line"></div>
                 </header>
 
                 {/* Footer Legend */}
                 <p className="footer-legend">
-                    “At Meat Palace we have the best imported cuts as well as local ones to fully satisfy our customers, which is our main objective. We also have the best cheeses, sausages and breads to accompany a perfect barbecue.”
+                    “At Lincolnshire Game we ensure our produce is of the highest qualities to satisfy our customers. We produce the best game and related products in the East-Middlelands.”
                 </p>
 
                 {/* Footer Navigation */}

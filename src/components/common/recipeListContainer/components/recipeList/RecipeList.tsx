@@ -8,10 +8,10 @@ type Props = {
 
 export const RecipeList = ({ recipes }: Props) => {
   return (
-    <div className="recipe-list">
+    <section className="recipe-list" aria-label="Recipe list" role="list">
       {recipes.map((recipe) => (
         <RecipeItem key={recipe.id} recipe={recipe} />
       ))}
-    </div>
+    </section>
   );
 };

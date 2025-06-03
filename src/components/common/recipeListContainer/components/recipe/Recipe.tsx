@@ -10,15 +10,25 @@ export const RecipeItem = ({ recipe }: Props) => {
   const { id, title, img } = recipe;
 
   return (
-    <Link to={`/recipe/${id}`}>
-      <div className="recipe-card">
+    <article className="recipe-card" aria-label={`Recipe: ${title}`}>
+      <Link to={`/recipe/${id}`} tabIndex={-1} aria-hidden="true">
         <div className="rc-img">
-          <img src={img} alt={title} />
+          <img
+            src={img}
+            alt={title}
+            loading="lazy"
+            width="300" // optional fixed size to prevent layout shift
+            height="225" // match aspect ratio 4:3 from CSS
+          />
+          {/* Example overlay buttons */}
+          <div className="rc-overlay">
+          </div>
         </div>
-        <div className="rc-title">
-          <h4>{title}</h4>
-        </div>
+      </Link>
+      <div className="rc-name-price">
+        <h4>{title}</h4>
+        {/* You can add a price or subtitle here */}
       </div>
-    </Link>
+    </article>
   );
 };
