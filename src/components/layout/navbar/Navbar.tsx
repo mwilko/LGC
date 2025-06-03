@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // Toasts
 import { logoutToast } from 'utils/toasts';
 // Logo
-import logoWhite from 'assets/img/logo/logo-white.png';
+import lgcLogo from 'assets/images/lgc_transparent.png';
 // Icons
 import { ReactComponent as HamburguerIcon } from 'assets/icons/hamburguer-menu.svg';
 // import { ReactComponent as LoginIcon } from 'assets/icons/login.svg';
@@ -13,7 +13,7 @@ import { ReactComponent as DropdownItemIcon } from 'assets/icons/arrow-right-cir
 // Components
 import { HamburguerMenuCanvas } from './components/HamburguerMenuCanvas/HamburguerMenuCanvas';
 // import { LoginModal } from './components/loginModal/LoginModal';
-import { CartWidget } from './components/cartWidget/CartWidget';
+// import { CartWidget } from './components/cartWidget/CartWidget';
 // import { UserInfo } from './components/userInfo/UserInfo';
 // Auth
 // import { useAuth } from 'hooks/useAuth';
@@ -68,7 +68,7 @@ export const NavBar = () => {
                     {/* Logo */}
                     <div className="nc-left">
                         <Link to='/'>
-                            <img src={logoWhite} alt="Meat Palace Logo" />
+                            <img src={lgcLogo} alt="Lincolnshire Game Company Logo" />
                         </Link>
                     </div>
 
@@ -144,13 +144,14 @@ export const NavBar = () => {
                                 </button> } */}
 
 
-                        {/* Cart Button */}
+                        {/* Cart Button
                         <Link to='/cart'>
                             <CartWidget />
-                        </Link>
+                        </Link> */}
                     </nav>
                 </div>
             </header>
         </>
+
     )
 }

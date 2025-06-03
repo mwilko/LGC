@@ -1,21 +1,22 @@
-import { useContext } from 'react';
-// Contexts
-import { CartContext } from 'contexts/CartContext';
-// Components
-import { BillingProductCard } from '../billingProductCard/BillingProductCard';
-// Interfaces
-import { Product } from 'interfaces/product';
-// Styles
-import './BillingCartResume.css';
+// import { useContext } from 'react';
+// // Contexts
+// import { CartContext } from 'contexts/CartContext';
+// // Components
+// import { BillingProductCard } from '../billingProductCard/BillingProductCard';
+// // Interfaces
+// import { Product } from 'interfaces/product';
+// // Styles
+// import './BillingCartResume.css';
 
 
-export const BillingCartResume = () => {
+// export const BillingCartResume = () => {
 
-    const { products } = useContext(CartContext);
+//     const { products } = useContext(CartContext);
 
-    return (
-        <div className="billing-cart-resume">
-            { products.map( ({id, name, price, img, category, cartAmount }: Product) => <BillingProductCard key={id} name={name} price={price} img={img} category={category} cartAmount={cartAmount} /> ) } 
-        </div>
-    )
-}
+//     return (
+//         <div className="billing-cart-resume">
+//             { products.map( ({id, name, price, img, category, cartAmount }: Product) => <BillingProductCard key={id} name={name} price={price} img={img} category={category} cartAmount={cartAmount} /> ) } 
+//         </div>
+//     )
+// }
+export {}

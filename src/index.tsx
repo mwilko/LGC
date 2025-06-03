@@ -6,7 +6,7 @@ import reportWebVitals from 'misc/reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 // Contexts
 // import { AuthContextProvider } from 'contexts/AuthContext';
-import { CartContextProvider } from 'contexts/CartContext';
+// import { CartContextProvider } from 'contexts/CartContext';
 import { LSModalContextProvider } from 'contexts/LSModalContext';
 
 const root = ReactDOM.createRoot(
@@ -16,11 +16,11 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             {/* <AuthContextProvider> */}
-                <CartContextProvider>
+                {/* <CartContextProvider> */}
                     <LSModalContextProvider>
                         <App />
                     </LSModalContextProvider>
-                </CartContextProvider>
+                {/* </CartContextProvider> */}
             {/* </AuthContextProvider> */}
         </BrowserRouter>
     </React.StrictMode>

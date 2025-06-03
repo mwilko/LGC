@@ -1,83 +1,73 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 // Router
 import { Link } from 'react-router-dom';
 // Interfaces
 import { Product } from 'interfaces/product';
-// Components
-import { ItemCount } from '../itemCount/ItemCount';
-// Contexts
-import { CartContext } from 'contexts/CartContext';
 // Styles
 import './ProductDetail.css';
+// Images
+import lgcLogo from 'assets/images/lgc_transparent.png';
 
-// The props that recibes this component have this types.
+
 type props = {
-    product: Product;
-}
+  product: Product;
+};
 
-// This component recibes the product to detail.
 export const ProductDetail = ({ product }: props) => {
+  const { id, name, price, description, img, category } = product;
 
-    // Product properties
-    const { id, name, price, description, img, category, cartAmount, stock } = product;
+//   // Optional: manage selected quantity if needed (not tied to a cart)
+//   const [selectedQty, setSelectedQty] = useState(1);
 
-    const { addProduct, isInCart, getProduct } = useContext(CartContext);
+  console.log('img:', img);
 
-    // cartProduct is the product in the cart or null if it isn't in the cart.
-    const cartProduct = isInCart(id) ? getProduct(id) : null;
 
-    // State that represents if the user has added the product to the cart and the amount.
-    const [addedToCart, setAddedToCart] = useState({
-        isAdded: false,
-        amount: 0 
-    });
+  return (
+    <div className="product-detail-card">
 
-    // This function adds "amount" times a product to the cart and decreases the stock (new stock = stock - amount).
-    const onAdd = (amount: number) => {
-        setAddedToCart({
-            isAdded: true,
-            amount: amount
-        });
-        addProduct(product, amount);
-    }
-
-    return (
-        <div className="product-detail-card">
-            
-            {/* Product main info and amount */}
-            <div className="pdc-main">
-                <div className="pdcm-img">
-                    <img src={`/assets/products/${category}/${img}`} alt={name} />
-                </div>
-
-                <div className="pdcm-data">
-                    <h3> {name} </h3>
-                    <span> US$ {price.toFixed(2)} </span>
-                    <hr />
-
-                    {/* If the product have been added to the cart
-                    show the amount, otherwise show ItemCount component */}
-                    {
-                        addedToCart.isAdded ? 
-                            <div className="finish-buying">
-                                <span className="fb-info">{`x${addedToCart.amount} ${name} added to cart`}</span>
-                                <div className="fb-buttons">
-                                    <Link to="/cart" className="button fb-btn">Finish Buying</Link>
-                                    <Link to="/shop" className="button fb-continue-shopping-btn">Continue Shopping</Link>
-                                </div>
-                            </div>
-                        : 
-                            <ItemCount stock={cartProduct !== null ? (cartProduct.stock - cartProduct.cartAmount) : stock} initial={1} onAdd={onAdd} />
-                    }
-                </div>
-            </div>
-
-            {/* Product description */}
-            <div className="pdc-description">
-                <h4>Description</h4>
-                <p> {description} </p>
-            </div>
-
+      {/* Product main info */}
+      <div className="pdc-main">
+        <div className="pdcm-img">
+            <img
+            src={img || lgcLogo}
+            alt={name}
+            onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = lgcLogo;
+            }}
+            />
         </div>
-    )
-}
+
+        <div className="pdcm-data">
+          <h3>{name}</h3>
+          <span>£ {price.toFixed(2)}</span> {/* Display price with 2 decimal places */}
+          <hr />
+
+          {/* Quantity selector if needed */}
+          {/* <div className="qty-selector">
+            <label htmlFor="qty">Quantity:</label>
+            <input
+              type="number"
+              id="qty"
+              min="1"
+              value={selectedQty}
+              onChange={(e) => setSelectedQty(parseInt(e.target.value) || 1)}
+            />
+          </div> */}
+
+          {/* Example action buttons */}
+          <div className="fb-buttons">
+            <Link to="/shop" className="button fb-continue-shopping-btn">
+              Back to Shop
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Product description */}
+      <div className="pdc-description">
+        <h4>Description</h4>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+};

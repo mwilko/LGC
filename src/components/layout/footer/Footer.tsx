@@ -29,20 +29,13 @@ export const Footer = () => {
                 {/* Footer Navigation */}
                 <nav className="footer-nav">
                     <Link className="footer-link navbar-link" to='/'> Home </Link>
-                    <a className="footer-link navbar-link" href="https://github.com/mathiramilo/MeatPalace-Ramilo" target="_blank" rel="noreferrer"> Visit Project </a>
+                    <Link className="footer-link navbar-link" to="/contact"> Contact Us </Link>
                     <Link className="footer-link navbar-link" to='/shop/all'> Shop </Link>
                 </nav>
 
                 {/* Footer Developed By */}
                 <div className="footer-developed-by">
-                    <p>Developed by Mathias Ramilo</p>
-                    <a href="https://github.com/mathiramilo"
-                       target="_blank" 
-                       rel="noreferrer"
-                       className="github-btn"
-                    >
-                        <GithubIcon className="github-icon" />
-                    </a>
+                    <p>Founded in 2015</p>
                 </div>
             </div>
         </footer>

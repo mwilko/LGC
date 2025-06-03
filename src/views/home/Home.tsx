@@ -12,9 +12,12 @@ import sausagesImg from 'assets/img/others/sausages.webp';
 import breadsImg from 'assets/img/others/breads.webp';
 import aboutUsImg from 'assets/img/others/aside.webp';
 // Components
-// import { ItemListContainer } from 'components/common/itemListContainer/ItemListContainer';
+import { ItemListContainer } from 'components/common/itemListContainer/ItemListContainer';
+import { RecipeListContainer } from 'components/common/recipeListContainer/RecipeListContainer';
 // Utils
 import { isIOS } from 'utils/isIOS';
+// Data
+import { recipes } from 'data/recipes';
 // Styles
 import './Home.css';
 
@@ -113,9 +116,22 @@ export const Home = () => {
                     </div>
                     
                     {/* Bestsellers Products Wrapper */}
-                    {/* <ItemListContainer category={'bestsellers'} limit={true} /> */}
+                    <ItemListContainer category={'bestsellers'} limit={true} />
                     
                     <Link className="button bs-btn" to='/shop/all'>View All Meats</Link>
+
+                </section>
+
+                {/* Recipes Section */}
+                <section className="recipes-section">
+                    <div className="r-title">
+                    {/* <ChefIcon className="chef-icon" /> */}
+                    <h2>Our Recipes</h2>
+                    </div>
+
+                    <RecipeListContainer limit={3} />
+
+                    <Link className="button r-btn" to="/recipes">View All Recipes</Link>
 
                 </section>
 

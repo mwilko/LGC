@@ -1,11 +1,10 @@
 // Definition of Product Interface.
-export interface Product {
-    id: string;
-    name: string;
-    price: number;
-    description: string;
-    img: string;
-    category: string;
-    cartAmount: number;
-    stock: number;
-}
+export type Product = {
+  // Represents a product in the shop
+  id: string;
+  name: string;
+  price: number;
+  img: string;
+  description?: string; // Optional description for the product
+  category: 'wagyu' | 'feedlot' | 'standard' | 'other';
+};

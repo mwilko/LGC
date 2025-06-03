@@ -5,8 +5,9 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { Home } from 'views/home/Home';
 import { Shop } from 'views/shop/Shop';
 import { ProductDetailContainer } from 'views/product/ProductDetailContainer';
+import { Contact } from 'views/contact/Contact';
 // import { Billing } from 'views/billing/Billing';
-import { Cart } from 'views/cart/Cart';
+// import { Cart } from 'views/cart/Cart';
 
 export const AppRoutes = () => {
     return (
@@ -16,7 +17,8 @@ export const AppRoutes = () => {
             <Route path='/shop/:category' element={<Shop />} />
             <Route path='/shop' element={<Navigate to='/shop/all' />} />
             <Route path='/product/:productID' element={<ProductDetailContainer />} />
-            {<Route path='/cart' element={<Cart />} />}
+            <Route path='/contact' element={<Contact />} />
+            {/* {<Route path='/cart' element={<Cart />} />} */}
             {/* <Route path='/billing' element={<Billing />} /> */}
             {/* Any unknown path will be redirected to home page */}
             <Route path='*' element={<Navigate to='/' />} />

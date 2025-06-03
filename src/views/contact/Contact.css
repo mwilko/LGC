@@ -1,0 +1,67 @@
+.contact-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: url('/public/game_fair_food.png') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+  padding: 2rem;
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-content p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 0.8rem;
+  border: none;
+  background-color: #e63946;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #d62828;
+}
