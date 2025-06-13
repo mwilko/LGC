@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // Toasts
 import { logoutToast } from 'utils/toasts';
 // Logo
-import lgcLogo from 'assets/images/lgc_transparent.png';
+import lgcLogo from 'assets/images/lgc_logo_new_trans.png';
 // Icons
 import { ReactComponent as HamburguerIcon } from 'assets/icons/hamburguer-menu.svg';
 // import { ReactComponent as LoginIcon } from 'assets/icons/login.svg';

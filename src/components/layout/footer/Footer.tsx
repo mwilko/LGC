@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // Icons
 import { ReactComponent as GithubIcon } from 'assets/icons/github.svg';
 // Logo
-import lgcTrans from 'assets/images/lgc_transparent.png';
+import lgcTrans from 'assets/images/lgc_logo_new_trans.png';
 // Styles
 import './Footer.css';
 

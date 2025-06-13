@@ -6,7 +6,7 @@ import { Product } from 'interfaces/product';
 // Styles
 import './Item.css';
 // Images
-import lgcLogo from 'assets/images/lgc_logo.jpg'; // Fallback logo
+import lgcLogo from 'assets/images/lgc_logo_new_trans.png'; // Fallback logo
 
 // This file defines the Item component that displays product information in a card format.
 

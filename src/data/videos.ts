@@ -11,7 +11,7 @@ export const videos = [
   },
   {
     id: '2',
-    title: 'Game for Hearts of Resturaunt Menus',
+    title: 'Game for Resturaunt Dishes',
     thumbnail: resturantGame,
     url: 'https://youtu.be/Q8zEiKRmRQA?si=4m6lceScJJjTGeQa'
   },

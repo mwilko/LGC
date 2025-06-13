@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero-section {
-    background-image: url(../../assets/img/others/banner.webp);
+    background-image: url(../../assets/images/Venison\ Kofta\ -\ Garlic\ Paprika.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -74,57 +74,111 @@
     }
 }
 
-/* Recipe Section */
+/* === Recipe Section - Professional Styling === */
 .recipe-section {
-    padding: 4em 1em;
+    padding: 5em 2em;
+    background-color: var(--black-90);
+    text-align: center;
 }
 
 .r-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 6em;
+    gap: 12px;
+    margin-bottom: 4em;
+    position: relative;
+}
+
+.r-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1.2em;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary); /* You can define this in your root if not already */
+    border-radius: 6px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .r-title h2 {
-    color: var(--white-50);
-    font-weight: 300;
-    text-transform: uppercase;
+    color: var(--white-100);
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: none;
+    letter-spacing: 0.5px;
 }
 
 .r-btn {
-    display: block;
-    margin: auto;
-    margin-top: 4.5em;
-    max-width: 260px;
+    display: inline-block;
+    margin-top: 3em;
+    padding: 0.9em 2em;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white-100);
+    background-color: var(--primary);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
-/* Video Section */
+.r-btn:hover {
+    background-color: var(--primary-dark); /* define darker variant */
+}
+
+
+/* === Video Section - Professional Styling === */
 .video-section {
-    padding: 4em 1em;
-    background-color: var(--black-75);
+    padding: 5em 2em;
+    background-color: var(--black-85);
+    text-align: center;
 }
 
 .vs-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 6em;
+    gap: 12px;
+    margin-bottom: 4em;
+    position: relative;
+}
+
+.vs-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1.2em;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 6px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .vs-title h2 {
-    color: var(--white-50);
-    font-weight: 300;
-    text-transform: uppercase;
+    color: var(--white-100);
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: none;
+    letter-spacing: 0.5px;
 }
 
 .vs-btn {
-    display: block;
-    margin: auto;
-    margin-top: 4.5em;
-    max-width: 260px;
+    display: inline-block;
+    margin-top: 3em;
+    padding: 0.9em 2em;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white-100);
+    background-color: var(--primary);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.vs-btn:hover {
+    background-color: var(--primary-dark);
 }
 
 /* Bestsellers Section */

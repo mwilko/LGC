@@ -1,6 +1,6 @@
 /* Utility classes */
 .button {
-    background-color: var(--white-100);
+    background-color: #6F8084;
     padding: 6px;
     border-radius: 2px;
     color: var(--black-75);
@@ -10,7 +10,7 @@
 }
 
 .button:hover {
-    background-color: #dadada;
+    background-color: #9BAAAA;
 }
 
 .button:active {

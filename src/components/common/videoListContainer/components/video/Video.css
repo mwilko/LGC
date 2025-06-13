@@ -1,19 +1,19 @@
-.video-card { 
+.video-card {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  max-width: 550px; /* Increased width */
-  padding: 1em; /* Padding around the card */
-  background-color: var(--black-90); /* Optional: dark background for card */
-  border-radius: 12px; /* Rounded corners for card */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Subtle shadow */
+  max-width: 550px;
+  padding: 1em;
+  background-color: var(--black-90);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 1em auto; /* Center cards with some vertical spacing */
+  margin: 1em auto;
 }
 
 .video-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .vc-thumbnail {
@@ -24,7 +24,7 @@
 
 .vc-thumbnail img {
   width: 100%;
-  height: 250px; /* Increased height */
+  height: 250px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
@@ -36,7 +36,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +52,7 @@
 
 .vc-title h4 {
   margin-top: 0.8em;
-  font-size: 1.2rem; /* Slightly larger font */
+  font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
   color: var(--white-50);

@@ -59,18 +59,3 @@
 .footer-developed-by p {
     font-size: 0.5rem;
 }
-
-.github-btn {
-    border: none;
-    background: none;
-}
-
-.github-icon {
-    width: 12px;
-    color: var(--white-25);
-    transition: all 0.3s ease-out;
-}
-
-.github-btn:hover .github-icon {
-    color: var(--red-100);
-}

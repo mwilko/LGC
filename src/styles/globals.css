@@ -1,27 +1,38 @@
-/* Globals */
-body {
-    margin: 0;
-    font-family: var(--mainFont);
-    background-color: var(--mainBackground);
-    overflow-x: hidden;
-}
+/* 1. Font-face declaration - Logo font*/
+/* @font-face {
+  font-family: 'DelphinNo2Std';
+  src: url('/src/assets/fonts/DelphinNo2W01Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+} */
 
-* {
-    letter-spacing: 0.1px;
+/* 2. Global styles */
+body {
+  margin: 0;
+  font-family: var(--mainFont, Arial, sans-serif);
+  background-color: var(--mainBackground, #fff);
+  overflow-x: hidden;
+  letter-spacing: 0.1px; /* moved from * to body for better performance */
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+/* 3. Override font for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DelphinNo2Std', serif;
+  font-weight: normal;
 }
