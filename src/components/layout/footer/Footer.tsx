@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as GithubIcon } from 'assets/icons/github.svg';
 // Logo
 import lgcTrans from 'assets/images/lgc_logo_new_trans.png';
+// Icons
+import { ReactComponent as Facebook } from 'assets/icons/facebook.svg';
+import { ReactComponent as Instagram } from 'assets/icons/instagram.svg';
+import { ReactComponent as LinkedIn } from 'assets/icons/linkedin.svg';
 // Styles
 import './Footer.css';
 
@@ -36,6 +40,12 @@ export const Footer = () => {
                 {/* Footer Developed By */}
                 <div className="footer-developed-by">
                     <p>© 2025 Lincolnshire Game Company — Established 2013</p>
+                </div>
+
+                {/* Footer Socials */}
+                <div className="footer-socials">
+                    <Facebook className="facebook-icon" /> 
+                    
                 </div>
             </div>
         </footer>

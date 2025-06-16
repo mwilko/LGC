@@ -59,3 +59,28 @@
 .footer-developed-by p {
     font-size: 0.5rem;
 }
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8em;
+  margin-bottom: 1.8em;
+}
+
+.footer-socials .facebook-icon,
+.footer-socials .instagram-icon,
+.footer-socials .linkedin-icon {
+  width: 20px;
+  height: 20px;
+  color: #838882;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.footer-socials .facebook-icon:hover,
+.footer-socials .instagram-icon:hover,
+.footer-socials .linkedin-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}

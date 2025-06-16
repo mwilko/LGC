@@ -132,7 +132,7 @@ export const Home = () => {
                     </div>
                     
                     {/* Bestsellers Products Wrapper */}
-                    <ItemListContainer category={'bestsellers'} limit={true} />
+                    <ItemListContainer category={'venison'} limit={true} />
                     
                     <Link className="button bs-btn" to='/shop/all'>View All Meats</Link>
 
