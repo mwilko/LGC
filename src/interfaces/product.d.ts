@@ -6,5 +6,5 @@ export type Product = {
   price: number;
   img: string;
   description?: string; // Optional description for the product
-  category: 'wagyu' | 'feedlot' | 'standard' | 'other';
+  category: 'venison' | 'poultry' | 'standard' | 'other';
 };

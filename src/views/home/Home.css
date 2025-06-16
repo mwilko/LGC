@@ -288,9 +288,8 @@
 }
 
 .ops-btn {
-    display: block;
-    margin: auto;
-    max-width: 260px;
+    width: 200px;
+    margin-left: 60px;
 }
 
 @media (min-width: 598px) {
@@ -380,6 +379,13 @@
 .aus-info p {
     font-size: 0.8rem;
     text-align: start;
+}
+
+.aus-btn {
+    display: block;
+    margin: auto;
+    max-width: 160px; /* smaller max width */
+    width: 100%; /* optional, to fill the max-width */
 }
 
 @media (min-width: 868px) {

@@ -117,9 +117,24 @@ export const Home = () => {
                             <h2>About Us</h2>
                             <p>At The Lincolnshire Game Company, we take pride in delivering the finest wild game meat from the heart of Lincolnshire. With a strong focus on traceability, sustainability, and traditional values, we supply premium-quality produce to customers across the UK and Europe.
                             </p>
-                            <p>Donec elit ipsum, cursus at congue non, euismod ac turpis. Donec lacinia felis quis sem consectetur, at elementum justo aliquet. Pellentesque nulla ex, pulvinar ac dolor ac, tincidunt mollis leo. Morbi gravida, metus vel feugiat luctus, elit ex tempor lacus, id consequat orci urna quis orci. In sagittis orci est, in porttitor mi elementum et. Morbi at lorem at nibh gravida malesuada vel sit amet leo. Pellentesque in massa congue, bibendum lacus a, gravida diam. Maecenas scelerisque mollis finibus.</p>
+                            <p>Established in 2013, we provide venison and poultry products to an proffesional standard to customers. We strive for the best quality and service for our customers.</p>
+                            <Link className="button aus-btn" to='/about-us'>Our Story</Link>
                         </div>
                     </div>
+                </section>
+
+                {/* Product Selections */}
+                <section className="bestsellers-section">
+
+                    <div className="bs-title">
+                        <AwardIcon className="award-icon" />
+                        <h2>Our Products</h2>
+                    </div>
+                    
+                    {/* Bestsellers Products Wrapper */}
+                    <ItemListContainer category={'bestsellers'} limit={true} />
+                    
+                    <Link className="button bs-btn" to='/shop/all'>View All Meats</Link>
 
                 </section>
 

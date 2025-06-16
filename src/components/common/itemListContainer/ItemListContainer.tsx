@@ -35,7 +35,7 @@ export const ItemListContainer = ({ category, limit }: props) => {
       if (limit) {
         // Example: limit to 4 Wagyu products (can customize logic here)
         filtered = filtered
-          .filter(p => p.category === 'wagyu')
+          .filter(p => p.category === 'venison')
           .slice(0, 4);
       }
 

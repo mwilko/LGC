@@ -5,17 +5,17 @@ import lgcLogo from 'assets/images/lgc_transparent.png'; // Fallback logo for pr
 export const products: Product[] = [ // Products array
   {
     id: '1',
-    name: 'Wagyu Ribeye',
+    name: 'Venison',
     price: 59.99,
     img: lgcLogo,
-    category: 'wagyu',
+    category: 'venison',
   },
   {
     id: '2',
-    name: 'Feedlot Sirloin',
+    name: 'Chicken',
     price: 34.5,
     img: lgcLogo,
-    category: 'feedlot',
+    category: 'poultry',
   },
   {
     id: '3',

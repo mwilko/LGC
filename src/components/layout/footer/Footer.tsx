@@ -35,7 +35,7 @@ export const Footer = () => {
 
                 {/* Footer Developed By */}
                 <div className="footer-developed-by">
-                    <p>Founded in 2015</p>
+                    <p>© 2025 Lincolnshire Game Company — Established 2013</p>
                 </div>
             </div>
         </footer>
