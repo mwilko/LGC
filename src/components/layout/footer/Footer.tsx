@@ -44,8 +44,15 @@ export const Footer = () => {
 
                 {/* Footer Socials */}
                 <div className="footer-socials">
-                    <Facebook className="facebook-icon" /> 
-                    
+                    <a href="https://www.facebook.com/lincolnshiregameco/?locale=en_GB" target="_blank" rel="noopener noreferrer">
+                        <Facebook className="facebook-icon" />
+                    </a>
+                    <a href="https://www.instagram.com/thelincolnshiregamecompany/" target="_blank" rel="noopener noreferrer">
+                        <Instagram className="instagram-icon" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/tristan-kirk-ba44612/" target="_blank" rel="noopener noreferrer">
+                        <LinkedIn className="linkedin-icon" />
+                    </a>
                 </div>
             </div>
         </footer>
