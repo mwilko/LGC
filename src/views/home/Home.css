@@ -183,7 +183,7 @@
 
 .bestsellers-section {
   padding: 4em 1em;
-  background-image: url('/assets/images/');
+  /* background-image: url('/assets/images/'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
