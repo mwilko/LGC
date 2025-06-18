@@ -1,17 +1,20 @@
 /* Utility classes */
 .button {
-    background-color: #6F8084;
-    padding: 6px;
-    border-radius: 2px;
-    color: var(--black-75);
-    text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease-out;
+  background-color: #6F8084;
+  padding: 6px;
+  border-radius: 2px;
+  color: #E0E0E0;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  cursor: pointer;
 }
 
 .button:hover {
-    background-color: #9BAAAA;
+  background-color: #57686c; /* Slightly darker shade */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); /* Soft subtle shadow on hover */
 }
+
 
 .button:active {
     background-color: #919191;   

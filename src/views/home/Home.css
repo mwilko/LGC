@@ -17,15 +17,28 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  /* Example linear gradient from top to bottom */
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5) 0%,  /* top */
-    rgba(0, 0, 0, 0.25) 50%, /* middle */
-    rgba(0, 0, 0, 0.5) 100% /* bottom */
-  );
+  top: 0; left: 0;
+  background: rgba(0, 0, 0, 0.3); /* starting opacity */
+  pointer-events: none; /* so clicks pass through */
+  transition: background 0.2s ease-out;
+  z-index: 0;
 }
 
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  transition: background 0.2s ease-out;
+  z-index: 0;
+}
 
 .hs-greeting {
   margin: 6em 2em;
@@ -186,13 +199,14 @@
 
 .bestsellers-section {
   padding: 4em 1em;
-  /* background-image: url('/assets/images/'); */
+  position: relative;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/british-landscape.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
 }
-
 
 .bs-title {
     display: flex;
