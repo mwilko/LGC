@@ -1,47 +1,50 @@
-/* Hero Section */
 .hero-section {
-    background-image: url(../../assets/images/Venison\ Kofta\ -\ Garlic\ Paprika.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin-top: -5.6em;
+  background-image: url(../../assets/images/Venison\ Kofta\ -\ Garlic\ Paprika.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: -5.6em;
+  position: relative;
 }
 
 .hero-section::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #0000002a;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Example linear gradient from top to bottom */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,  /* top */
+    rgba(0, 0, 0, 0.25) 50%, /* middle */
+    rgba(0, 0, 0, 0.5) 100% /* bottom */
+  );
 }
 
+
 .hs-greeting {
-    margin: 6em 2em;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6em;
-    max-width: 280px;
-    z-index: 1;
+  margin: 6em 2em;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+  z-index: 1;
 }
 
 .hs-greeting h1 {
-    color: var(--white-100);
-    font-weight: 300;
-    font-size: 1.5rem;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  color: var(--white-100);
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .hsg-search-meats-btn {
-    width: 200px;
+  width: 200px;
 }
 
 @media (min-width: 598px) {
@@ -183,7 +186,7 @@
 
 .bestsellers-section {
   padding: 4em 1em;
-  /* background-image: url('/assets/images/'); */
+  background-image: url('/assets/images/');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -346,94 +349,139 @@
 
 /* About Us Section */
 .about-us-section {
-    padding: 6em 1em;
+  padding: 6em 1em;
 }
 
 .aus-grid {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    gap: 2em;
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  align-items: center;
 }
 
 .about-us-section img {
-    width: 100%;
-    height: 110%;
-    object-fit: cover;
-    border-radius: 6px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .aus-info {
-    color: var(--white-50);
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    width: 88%;
+  color: var(--white-50);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .aus-info h2 {
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    margin-bottom: 1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.6rem;
 }
 
 .aus-info p {
-    font-size: 0.8rem;
-    text-align: start;
+  font-size: 0.8rem;
+  text-align: start;
 }
 
 .aus-btn {
-    display: block;
-    margin: auto;
-    max-width: 160px; /* smaller max width */
-    width: 100%; /* optional, to fill the max-width */
+  display: block;
+  max-width: 160px;
+  margin-top: 1em;
 }
 
-@media (min-width: 868px) {
-    .aus-grid {
-        gap: 4em;
-    }
+.bestsellers-section {
+  padding: 4em 1em;
+  position: relative;
 }
 
-@media (min-width: 992px) {
-    .aus-grid {
-        grid-template-columns: 30% 70%;
-    }
+.bs-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 4em;
 }
 
-/* Home Loading */
+.award-icon {
+  width: 42px;
+  fill: var(--white-50);
+}
+
+.bs-title h2 {
+  color: var(--white-50);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.bs-btn {
+  display: block;
+  margin: 4em auto 0 auto;
+  max-width: 260px;
+}
+
 .home-loading {
-    width: 100%;
-    height: 105vh;
-    position: fixed;
-    z-index: 1000;
-    margin-top: -5.65em;
-    background: radial-gradient(circle, rgba(32,32,32,1) 0%, rgba(8,8,8,1) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    pointer-events: all;
-    transition: all 0.5s ease-out;
+  position: fixed;
+  width: 100%;
+  height: 105vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: radial-gradient(circle, rgba(32,32,32,1) 0%, rgba(8,8,8,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-out;
 }
 
 .home-loading-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
 }
 
 .home-loading-content img {
-    width: 180px;
+  width: 180px;
 }
 
 .home-loading-content span {
-    position: relative;
-    font-size: 1.2rem;
-    color: #646464;
+  font-size: 1.2rem;
+  color: #646464;
+}
+
+@media (min-width: 598px) {
+  .hero-section {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hs-greeting {
+    margin-right: 2em;
+  }
+
+  .aus-grid {
+    grid-template-columns: 25% 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hs-greeting {
+    margin-right: 12em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hs-greeting {
+    margin-right: 20em;
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    background-attachment: initial;
+  }
 }
