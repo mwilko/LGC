@@ -181,10 +181,15 @@
     background-color: var(--primary-dark);
 }
 
-/* Bestsellers Section */
 .bestsellers-section {
-    padding: 4em 1em;
+  padding: 4em 1em;
+  background-image: url('/assets/images/');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
+
 
 .bs-title {
     display: flex;
