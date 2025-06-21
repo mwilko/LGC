@@ -249,22 +249,12 @@
 }
 
 /* Media Queries */
-@media (min-width: 992px) {
+@media (min-width: 592px) {
   .desktop-nav {
     display: flex;
   }
   
   .hamburger-btn {
-    display: none;
-  }
-  
-  .mobile-nav {
-    display: none;
-  }
-}
-
-@media (max-width: 991px) {
-  .desktop-nav {
     display: none;
   }
 }
