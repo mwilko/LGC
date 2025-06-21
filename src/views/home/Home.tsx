@@ -106,28 +106,21 @@ export const Home = () => {
 
         {/* About Us Section */}
         <section ref={aboutUs} className="about-us-section">
-          <div className="aus-grid">
+          <div className="section-grid">
             <img src={aboutUsImg} alt="Our Owners in Lincolnshire" />
-            <div className="aus-info">
+            <div className="section-info">
               <h2>Our Heritage</h2>
               <p>At The Lincolnshire Game Company, we are passionate about bringing the finest wild game and poultry from the heart of Lincolnshire. We value sustainability, traceability, and tradition in every cut we offer.</p>
               <p>Since 2013, we've been a trusted name for chefs, restaurants, and families across the UK and Europe, delivering exceptional quality and service.</p>
-              <Link className="button aus-btn" to='/about-us'>Discover Our Story</Link>
+              <Link className="button" to='/about-us'>Discover Our Story</Link>
             </div>
           </div>
         </section>
 
         {/* Awards and Accreditations */}
         <section className="achievements-section">
-          <div className="achievements-grid">
-            <div className="awards-image-container">
-              <img 
-                src={awardsAndApprovedImg} 
-                alt="Our awards and certifications" 
-                className="awards-image"
-              />
-            </div>
-            <div className="achievements-info">
+          <div className="section-grid">
+            <div className="section-info">
               <h2>Recognised for Excellence</h2>
               <p>
                 We make sure to deliver exceptional taste, ethical sourcing, and unwavering quality with our products. These aren't just promises—they're commitments validated by the best in the business.
@@ -136,6 +129,13 @@ export const Home = () => {
                 Explore the recognitions that set our game apart and give you complete confidence in every purchase.
               </p>
               <Link to='/about-us' className="button achievements-btn">View Achievements</Link>
+            </div>
+            <div className="awards-image-container">
+              <img 
+                src={awardsAndApprovedImg} 
+                alt="Our awards and certifications" 
+                className="awards-image"
+              />
             </div>
           </div>
         </section>

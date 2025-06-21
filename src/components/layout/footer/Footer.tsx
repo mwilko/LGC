@@ -48,7 +48,7 @@ export const Footer = () => {
             </a>
           </div>
           
-          <p className="copyright">© {new Date().getFullYear()} Lincolnshire Game Company. All rights reserved.</p>
+          <p className="copyright">© {new Date().getFullYear()} The Lincolnshire Game Company. All rights reserved.</p>
         </div>
       </div>
     </footer>
