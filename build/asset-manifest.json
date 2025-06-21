@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.f56432fe.css",
-    "main.js": "/static/js/main.2487e6ac.js",
+    "main.css": "/static/css/main.90e96309.css",
+    "main.js": "/static/js/main.c3dbfea7.js",
     "static/js/787.b73c6c38.chunk.js": "/static/js/787.b73c6c38.chunk.js",
     "static/media/Venison Kofta - Garlic Paprika.jpg": "/static/media/Venison Kofta - Garlic Paprika.b627fb43f4578d363996.jpg",
+    "static/media/Venison Skewers - Garlic Paprika.jpg": "/static/media/Venison Skewers - Garlic Paprika.cd909069e5cac803a4e7.jpg",
+    "static/media/british-landscape.jpeg": "/static/media/british-landscape.79f8e854b97d77f0525a.jpeg",
+    "static/media/awards_and_approved.png": "/static/media/awards_and_approved.0a3359f31a92890213b5.png",
     "static/media/game_fair_food.png": "/static/media/game_fair_food.860584c2811d222248f3.png",
     "static/media/sim_and_t.jpg": "/static/media/sim_and_t.ed7f6334697c164c3e25.jpg",
     "static/media/lgc_logo_new_trans.png": "/static/media/lgc_logo_new_trans.e30e9bc4714cedc3861b.png",
-    "static/media/shop-banner.webp": "/static/media/shop-banner.d16dbe3711782f4942c6.webp",
     "static/media/lgc_transparent.png": "/static/media/lgc_transparent.020efa4c56ee573657f4.png",
     "static/media/instagram.svg": "/static/media/instagram.69926b9802e69bb7bd031d1c4202e97c.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.eb6cb1bc2e12529632f90017c6364448.svg",
@@ -21,12 +23,12 @@
     "static/media/hamburguer-menu.svg": "/static/media/hamburguer-menu.d816dbe5fe8a25bbf2b38f8b09442139.svg",
     "static/media/x.svg": "/static/media/x.04be7fdc34f32a9edf10981a1f8ebf64.svg",
     "static/media/arrow-left.svg": "/static/media/arrow-left.fab67a7faddfd41752f3aac52d15b349.svg",
-    "main.f56432fe.css.map": "/static/css/main.f56432fe.css.map",
-    "main.2487e6ac.js.map": "/static/js/main.2487e6ac.js.map",
+    "main.90e96309.css.map": "/static/css/main.90e96309.css.map",
+    "main.c3dbfea7.js.map": "/static/js/main.c3dbfea7.js.map",
     "787.b73c6c38.chunk.js.map": "/static/js/787.b73c6c38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f56432fe.css",
-    "static/js/main.2487e6ac.js"
+    "static/css/main.90e96309.css",
+    "static/js/main.c3dbfea7.js"
   ]
 }

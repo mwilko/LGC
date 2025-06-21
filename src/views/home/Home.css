@@ -18,8 +18,8 @@
   width: 100%;
   height: 100%;
   top: 0; left: 0;
-  background: rgba(0, 0, 0, 0.3); /* starting opacity */
-  pointer-events: none; /* so clicks pass through */
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
   transition: background 0.2s ease-out;
   z-index: 0;
 }
@@ -112,7 +112,7 @@
     bottom: -1.2em;
     width: 80px;
     height: 3px;
-    background-color: var(--primary); /* You can define this in your root if not already */
+    background-color: var(--primary);
     border-radius: 6px;
     left: 50%;
     transform: translateX(-50%);
@@ -140,7 +140,7 @@
 }
 
 .r-btn:hover {
-    background-color: var(--primary-dark); /* define darker variant */
+    background-color: var(--primary-dark);
 }
 
 
@@ -396,7 +396,7 @@
 }
 
 .aus-info p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: start;
 }
 
@@ -497,5 +497,102 @@
 @media (max-width: 767px) {
   .hero-section {
     background-attachment: initial;
+  }
+}
+
+/* Achievements Section (Inverse About Us Style) */
+.achievements-section {
+  padding: 6em 1em;
+  background-color: var(--black-85);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  align-items: center;
+}
+
+.achievements-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.achievements-info {
+  color: var(--white-50);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.achievements-info h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.achievements-info p {
+  font-size: 0.9rem;
+  text-align: start;
+}
+
+.achievements-btn {
+  max-width: 160px;
+  margin-top: 1em;
+  background-color: var(--primary);
+  color: var(--white-100);
+  padding: 0.8em 1.4em;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.achievements-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Awards image container */
+.awards-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Awards image styling */
+.awards-image {
+  max-width: 90%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Reverse the order so image is on right, text is on left */
+  .achievements-grid {
+    direction: rtl;
+  }
+
+  .achievements-grid > * {
+    direction: ltr;
+  }
+
+  /* Adjust image size on desktop */
+  .awards-image {
+    max-width: 85%;
+    max-height: 350px;
+  }
+  
+  /* Align to top to prevent stretching */
+  .achievements-grid {
+    align-items: flex-start;
   }
 }

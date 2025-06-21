@@ -66,7 +66,7 @@ export const Shop = () => {
             </section>
 
             <h3 className="shop-legend">
-                “All our meat cuts are of the highest quality, ensuring that all our customers are satisfied.”
+                Please contact us for any enquiries regarding our products.
             </h3>
         </div>
     );
