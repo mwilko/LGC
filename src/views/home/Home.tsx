@@ -178,7 +178,7 @@ export const Home = () => {
               We ensure exceptional taste and quality in every product we offer,
               recognised by top industry awards.
             </p>
-            <Link to="/about-us" className="button achievements-btn">
+            <Link to="/awards" className="button achievements-btn">
               View Achievements
             </Link>
           </div>
