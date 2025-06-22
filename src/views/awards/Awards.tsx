@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Awards.css';
 import awardsImg from 'assets/images/awards_and_approved.png';
@@ -8,6 +9,11 @@ import {
 } from '@heroicons/react/24/outline';
 
 export const Awards = () => {
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <div className="awards-page">
       <header className="awards-hero">
@@ -47,7 +53,6 @@ export const Awards = () => {
           <img src={awardsImg} alt="Our awards and certifications" />
         </div>
       </section>
-
     </div>
   );
 };

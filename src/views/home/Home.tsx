@@ -134,7 +134,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Rest of your sections unchanged */}
       <section
         ref={aboutUs}
         className="about-us-section"
