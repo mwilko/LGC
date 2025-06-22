@@ -59,29 +59,30 @@ export const HamburguerMenuCanvas = ({ hamburguerMenuOpen, closeHamburguerMenu }
                 viewCategories ? {transform: 'translateX(-100vw)'} : {}
             }>
                 <Link className="navbar-link nbl-hm" to='/' onClick={ () => closeHamburguerMenu() }> Home </Link>
-                <button className="navbar-link nbl-hm nbl-hm-cat" onClick={ () => setViewCategories(true) }> Categories </button>
+                <Link className="navbar-link nbl-hm" to='/about-us' onClick={ () => closeHamburguerMenu() }> About </Link>
                 <Link className="navbar-link nbl-hm" to='/shop/all' onClick={ () => closeHamburguerMenu() }> Shop </Link>
+                <button className="navbar-link nbl-hm nbl-hm-cat" onClick={ () => setViewCategories(true) }> More </button>
             </div>
 
             <div className="cat-links" style={
                 viewCategories ? {transform: 'translateX(0)'} : {opacity: '0'}
             }>
-                <Link className="navbar-link nbl-hm" to='/shop/wagyu' onClick={() => {
+                <Link className="navbar-link nbl-hm" to='/awards' onClick={() => {
                     closeHamburguerMenu();
                     setTimeout(() => setViewCategories(false), 500);
-                }}>Wagyu</Link>
-                <Link className="navbar-link nbl-hm" to='/shop/feedlot' onClick={() => {
+                }}>Awards & Recognition</Link>
+                <Link className="navbar-link nbl-hm" to='/partnerships' onClick={() => {
                     closeHamburguerMenu();
                     setTimeout(() => setViewCategories(false), 500);
-                }}>Feedlot</Link>
-                <Link className="navbar-link nbl-hm" to='/shop/standard' onClick={() => {
+                }}>Partnerships</Link>
+                <Link className="navbar-link nbl-hm" to='/blogs' onClick={() => {
                     closeHamburguerMenu();
                     setTimeout(() => setViewCategories(false), 500);
-                }}>Standard</Link>
-                <Link className="navbar-link nbl-hm" to='/shop/other' onClick={() => {
+                }}>Blogs</Link>
+                <Link className="navbar-link nbl-hm" to='/sponsors' onClick={() => {
                     closeHamburguerMenu();
                     setTimeout(() => setViewCategories(false), 500);
-                }}>Others</Link>
+                }}>Sponsors</Link>
             </div>
         </div>    
     )

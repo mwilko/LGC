@@ -31,6 +31,17 @@
     transition: all 0.3s ease-out;
 }
 
+.section-separator {
+  border: none;
+  height: 1px;
+  background-color: var(--grey-30, #ccc); /* use your site's grey variable or fallback */
+  margin: 0.02em auto;  /* spacing around the line */
+  width: 90%;        /* or any width you want */
+  max-width: 1100px;
+  opacity: 0.4;      /* subtle transparency */
+}
+
+
 /* Forms */
 .form-field {
     display: flex;

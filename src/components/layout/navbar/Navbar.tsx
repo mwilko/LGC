@@ -42,7 +42,7 @@ export const NavBar = () => {
           <nav className="desktop-nav">
             <Link className="navbar-link" to='/'>Home</Link>
             <Link className="navbar-link" to='/shop/all'>Shop</Link>
-            <Link className="navbar-link" to='/about'>About</Link>
+            <Link className="navbar-link" to='/about-us'>About</Link>
 
             <div 
               className="dropdown-container"
@@ -95,7 +95,7 @@ export const NavBar = () => {
           <div className="mobile-nav-content">
             <Link className="mobile-nav-link" to='/' onClick={closeMenu}>Home</Link>
             <Link className="mobile-nav-link" to='/shop/all' onClick={closeMenu}>Shop</Link>
-            <Link className="mobile-nav-link" to='/about' onClick={closeMenu}>About</Link>
+            <Link className="mobile-nav-link" to='/about-us' onClick={closeMenu}>About</Link>
             
             <div className="mobile-dropdown">
               <button 
