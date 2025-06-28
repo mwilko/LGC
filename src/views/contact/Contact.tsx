@@ -13,7 +13,7 @@ export const Contact = () => {
           <h1>Contact Us</h1>
           <p>
             Have questions or want to work with us? Fill out the form below. <br />
-            Prefer to give us a call? (+44) 01205 822882
+            Prefer to give us a call? (+44) 1205 822882
           </p>
 
           <form className="contact-form">

@@ -5,8 +5,8 @@ import { isIOS } from 'utils/isIOS';
 import Logo from 'assets/images/lgc_logo_new_trans.png';
 import heroImg1 from 'assets/images/Venison Kofta - Garlic Paprika.jpg';
 import heroImg2 from 'assets/images/Venison Skewers - Garlic Paprika.jpg';
-import heroImg3 from 'assets/images/machinery_thumbnail.png';
-import aboutUsImg from 'assets/images/sim_and_t.jpg';
+import heroImg3 from 'assets/images/avacado_dish.jpg';
+import aboutUsImg from 'assets/images/sim_t_game_fair.jpg';
 import awardsAndApprovedImg from 'assets/images/awards_and_approved.png';
 import './Home.css';
 
@@ -18,7 +18,7 @@ const testimonials = [
 
 const heroSlides = [
   {
-    title: "Lincolnshire's Finest Wild Game",
+    title: "Lincolnshire Game",
     cta: { text: 'Explore Our Produce', link: '/shop/all' },
     image: heroImg1
   },
@@ -29,14 +29,14 @@ const heroSlides = [
   },
   {
     title: 'Award-Winning Excellence',
-    cta: { text: 'View Achievements', link: '/about-us#achievements' },
+    cta: { text: 'View Achievements', link: '/awards' },
     image: heroImg3
   }
 ];
 
 export const Home = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [overlayOpacity, setOverlayOpacity] = useState(0.3);
+  const [overlayOpacity, setOverlayOpacity] = useState(0.6);
   const aboutUs = useRef<HTMLElement>(null);
   const location = useLocation();
   const heroRef = useRef<HTMLDivElement>(null);
@@ -55,13 +55,9 @@ export const Home = () => {
     function startInterval() {
       intervalId.current = setInterval(() => {
         setSlideIndex(i => (i + 1) % heroSlides.length);
-      }, 12000); // 12 seconds delay
+      }, 12000);
     }
-
-    if (!isPaused) {
-      startInterval();
-    }
-
+    if (!isPaused) startInterval();
     return () => {
       if (intervalId.current) clearInterval(intervalId.current);
     };
@@ -82,7 +78,6 @@ export const Home = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Handlers for pause on hover and focus
   const handleMouseEnter = () => setIsPaused(true);
   const handleMouseLeave = () => setIsPaused(false);
   const handleFocus = () => setIsPaused(true);
@@ -101,7 +96,7 @@ export const Home = () => {
         onMouseLeave={handleMouseLeave}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        tabIndex={-1} // make the section focusable for keyboard users
+        tabIndex={-1}
       >
         {heroSlides.map((slide, idx) => (
           <img
@@ -114,7 +109,14 @@ export const Home = () => {
         ))}
         <div
           className="hero-overlay"
-          style={{ background: `rgba(0,0,0,${overlayOpacity})` }}
+          style={{
+            background: `linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, ${Math.min(overlayOpacity + 0.3, 1)}) 0%,
+              rgba(0, 0, 0, ${overlayOpacity}) 50%,
+              rgba(0, 0, 0, ${Math.max(overlayOpacity - 0.2, 0)}) 100%
+            )`
+          }}
         />
         <div className="hs-greeting" aria-live="polite">
           <h1>{current.title}</h1>

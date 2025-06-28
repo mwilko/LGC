@@ -119,6 +119,14 @@
   text-align: center;
 }
 
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline; /* Optional: add underline on hover */
+}
+
 @media (min-width: 768px) {
   .footer-content {
     grid-template-columns: repeat(3, 1fr);

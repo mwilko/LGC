@@ -3,6 +3,7 @@ import lgcTrans from 'assets/images/lgc_logo_new_trans.png';
 import { ReactComponent as Facebook } from 'assets/icons/facebook.svg';
 import { ReactComponent as Instagram } from 'assets/icons/instagram.svg';
 import { ReactComponent as LinkedIn } from 'assets/icons/linkedin.svg';
+import { ReactComponent as X } from 'assets/icons/x_social.svg';
 import './Footer.css';
 
 export const Footer = () => {
@@ -29,9 +30,9 @@ export const Footer = () => {
 
           <div className="footer-contact">
             <h3 className="footer-heading">Contact Us</h3>
-            <p>Steyning Farm, Steyning Lane, Boston PE20 3NQ</p>
-            <p>orders@lincolnshiregame.co.uk</p>
-            <p>(+44) 01205 822882</p>
+            <p>Steyning Farm, Steyning Lane, Boston, Lincolnshire, PE20 3NQ, United Kingdom</p>
+            <a href="mailto:orders@lincolnshiregame.co.uk" className="footer-link">orders@lincolnshiregame.co.uk</a>
+            <p>(+44) 1205 822882</p>
           </div>
         </div>
 
@@ -42,6 +43,9 @@ export const Footer = () => {
             </a>
             <a href="https://www.instagram.com/thelincolnshiregamecompany/" target="_blank" rel="noopener noreferrer">
               <Instagram className="social-icon" />
+            </a>
+            <a href="https://x.com/lincsgameltd" target="_blank" rel="noopener noreferrer">
+              <X className="social-icon" />
             </a>
             <a href="https://www.linkedin.com/in/tristan-kirk-ba44612/" target="_blank" rel="noopener noreferrer">
               <LinkedIn className="social-icon" />

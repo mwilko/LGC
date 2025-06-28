@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 // Images
-import aboutUsImg from '../../assets/images/sim_and_t.jpg';
+import aboutUsImg from '../../assets/images/showcase_game_fair.jpg';
 import './AboutUs.css';
 
 export const AboutUs = () => {
