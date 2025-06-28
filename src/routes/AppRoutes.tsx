@@ -8,6 +8,9 @@ import { ProductDetailContainer } from 'views/product/ProductDetailContainer';
 import { Contact } from 'views/contact/Contact';
 import { AboutUs } from 'views/aboutUs/AboutUs';
 import { Awards } from 'views/awards/Awards';
+import { Partnerships } from 'views/partnerships/Partnerships';
+import { Blogs } from 'views/blogs/Blogs';
+import { Sponsors } from 'views/sponsors/Sponsors';
 // import { Billing } from 'views/billing/Billing';
 // import { Cart } from 'views/cart/Cart';
 
@@ -22,6 +25,9 @@ export const AppRoutes = () => {
             <Route path='/contact' element={<Contact />} />
             <Route path='/about-us' element={<AboutUs />} />
             <Route path='/awards' element={<Awards />} />
+            <Route path='/partnerships' element={<Partnerships />} />
+            <Route path='/blogs' element={<Blogs />} />
+            <Route path='/sponsors' element={<Sponsors />} />
             {/* Any unknown path will be redirected to home page */}
             <Route path='*' element={<Navigate to='/' />} />
         </Routes>

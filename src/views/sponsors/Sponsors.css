@@ -1,0 +1,95 @@
+.sponsorships-page {
+  background: #111;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 4rem;
+}
+
+.sponsorships-hero {
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+  background-color: #000;
+  border-bottom: 1px solid #333;
+}
+
+.sponsorships-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.sponsorships-hero p {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.sponsor-logos img {
+  max-width: 140px;
+  height: auto;
+  /* filter: brightness(0) invert(1); */
+  opacity: 0.85;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.sponsor-values {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .sponsor-values {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.value-item h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.value-item p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.sponsorships-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.button {
+  background-color: #222;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #333;
+  color: #facc15;
+}
