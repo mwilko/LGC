@@ -14,36 +14,39 @@ export const Sponsors = () => {
       <header className="sponsorships-hero">
         <h1>Who We Sponsor</h1>
         <p>
-          Lincolnshire Game is proud to sponsor local organisations, conservation groups, and causes that share our values.
-          From food education to wildlife protection, we believe in giving back.
+          Lincolnshire Game proudly supports events and organisations that share our values — 
+          including sustainable field sports, education, and community heritage.
         </p>
       </header>
 
-      <section className="sponsor-logos">
-        <img src={sponsor1} alt="Sponsored Group 1" />
-        <img src={sponsor2} alt="Sponsored Group 2" />
-        <img src={sponsor3} alt="Sponsored Group 3" />
-        {/* Add more sponsor logos */}
-      </section>
+      <section className="sponsor-grid">
+        <div className="sponsor-card">
+          <img src={sponsor1} alt="Lincolnshire Game Fair" />
+          <h3>Lincolnshire Game Fair</h3>
+          <p>We support this flagship event promoting rural traditions and ethical countryside sports.</p>
+          <a href="https://example.com/lincolnshire-game-fair" target="_blank" rel="noopener noreferrer">
+            Visit Site →
+          </a>
+        </div>
 
-      <section className="sponsor-values">
-        <div className="value-item">
-          <h3>Education</h3>
-          <p>We support programs that teach sustainable food sourcing and ethical game handling.</p>
+        <div className="sponsor-card">
+          <img src={sponsor2} alt="Showcase Game Fair" />
+          <h3>Showcase Game Fair</h3>
+          <p>Our sponsorship helps inspire younger audiences through wild game demos and education.</p>
+          <a href="https://example.com/showcase-fair" target="_blank" rel="noopener noreferrer">
+            Visit Site →
+          </a>
         </div>
-        <div className="value-item">
-          <h3>Conservation</h3>
-          <p>Partnering with wildlife trusts and conservation bodies to protect natural habitats.</p>
-        </div>
-        <div className="value-item">
-          <h3>Community</h3>
-          <p>Backing local events, rural charities, and youth development through sport and fieldcraft.</p>
+
+        <div className="sponsor-card">
+          <img src={sponsor3} alt="Simulated Training Days" />
+          <h3>Simulated Shoot Days</h3>
+          <p>We fund responsible fieldcraft training through simulated shoots across the region.</p>
+          <a href="https://example.com/simulated-training" target="_blank" rel="noopener noreferrer">
+            Visit Site →
+          </a>
         </div>
       </section>
-
-      <div className="sponsorships-cta">
-        <a href="/contact" className="button">Request Sponsorship</a>
-      </div>
     </div>
   );
 };
