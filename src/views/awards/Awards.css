@@ -4,10 +4,21 @@
 }
 
 .awards-hero {
-  /* background: url('/path/to/your/hero-image.jpg') center/cover no-repeat; */
-  padding: 4rem 1rem;
+  position: relative;
+  padding: 4rem 1rem 2rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-bottom: 1px solid #333;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../../assets/images/Sausages.jpg') center/cover no-repeat;
+  z-index: 1;
+}
+
+.awards-hero h1,
+.awards-hero p {
+  position: relative;
+  z-index: 2;
 }
 
 .awards-hero h1 {

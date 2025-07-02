@@ -156,6 +156,13 @@
   padding: 6em 1em;
 }
 
+.about-us-section .section-info p,
+.achievements-section .section-info p,
+.partnerships-page .partnership-benefits p {
+  font-weight: 400; /* Or 300 for lighter */
+}
+
+
 .about-us-section .section-image {
   max-width: 400px;
   width: 100%;

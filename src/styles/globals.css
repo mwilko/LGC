@@ -7,12 +7,17 @@
 } */
 
 /* 2. Global styles */
+:root {
+  --mainFont: "Lora", Georgia, serif;
+}
+
 body {
   margin: 0;
   font-family: var(--mainFont, Arial, sans-serif);
   background-color: var(--mainBackground, #fff);
   overflow-x: hidden;
   letter-spacing: 0.1px; /* moved from * to body for better performance */
+  font-weight: normal;
 }
 
 img {

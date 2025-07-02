@@ -1,15 +1,25 @@
 .partnerships-page {
   background: #111;
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
   padding-bottom: 4rem;
 }
 
 .partnerships-hero {
+  position: relative;
   padding: 4rem 1rem 2rem;
   text-align: center;
-  background-color: #000;
+  color: #fff;
   border-bottom: 1px solid #333;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../../assets/images/Burgers\ \ Paprika\ and\ \ Garlic.jpg') center/cover no-repeat;
+  z-index: 1;
+}
+
+.partnerships-hero h1,
+.partnerships-hero p {
+  position: relative;
+  z-index: 2;
 }
 
 .partnerships-hero h1 {

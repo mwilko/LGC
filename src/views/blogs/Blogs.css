@@ -2,14 +2,24 @@
   background: #111;
   color: #fff;
   padding-bottom: 4rem;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .blogs-hero {
+  position: relative;
   padding: 4rem 1rem 2rem;
   text-align: center;
-  background-color: #000;
+  color: #fff;
   border-bottom: 1px solid #333;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../../assets/images/Venison\ Steaks.jpg') center/cover no-repeat;
+  z-index: 1;
+}
+
+.blogs-hero h1,
+.blogs-hero p {
+  position: relative;
+  z-index: 2;
 }
 
 .blogs-hero h1 {
