@@ -19,25 +19,32 @@ export const Partnerships = () => {
         </p>
       </header>
 
-      <section className="partners-logos">
-        <img src={partner1} alt="Partner 1" />
-        <img src={partner2} alt="Partner 2" />
-        <img src={partner3} alt="Partner 3" />
-        {/* Add more as needed */}
-      </section>
+      <section className="partners-list">
+        <div className="partner-item">
+          <img src={partner1} alt="Partner One" />
+          <div className="partner-content">
+            <h3>Partner One</h3>
+            <p>Partner One is a leader in sustainable food production, committed to quality and ethical sourcing.</p>
+            <a href="https://example.com/partner1" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
+          </div>
+        </div>
 
-      <section className="partnership-benefits">
-        <div className="benefit-item">
-          <h3>Trusted Quality</h3>
-          <p>Our partners know they can rely on our commitment to excellence in every product.</p>
+        <div className="partner-item">
+          <img src={partner2} alt="Partner Two" />
+          <div className="partner-content">
+            <h3>Partner Two</h3>
+            <p>Partner Two supports local communities by promoting traditional game hunting and responsible fieldcraft.</p>
+            <a href="https://example.com/partner2" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
+          </div>
         </div>
-        <div className="benefit-item">
-          <h3>Ethical Sourcing</h3>
-          <p>We uphold the highest standards in traceability and sustainable hunting practices.</p>
-        </div>
-        <div className="benefit-item">
-          <h3>National Reach</h3>
-          <p>From local butchers to national retailers, we deliver across the UK with care and speed.</p>
+
+        <div className="partner-item">
+          <img src={partner3} alt="Partner Three" />
+          <div className="partner-content">
+            <h3>Partner Three</h3>
+            <p>Partner Three provides nationwide distribution ensuring fresh, traceable products reach customers fast.</p>
+            <a href="https://example.com/partner3" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
+          </div>
         </div>
       </section>
 

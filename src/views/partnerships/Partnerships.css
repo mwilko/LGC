@@ -36,52 +36,73 @@
   color: #ccc;
 }
 
-.partners-logos {
+.partners-list {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-.partners-logos img {
-  max-width: 140px;
+.partner-item {
+  display: flex;
+  gap: 2rem;
+  background: #1a1a1a;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.partner-item:hover {
+  background-color: #272727;
+}
+
+.partner-item img {
+  width: 280px;  /* doubled size */
   height: auto;
-  filter: brightness(0) invert(1); /* Optional for white-on-black logos */
-  opacity: 0.9;
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.partners-logos img:hover {
-  transform: scale(1.05);
-  opacity: 1;
+.partner-content {
+  flex: 1;
 }
 
-.partnership-benefits {
-  display: grid;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .partnership-benefits {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.benefit-item h3 {
-  font-size: 1.4rem;
+.partner-content h3 {
+  font-size: 1.6rem;
   color: #fff;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
-.benefit-item p {
-  color: #ccc;
-  line-height: 1.6;
+.partner-content p {
   font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Styled hyperlink replacing button */
+.button-link {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.button-link:hover {
+  color: #d4a72c;  /* yellow hover */
+  text-decoration: underline;
 }
 
 .partnerships-cta {
@@ -97,8 +118,21 @@
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  display: inline-block;
 }
 
 .button:hover {
   background-color: #333;
+}
+
+@media (max-width: 700px) {
+  .partner-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .partner-item img {
+    margin-bottom: 1rem;
+  }
 }

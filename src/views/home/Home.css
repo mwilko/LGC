@@ -86,10 +86,9 @@
   display: flex;
   gap: 0.6em;
   padding: 0.5em 1em;
-  background: rgba(255, 255, 255, 0.4);
-  background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 999px;
-  backdrop-filter: blur(4px); /* softens image behind */
+  backdrop-filter: blur(4px);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
@@ -105,7 +104,7 @@
 }
 
 .hero-dot.active {
-  background: var(--primary); /* or use a color like '#FF9900' */
+  background: var(--primary);
   transform: scale(1.2);
   box-shadow: 0 0 6px var(--primary);
 }
@@ -118,10 +117,12 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 @keyframes slideUp {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
 @keyframes popIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
@@ -159,9 +160,8 @@
 .about-us-section .section-info p,
 .achievements-section .section-info p,
 .partnerships-page .partnership-benefits p {
-  font-weight: 400; /* Or 300 for lighter */
+  font-weight: 400;
 }
-
 
 .about-us-section .section-image {
   max-width: 400px;
@@ -169,7 +169,6 @@
   margin: 0 auto;
 }
 
-/* Headings (left aligned) */
 .section-info h2 {
   font-weight: 300;
   text-transform: uppercase;
@@ -179,7 +178,6 @@
   margin-bottom: 0.5em;
 }
 
-/* Paragraphs (left aligned, constrained) */
 .about-us-section .section-info p,
 .achievements-section .section-info p {
   text-align: left;
@@ -190,7 +188,6 @@
   font-size: 0.95rem;
 }
 
-/* Buttons (shrink-wrap + centered) */
 .about-us-section .section-info .button,
 .achievements-section .section-info .button {
   display: inline-block;
@@ -274,11 +271,15 @@
   color: var(--white-100);
 }
 
+.bs-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
 .bs-btn {
   display: block;
-  margin: 4em auto 0;
-  max-width: 260px;
-  text-align: center;
+  margin-top: 1em auto 0 auto;
 }
 
 /* ==========================================================================
@@ -288,12 +289,15 @@
   .section-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .features-grid {
     gap: 6em;
   }
+
   .testimonials-grid {
     flex-direction: row;
   }
+
   .testimonials-grid blockquote {
     flex: 1;
   }

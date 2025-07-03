@@ -92,8 +92,9 @@
 .blog-card a {
   text-decoration: none;
   font-weight: 600;
-  color: #fff;
+  color: #fff; /* white */
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .blog-card a:hover {

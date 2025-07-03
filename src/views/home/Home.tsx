@@ -199,9 +199,9 @@ export const Home = () => {
           <h2>Our Signature Meats</h2>
         </div>
         <ItemListContainer category="venison" limit />
-        <Link className="button bs-btn" to="/shop/all">
-          View All Meats
-        </Link>
+        <div className="bs-cta">
+          <Link to="/shop/all" className="button bs-btn">View All Meats</Link>
+        </div>
       </section>
 
       <section className="testimonials-section" aria-labelledby="testimonials-heading">
