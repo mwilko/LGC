@@ -135,3 +135,30 @@
   margin: 0.5rem 0 0; /* Optional: adjust spacing */
   text-transform: uppercase; /* Optional: uppercase for emphasis */
 }
+
+@media (max-width: 767px) {
+  .features-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+  }
+
+  .feature-item {
+    flex: 1 1 auto;
+    min-width: 80px;
+    max-width: 120px;
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .feature-item h3 {
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+  }
+}
