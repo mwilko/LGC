@@ -157,6 +157,9 @@ export const Home = () => {
 
       </section>
 
+    <section className="about-achievements-wrapper">
+      <div className="grey-overlay"></div>
+
       <section
         ref={aboutUs}
         className="about-us-section"
@@ -186,8 +189,6 @@ export const Home = () => {
         </div>
       </section>
 
-      <hr className="section-separator" />
-
       <section
         className="achievements-section"
         id="achievements"
@@ -214,6 +215,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
+    </section>
 
       <section className="bestsellers-section">
         <div className="bs-title">
