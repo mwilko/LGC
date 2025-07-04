@@ -134,6 +134,27 @@ export const Home = () => {
             />
           ))}
         </div>
+
+        <button
+          className="hero-arrow left"
+          onClick={() => setSlideIndex((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
+          aria-label="Previous Slide"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+
+        <button
+          className="hero-arrow right"
+          onClick={() => setSlideIndex((prev) => (prev + 1) % heroSlides.length)}
+          aria-label="Next Slide"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+
       </section>
 
       <section

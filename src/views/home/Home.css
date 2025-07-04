@@ -28,6 +28,42 @@
   opacity: 1;
 }
 
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.35);
+  border: none;
+  padding: 0.6em;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.hero-arrow svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  stroke: white;
+}
+
+.hero-arrow.left {
+  left: 2.5rem;
+}
+
+.hero-arrow.right {
+  right: 2.5rem;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
