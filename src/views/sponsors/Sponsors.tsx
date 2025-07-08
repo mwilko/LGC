@@ -21,10 +21,10 @@ export const Sponsors = () => {
 
       <section className="sponsor-grid">
         <div className="sponsor-card">
-          <img src={sponsor1} alt="Lincolnshire Game Fair" />
+          <img src={sponsor1} alt="The Game Fair" />
           <h3>Lincolnshire Game Fair</h3>
-          <p>We support this flagship event promoting rural traditions and ethical countryside sports.</p>
-          <a href="https://example.com/lincolnshire-game-fair" target="_blank" rel="noopener noreferrer">
+          <p>We support and hold</p>
+          <a href="https://thegamefair.org/" target="_blank" rel="noopener noreferrer">
             Visit Site →
           </a>
         </div>
