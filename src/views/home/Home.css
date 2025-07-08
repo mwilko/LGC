@@ -1,5 +1,5 @@
-/* ==========================================================================
-   HERO / CAROUSEL
+/* ==========================================================================  
+   HERO / CAROUSEL  
    ========================================================================== */
 .hero-section {
   width: 100%;
@@ -164,8 +164,8 @@
   to { transform: scale(1); opacity: 1; }
 }
 
-/* ==========================================================================
-   SECTION GRID BASE
+/* ==========================================================================  
+   SECTION GRID BASE  
    ========================================================================== */
 .section-grid {
   display: grid;
@@ -184,20 +184,23 @@
   object-fit: cover;
 }
 
-/* ==========================================================================
-   ABOUT / ACHIEVEMENTS / TESTIMONIALS
+/* ==========================================================================  
+   ABOUT / ACHIEVEMENTS / TESTIMONIALS  
    ========================================================================== */
-/* .about-achievements-wrapper {
+.about-achievements-wrapper {
   position: relative;
-  background-image: url('../../assets/images/british-landscape.jpeg'); /* or another shared background */
-  /* background-size: cover;
+  background-image: url('../../assets/images/wood-background.jpg');
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   z-index: 0;
   padding: 6em 0;
-} */ 
 
-/* .about-achievements-wrapper > section {
+  /* ✨ ADDED for fade effect ✨ */
+  transition: opacity 0.6s ease;
+}
+
+.about-achievements-wrapper > section {
   position: relative;
   z-index: 2;
 }
@@ -206,9 +209,22 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8); /* greyish overlay */
-  /* z-index: 1; */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 
+.section-grid-box {
+  background: rgba(0, 0, 0, 0.4); /* dark translucent */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 3em 2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 2em auto;
+  width: 90%;
+  max-width: 1100px;
+  border: 1px solid rgba(255, 255, 255, 0.08); /* subtle white border */
+}
 
 .about-us-section,
 .achievements-section,
@@ -256,8 +272,8 @@
   margin-top: 1.5em;
 }
 
-/* ==========================================================================
-   ACHIEVEMENTS
+/* ==========================================================================  
+   ACHIEVEMENTS  
    ========================================================================== */
 .achievements-btn {
   margin-top: 1em;
@@ -275,8 +291,8 @@
   border-radius: 8px;
 }
 
-/* ==========================================================================
-   TESTIMONIALS
+/* ==========================================================================  
+   TESTIMONIALS  
    ========================================================================== */
 .testimonials-section {
   background: var(--black-75);
@@ -306,16 +322,16 @@
   text-align: right;
 }
 
-/* ==========================================================================
-   BESTSELLERS
+/* ==========================================================================  
+   BESTSELLERS  
    ========================================================================== */
 .bestsellers-section {
   padding: 4em 1em;
   background: linear-gradient(
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)
-    ),
-    url('../../assets/images/british-landscape.jpeg');
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url('../../assets/images/british-landscape.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -341,8 +357,22 @@
   margin-top: 1em auto 0 auto;
 }
 
-/* ==========================================================================
-   RESPONSIVE
+/* ==========================================================================  
+   ANIMATIONS ADDED  
+   ========================================================================== */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 1.6s ease, transform 1.6s ease; /* transform {time} */
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ==========================================================================  
+   RESPONSIVE  
    ========================================================================== */
 @media (min-width: 768px) {
   .section-grid {
