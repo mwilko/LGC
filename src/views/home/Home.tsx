@@ -217,6 +217,7 @@ export const Home = () => {
         ref={sectionWrapperRef}
         style={{ opacity: sectionOpacity, transition: 'opacity 0.6s ease' }}
       >
+        <div className='grey-overlay'></div>
         <section
           ref={aboutUs}
           className="about-us-section"

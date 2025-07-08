@@ -194,9 +194,9 @@
   background-position: center;
   background-attachment: fixed;
   z-index: 0;
-  padding: 6em 0;
+  padding: 2em 0;
 
-  /* ✨ ADDED for fade effect ✨ */
+  /* ADDED for fade effect */
   transition: opacity 0.6s ease;
 }
 
@@ -229,7 +229,7 @@
 .about-us-section,
 .achievements-section,
 .testimonials-section {
-  padding: 6em 1em;
+  padding: 3em 1em;
 }
 
 .about-us-section .section-info p,
