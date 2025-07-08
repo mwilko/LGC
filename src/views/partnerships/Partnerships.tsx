@@ -21,11 +21,11 @@ export const Partnerships = () => {
 
       <section className="partners-list">
         <div className="partner-item">
-          <img src={partner1} alt="Partner One" />
+          <img src={partner1} alt="Jose Soto" />
           <div className="partner-content">
-            <h3>Partner One</h3>
-            <p>Partner One is a leader in sustainable food production, committed to quality and ethical sourcing.</p>
-            <a href="https://example.com/partner1" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
+            <h3>Jose Luis Souto</h3>
+            <p>As Senior Chef Lecturer of Westminister Kingsway College, we work closly with Jose and he is a proud promoter of our produce at Lincolnshire Game.</p>
+            <a href="https://www.waterstones.com/author/jose-souto/3973804" target="_blank" rel="noopener noreferrer" className="button-link">The Game Larder Book</a>
           </div>
         </div>
 

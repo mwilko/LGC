@@ -22,8 +22,8 @@ export const Sponsors = () => {
       <section className="sponsor-grid">
         <div className="sponsor-card">
           <img src={sponsor1} alt="The Game Fair" />
-          <h3>Lincolnshire Game Fair</h3>
-          <p>We support and hold</p>
+          <h3>The Game Fair</h3>
+          <p>We regularly support the anual Game Fair event. </p>
           <a href="https://thegamefair.org/" target="_blank" rel="noopener noreferrer">
             Visit Site →
           </a>
