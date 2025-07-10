@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './Partnerships.css';
-import partner1 from 'assets/images/avacado_dish.jpg';
-import partner2 from 'assets/images/pheasant_dish.png';
+import jose from 'assets/images/jose_partner.png';
+import altas from 'assets/images/altas_quintas_pfp.jpg';
 import partner3 from 'assets/images/sim_t_game_fair.jpg';
 
 export const Partnerships = () => {
@@ -21,29 +21,25 @@ export const Partnerships = () => {
 
       <section className="partners-list">
         <div className="partner-item">
-          <img src={partner1} alt="Jose Soto" />
+          <img src={jose} alt="Jose Souto" />
           <div className="partner-content">
             <h3>Jose Luis Souto</h3>
-            <p>As Senior Chef Lecturer of Westminister Kingsway College, we work closly with Jose and he is a proud promoter of our produce at Lincolnshire Game.</p>
-            <a href="https://www.waterstones.com/author/jose-souto/3973804" target="_blank" rel="noopener noreferrer" className="button-link">The Game Larder Book</a>
+            <p>As Senior Chef Lecturer of Westminister Kingsway College, we work closly with Jose and he is a proud promoter of our produce at Lincolnshire Game.<br /><br /> 
+              Jose is also the author of <strong>The Game Larder Books</strong> in collaboration with us, which showcases everything game.
+            </p>
+            <a href="https://www.waterstones.com/author/jose-souto/3973804" target="_blank" rel="noopener noreferrer" className="button-link">Vist Jose's Books</a>
           </div>
         </div>
 
         <div className="partner-item">
-          <img src={partner2} alt="Partner Two" />
+          <img src={altas} alt="Altas Quintas" />
           <div className="partner-content">
-            <h3>Partner Two</h3>
-            <p>Partner Two supports local communities by promoting traditional game hunting and responsible fieldcraft.</p>
-            <a href="https://example.com/partner2" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
-          </div>
-        </div>
-
-        <div className="partner-item">
-          <img src={partner3} alt="Partner Three" />
-          <div className="partner-content">
-            <h3>Partner Three</h3>
-            <p>Partner Three provides nationwide distribution ensuring fresh, traceable products reach customers fast.</p>
-            <a href="https://example.com/partner3" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
+            <h3>Altas Quintas</h3>
+            <p>
+              Altas Quintas crafts high-altitude wines from Portugal’s Serra de São Mamede, bringing refined structure and bold character to the table—qualities that align perfectly with our game at Lincolnshire Game.<br /><br />
+              Our partnership celebrates the harmony between wild-sourced British produce and sustainably made Portuguese wine, regularly featured in our tastings and chef collaborations.
+            </p>
+            <a href="https://altasquintas.com/" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
           </div>
         </div>
       </section>
