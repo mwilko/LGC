@@ -119,6 +119,32 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
+/* Hover lift effect */
+.partner-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  background: linear-gradient(135deg, rgba(31, 31, 31, 0.95), rgba(20, 20, 20, 0.95));
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.partner-item img {
+  width: 280px;
+  height: auto;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  
+  /* Image hover scale effect */
+  position: relative;
+}
+
+.partner-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
 .partner-content {
   flex: 1;
   position: relative;
