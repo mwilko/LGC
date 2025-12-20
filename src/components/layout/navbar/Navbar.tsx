@@ -43,6 +43,7 @@ export const NavBar = () => {
             <Link className="navbar-link" to='/'>Home</Link>
             <Link className="navbar-link" to='/shop/all'>Shop</Link>
             <Link className="navbar-link" to='/about-us'>About</Link>
+            <Link className="navbar-link" to='/contact'>Contact</Link>
 
             <div 
               className="dropdown-container"
@@ -91,11 +92,13 @@ export const NavBar = () => {
         </div>
 
         {/* Mobile Navigation */}
+        {/* Mobile Navigation */}
         <div className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
           <div className="mobile-nav-content">
             <Link className="mobile-nav-link" to='/' onClick={closeMenu}>Home</Link>
             <Link className="mobile-nav-link" to='/shop/all' onClick={closeMenu}>Shop</Link>
             <Link className="mobile-nav-link" to='/about-us' onClick={closeMenu}>About</Link>
+            <Link className="mobile-nav-link" to='/contact' onClick={closeMenu}>Contact</Link>
             
             <div className="mobile-dropdown">
               <button 
