@@ -12,39 +12,80 @@ export const Sponsors = () => {
   return (
     <div className="sponsorships-page">
       <header className="sponsorships-hero">
-        <h1>Who We Sponsor</h1>
-        <p>
-          Lincolnshire Game proudly supports events and organisations that share our values — 
-          including sustainable field sports, education, and community heritage.
-        </p>
+        <div className="hero-content">
+          <h1>Strategic Partnerships & Sponsorships</h1>
+          <p className="hero-subtitle">
+            Lincolnshire Game proudly partners with events and organisations that share our core values—
+            sustainable field sports, heritage conservation, and community education.
+          </p>
+          <div className="hero-accent"></div>
+        </div>
       </header>
 
       <section className="sponsor-grid">
         <div className="sponsor-card">
-          <img src={sponsor1} alt="The Game Fair" />
+          <div className="sponsor-badge">Annual Partner</div>
+          <div className="sponsor-image-wrapper">
+            <img src={sponsor1} alt="The Game Fair" />
+          </div>
           <h3>The Game Fair</h3>
-          <p>We regularly support the anual Game Fair event. </p>
-          <a href="https://thegamefair.org/" target="_blank" rel="noopener noreferrer">
-            Visit Site →
+          <p className="sponsor-description">
+            Britain's premier field sports event, bringing together enthusiasts, professionals, and families to celebrate country life and sustainable land management.
+          </p>
+          <ul className="sponsor-highlights">
+            <li>Annual sponsorship</li>
+            <li>Product showcase</li>
+            <li>Community engagement</li>
+          </ul>
+          <a href="https://thegamefair.org/" target="_blank" rel="noopener noreferrer" className="sponsor-link">
+            Learn More →
           </a>
         </div>
 
         <div className="sponsor-card">
-          <img src={sponsor2} alt="Showcase Game Fair" />
+          <div className="sponsor-badge">Educational Initiative</div>
+          <div className="sponsor-image-wrapper">
+            <img src={sponsor2} alt="Showcase Game Fair" />
+          </div>
           <h3>Showcase Game Fair</h3>
-          <p>Our sponsorship helps inspire younger audiences through wild game demos and education.</p>
-          <a href="https://example.com/showcase-fair" target="_blank" rel="noopener noreferrer">
-            Visit Site →
+          <p className="sponsor-description">
+            An innovative platform inspiring younger audiences through interactive wild game demonstrations, culinary workshops, and field sports education.
+          </p>
+          <ul className="sponsor-highlights">
+            <li>Youth engagement</li>
+            <li>Educational demos</li>
+            <li>Culinary showcases</li>
+          </ul>
+          <a href="https://example.com/showcase-fair" target="_blank" rel="noopener noreferrer" className="sponsor-link">
+            Learn More →
           </a>
         </div>
 
         <div className="sponsor-card">
-          <img src={sponsor3} alt="Simulated Training Days" />
+          <div className="sponsor-badge">Training Support</div>
+          <div className="sponsor-image-wrapper">
+            <img src={sponsor3} alt="Simulated Training Days" />
+          </div>
           <h3>Simulated Shoot Days</h3>
-          <p>We fund responsible fieldcraft training through simulated shoots across the region.</p>
-          <a href="https://example.com/simulated-training" target="_blank" rel="noopener noreferrer">
-            Visit Site →
+          <p className="sponsor-description">
+            Funding responsible fieldcraft training and professional development through premier simulated shooting experiences across the East Midlands.
+          </p>
+          <ul className="sponsor-highlights">
+            <li>Fieldcraft training</li>
+            <li>Professional development</li>
+            <li>Regional outreach</li>
+          </ul>
+          <a href="https://example.com/simulated-training" target="_blank" rel="noopener noreferrer" className="sponsor-link">
+            Learn More →
           </a>
+        </div>
+      </section>
+
+      <section className="sponsorship-cta">
+        <div className="cta-content">
+          <h2>Interested in Partnering With Us?</h2>
+          <p>We're always looking for like-minded organisations to collaborate with. Get in touch to discuss sponsorship opportunities.</p>
+          <a href="/contact" className="cta-button">Get In Touch</a>
         </div>
       </section>
     </div>
