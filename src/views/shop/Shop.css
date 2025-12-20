@@ -1,38 +1,65 @@
 .shop-banner {
-    background-image: url(../../assets/images/Venison\ Skewers\ -\ Garlic\ Paprika.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../../assets/images/Venison\ Skewers\ -\ Garlic\ Paprika.jpg) center/cover no-repeat;
     width: 100%;
-    padding: 5em 1em;
-    height: 3.5em;
+    padding: var(--space-2xl) 1em;
+    min-height: 180px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--viewLines);
+    overflow: hidden;
+}
+
+/* Decorative background lines */
+.shop-banner::before {
+  display: none;
+}
+
+.shop-banner::after {
+  display: none;
+}
+
+.shop-banner h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--white-100);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    animation: fadeInDown 0.8s ease-out;
+    position: relative;
+    z-index: 2;
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--accent-gold);
+    display: inline-block;
 }
 
 .shop-main {
-    background-color: var(--black-75);
-    padding: 2em;
-    margin-bottom: 4em;
+    background-color: var(--mainBackground);
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
 }
 
 .sm-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: var(--space-2xl);
     margin: auto;
-    margin-bottom: 2em;
+    margin-bottom: var(--space-2xl);
     max-width: 1680px;
 }
 
 .sm-header h1 {
     color: var(--white-50);
-    font-weight: 300;
+    font-weight: var(--fw-regular);
     text-transform: uppercase;
     width: 675px;
     text-align: center;
     letter-spacing: 1px;
-    font-size: 1.3rem;
+    font-size: var(--fs-lg);
+    transition: color var(--transition-base);
 }
 
 .smh-line {
@@ -42,41 +69,78 @@
     background-color: var(--viewLines);
 }
 
+/* ============================================================================
+   CATEGORY BUTTONS
+   ============================================================================ */
+
 .sm-cat-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2em;
-    margin-bottom: 4em;
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
 }
 
 .sm-cat {
+    position: relative;
     border: none;
     background-color: transparent;
     color: #696969;
-    font-size: 0.9rem;
-    transition: all 0.3s ease-out;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5em 0;
+    
+    transition: color var(--transition-base);
+    cursor: pointer;
+}
+
+/* Animated underline on hover and active */
+.sm-cat::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width var(--transition-base);
 }
 
 .sm-cat:hover {
     color: var(--white-50);
 }
 
+.sm-cat:hover::after {
+    width: 100%;
+}
+
+/* Active state (when selected) */
+.sm-cat[style*="color: var(--white-50)"]::after {
+    width: 100%;
+}
+
 .shop-legend {
     text-align: center;
     color: var(--white-50);
-    font-weight: 300;
+    font-weight: var(--fw-light);
     width: 75%;
     margin: auto;
-    margin-bottom: 2em;
-    font-size: 0.9rem;
+    margin-bottom: var(--space-2xl);
+    font-size: var(--fs-sm);
     max-width: 480px;
+    line-height: var(--lh-relaxed);
 }
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
 
 @media (min-width: 598px) {
     .sm-header h1 {
-        font-size: 1.6rem;
+        font-size: var(--fs-xl);
     }
 }
 

@@ -1,12 +1,12 @@
 .product-detail {
-    padding: 2em;
-    margin-bottom: 4em;
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
 }
 
 .product-detail-gotoshop {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: var(--space-lg);
     width: 100%;
     margin: auto;
     max-width: 800px;
@@ -15,27 +15,64 @@
 .gotoshop-btn {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: var(--space-sm);
     background-color: transparent;
     border: none;
     color: var(--white-50);
-    margin-left: 1.4em;
+    margin-left: var(--space-lg);
+    
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: var(--fs-sm);
+    
+    cursor: pointer;
+    transition: all var(--transition-base);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    position: relative;
+}
+
+.gotoshop-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width var(--transition-base);
+}
+
+.gotoshop-btn:hover {
+    color: var(--primary);
+    background: rgba(111, 128, 132, 0.1);
+}
+
+.gotoshop-btn:hover::before {
+  width: 100%;
 }
 
 .gotoshop-btn:hover .goback-icon,
 .gotoshop-btn:hover span {
-    color: var(--white-25);
+    color: var(--primary);
 }
 
 .gotoshop-btn .goback-icon {
     width: 22px;
-    transition: all 0.3s ease-out;
+    height: 22px;
+    transition: all var(--transition-base);
 }
 
 .gotoshop-btn span {
-    font-size: 1rem;
+    font-size: var(--fs-base);
     text-transform: uppercase;
-    transition: all 0.3s ease-out;
+    transition: all var(--transition-base);
+}
+
+.gotoshop-btn:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
 }
 
 @media (min-width: 598px) {

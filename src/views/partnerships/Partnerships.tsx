@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './Partnerships.css';
-import jose from 'assets/images/jose_partner.png';
-import altas from 'assets/images/altas_quintas_pfp.jpg';
+import partner1 from 'assets/images/jose_pfp.jpeg';
+import partner2 from 'assets/images/altas_quintas_pfp.jpg';
 import partner3 from 'assets/images/sim_t_game_fair.jpg';
 
 export const Partnerships = () => {
@@ -19,29 +19,35 @@ export const Partnerships = () => {
         </p>
       </header>
 
-      <section className="partners-list">
-        <div className="partner-item">
-          <img src={jose} alt="Jose Souto" />
+      <section className="partners-list" aria-label="Featured partnerships">
+        <article className="partner-item">
+          <img src={partner1} alt="Jose Soto - Senior Chef Lecturer at Westminster Kingsway College" loading="lazy" />
           <div className="partner-content">
             <h3>Jose Luis Souto</h3>
-            <p>As Senior Chef Lecturer of Westminister Kingsway College, we work closly with Jose and he is a proud promoter of our produce at Lincolnshire Game.<br /><br /> 
-              Jose is also the author of <strong>The Game Larder Books</strong> in collaboration with us, which showcases everything game.
-            </p>
-            <a href="https://www.waterstones.com/author/jose-souto/3973804" target="_blank" rel="noopener noreferrer" className="button-link">Vist Jose's Books</a>
+            <p>As Senior Chef Lecturer of Westminister Kingsway College, we work closly with Jose and he is a proud promoter of our produce at Lincolnshire Game.
+              <br/><br/>Jose is also the author of The Game Larder Books in collaboration with us, which showcases everything game.</p>
+            <a href="https://www.waterstones.com/author/jose-souto/3973804" target="_blank" rel="noopener noreferrer" className="button-link">The Game Larder Book</a>
           </div>
-        </div>
+        </article>
 
-        <div className="partner-item">
-          <img src={altas} alt="Altas Quintas" />
+        <article className="partner-item">
+          <img src={partner2} alt="Atlas Quintas - Finest Portuguese Wines" loading="lazy" />
           <div className="partner-content">
-            <h3>Altas Quintas</h3>
-            <p>
-              Altas Quintas crafts high-altitude wines from Portugal’s Serra de São Mamede, bringing refined structure and bold character to the table—qualities that align perfectly with our game at Lincolnshire Game.<br /><br />
-              Our partnership celebrates the harmony between wild-sourced British produce and sustainably made Portuguese wine, regularly featured in our tastings and chef collaborations.
-            </p>
-            <a href="https://altasquintas.com/" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
+            <h3>Atlas Quintas</h3>
+            <p>Altas Quintas crafts high-altitude wines from Portugal’s Serra de São Mamede, bringing refined structure and bold character to the table—qualities that align perfectly with our game at Lincolnshire Game.
+              <br/><br/>Our partnership celebrates the harmony between wild-sourced British produce and sustainably made Portuguese wine, regularly featured in our tastings and chef collaborations.</p>
+            <a href="https://example.com/partner2" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
           </div>
-        </div>
+        </article>
+
+        <article className="partner-item">
+          <img src={partner3} alt="Partner Three - National distribution of traceable products" loading="lazy" />
+          <div className="partner-content">
+            <h3>Partner Three</h3>
+            <p>Partner Three provides nationwide distribution ensuring fresh, traceable products reach customers fast.</p>
+            <a href="https://example.com/partner3" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
+          </div>
+        </article>
       </section>
 
       <div className="partnerships-cta">

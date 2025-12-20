@@ -13,18 +13,18 @@
   text-align: center;
 }
 
-.hero-section img.hero-bg-img {
+.hero-bg-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   opacity: 0;
   transition: opacity 2s ease;
   pointer-events: none;
+  z-index: 0;
 }
 
-.hero-section img.hero-bg-img.active {
+.hero-bg-img.active {
   opacity: 1;
 }
 
@@ -33,7 +33,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(255, 255, 255, 0.15);
   border: none;
   padding: 0.6em;
   border-radius: 999px;
@@ -45,7 +45,7 @@
 }
 
 .hero-arrow:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -92,40 +92,52 @@
   color: var(--white-100);
   font-weight: 400;
   font-size: clamp(2.8rem, 6vw, 4rem);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   margin: 0;
   animation: slideUp 1s ease-out;
 }
 
 .hsg-search-meats-btn {
-  font-size: 1.2rem;
+  font-size: var(--fs-lg);
   padding: 1em 2.5em;
   width: auto;
-  border-radius: 8px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
   animation: popIn 1s ease-out;
   background-color: var(--primary);
   color: var(--white-100);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: var(--shadow-dark);
+  transition: all var(--transition-base);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .hsg-search-meats-btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
   background-color: var(--primary-dark);
+  box-shadow: var(--shadow-lg);
+  color: var(--white-100);
+}
+
+.hsg-search-meats-btn:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
 }
 
 .hero-dots {
   position: absolute;
-  bottom: 2em;
+  bottom: var(--space-2xl);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 0.6em;
-  padding: 0.5em 1em;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   backdrop-filter: blur(4px);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-md);
   z-index: 2;
 }
 
@@ -136,13 +148,13 @@
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition-base);
 }
 
 .hero-dot.active {
   background: var(--primary);
   transform: scale(1.2);
-  box-shadow: 0 0 6px var(--primary);
+  box-shadow: 0 0 8px var(--primary);
 }
 
 .hero-dot:hover {
