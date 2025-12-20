@@ -16,11 +16,38 @@ export const Contact = () => {
             Prefer to give us a call? (+44) 1205 822882
           </p>
 
-          <form className="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" rows={6} required />
-            <button type="submit" className="button contact-submit-btn">Send Message</button>
+          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+            <div className="contact-form-group">
+              <input 
+                type="text" 
+                id="name"
+                placeholder="Your Name" 
+                required 
+              />
+              <label htmlFor="name">Your Name</label>
+            </div>
+
+            <div className="contact-form-group">
+              <input 
+                type="email" 
+                id="email"
+                placeholder="Your Email" 
+                required 
+              />
+              <label htmlFor="email">Your Email</label>
+            </div>
+
+            <div className="contact-form-group">
+              <textarea 
+                id="message"
+                placeholder="Your Message" 
+                rows={6} 
+                required 
+              />
+              <label htmlFor="message">Your Message</label>
+            </div>
+
+            <button type="submit" className="contact-submit-btn">Send Message</button>
           </form>
         </div>
       </div>

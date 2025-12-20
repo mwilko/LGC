@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './Partnerships.css';
-import partner1 from 'assets/images/avacado_dish.jpg';
-import partner2 from 'assets/images/pheasant_dish.png';
+import partner1 from 'assets/images/jose_pfp.jpeg';
+import partner2 from 'assets/images/altas_quintas_pfp.jpg';
 import partner3 from 'assets/images/sim_t_game_fair.jpg';
 
 export const Partnerships = () => {
@@ -19,33 +19,35 @@ export const Partnerships = () => {
         </p>
       </header>
 
-      <section className="partners-list">
-        <div className="partner-item">
-          <img src={partner1} alt="Jose Soto" />
+      <section className="partners-list" aria-label="Featured partnerships">
+        <article className="partner-item">
+          <img src={partner1} alt="Jose Soto - Senior Chef Lecturer at Westminster Kingsway College" loading="lazy" />
           <div className="partner-content">
             <h3>Jose Luis Souto</h3>
-            <p>As Senior Chef Lecturer of Westminister Kingsway College, we work closly with Jose and he is a proud promoter of our produce at Lincolnshire Game.</p>
+            <p>As Senior Chef Lecturer of Westminister Kingsway College, we work closly with Jose and he is a proud promoter of our produce at Lincolnshire Game.
+              <br/><br/>Jose is also the author of The Game Larder Books in collaboration with us, which showcases everything game.</p>
             <a href="https://www.waterstones.com/author/jose-souto/3973804" target="_blank" rel="noopener noreferrer" className="button-link">The Game Larder Book</a>
           </div>
-        </div>
+        </article>
 
-        <div className="partner-item">
-          <img src={partner2} alt="Partner Two" />
+        <article className="partner-item">
+          <img src={partner2} alt="Atlas Quintas - Finest Portuguese Wines" loading="lazy" />
           <div className="partner-content">
-            <h3>Partner Two</h3>
-            <p>Partner Two supports local communities by promoting traditional game hunting and responsible fieldcraft.</p>
+            <h3>Atlas Quintas</h3>
+            <p>Altas Quintas crafts high-altitude wines from Portugal’s Serra de São Mamede, bringing refined structure and bold character to the table—qualities that align perfectly with our game at Lincolnshire Game.
+              <br/><br/>Our partnership celebrates the harmony between wild-sourced British produce and sustainably made Portuguese wine, regularly featured in our tastings and chef collaborations.</p>
             <a href="https://example.com/partner2" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
           </div>
-        </div>
+        </article>
 
-        <div className="partner-item">
-          <img src={partner3} alt="Partner Three" />
+        <article className="partner-item">
+          <img src={partner3} alt="Partner Three - National distribution of traceable products" loading="lazy" />
           <div className="partner-content">
             <h3>Partner Three</h3>
             <p>Partner Three provides nationwide distribution ensuring fresh, traceable products reach customers fast.</p>
             <a href="https://example.com/partner3" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
           </div>
-        </div>
+        </article>
       </section>
 
       <div className="partnerships-cta">

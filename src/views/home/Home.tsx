@@ -155,11 +155,15 @@ export const Home = () => {
         tabIndex={-1}
       >
         {heroSlides.map((slide, idx) => (
-          <img
+          <div
             key={idx}
-            src={slide.image}
-            alt=""
             className={`hero-bg-img${idx === slideIndex ? ' active' : ''}`}
+            style={{
+              backgroundImage: `url("${slide.image}")`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
             aria-hidden="true"
           />
         ))}
