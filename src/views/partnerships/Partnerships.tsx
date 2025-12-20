@@ -36,7 +36,7 @@ export const Partnerships = () => {
             <h3>Atlas Quintas</h3>
             <p>Altas Quintas crafts high-altitude wines from Portugal’s Serra de São Mamede, bringing refined structure and bold character to the table—qualities that align perfectly with our game at Lincolnshire Game.
               <br/><br/>Our partnership celebrates the harmony between wild-sourced British produce and sustainably made Portuguese wine, regularly featured in our tastings and chef collaborations.</p>
-            <a href="https://example.com/partner2" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
+            <a href="https://altasquintas.com/" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
           </div>
         </article>
 
