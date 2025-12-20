@@ -92,7 +92,6 @@ export const NavBar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {/* Mobile Navigation */}
         <div className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
           <div className="mobile-nav-content">
             <Link className="mobile-nav-link" to='/' onClick={closeMenu}>Home</Link>

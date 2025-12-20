@@ -40,14 +40,14 @@ export const Partnerships = () => {
           </div>
         </article>
 
-        <article className="partner-item">
+        {/* <article className="partner-item">
           <img src={partner3} alt="Partner Three - National distribution of traceable products" loading="lazy" />
           <div className="partner-content">
             <h3>Partner Three</h3>
             <p>Partner Three provides nationwide distribution ensuring fresh, traceable products reach customers fast.</p>
             <a href="https://example.com/partner3" target="_blank" rel="noopener noreferrer" className="button-link">Visit Site</a>
           </div>
-        </article>
+        </article> */}
       </section>
 
       <div className="partnerships-cta">
