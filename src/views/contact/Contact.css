@@ -30,7 +30,7 @@
   box-shadow: var(--shadow-xl);
   
   position: relative;
-  z-index: 1; /* Reduced from 10 to allow hamburger menu (z-index: 1100) to appear on top */
+  z-index: 10;
   
   animation: slideUp 0.8s ease-out;
 }

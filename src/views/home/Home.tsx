@@ -288,7 +288,7 @@ export const Home = () => {
         </div>
         <ItemListContainer category="venison" limit />
         <div className="bs-cta">
-          <Link to="/shop/all" className="button bs-btn">View All Meats</Link>
+          <Link to="/shop/all" className="corporate-link">View All Products →</Link>
         </div>
       </section>
 
