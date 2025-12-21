@@ -1,3 +1,4 @@
+// Home.tsx - Complete File
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ItemListContainer } from 'components/common/itemListContainer/ItemListContainer';
@@ -10,7 +11,7 @@ import awardsAndApprovedImg from 'assets/images/awards_and_approved.png';
 import './Home.css';
 
 const testimonials = [
-  { text: 'Absolutely the best game meat I’ve ever tasted!', author: 'Chef Gordon' },
+  { text: "Absolutely the best game meat I've ever tasted!", author: 'Chef Gordon' },
   { text: 'Unbeatable quality and service.', author: 'Restaurant Owner, London' },
   { text: 'Fast delivery, delicious products!', author: 'Home Cook, York' },
 ];
@@ -18,16 +19,19 @@ const testimonials = [
 const heroSlides = [
   {
     title: "Lincolnshire Game",
+    subtitle: "Premium wild game, sustainably sourced",
     cta: { text: 'Explore Our Produce', link: '/shop/all' },
     image: heroImg1
   },
   {
     title: 'Sustainably Sourced & Traceable',
+    subtitle: "Every product tracked from field to table",
     cta: { text: 'Learn More', link: '/about-us' },
     image: heroImg2
   },
   {
     title: 'Award-Winning Excellence',
+    subtitle: "Recognised for exceptional quality",
     cta: { text: 'View Achievements', link: '/awards' },
     image: heroImg3
   }
@@ -38,16 +42,12 @@ export const Home = () => {
   const [overlayOpacity, setOverlayOpacity] = useState(0.6);
   const [isPaused, setIsPaused] = useState(false);
   const [sectionOpacity, setSectionOpacity] = useState(0);
-  const [aboutVisible, setAboutVisible] = useState(false);
-  const [achievementsVisible, setAchievementsVisible] = useState(false);
 
   const heroRef = useRef<HTMLDivElement>(null);
   const aboutUs = useRef<HTMLElement>(null);
   const location = useLocation();
   const intervalId = useRef<NodeJS.Timeout | null>(null);
   const sectionWrapperRef = useRef<HTMLDivElement>(null);
-  const aboutGridRef = useRef<HTMLDivElement>(null);
-  const achievementsGridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (location.hash === '#about-us') {
@@ -84,7 +84,6 @@ export const Home = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // === Fade in/out entire wrapper ===
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionWrapperRef.current) return;
@@ -92,15 +91,12 @@ export const Home = () => {
       const rect = sectionWrapperRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      const startFade = windowHeight * 0.3;
-      const endFade = windowHeight * 0.2;
-
       const fadeInDistance = rect.top;
       const fadeOutDistance = rect.bottom;
 
       let opacity = 0;
 
-      if (fadeInDistance < windowHeight && fadeOutDistance > endFade) {
+      if (fadeInDistance < windowHeight && fadeOutDistance > 0) {
         const visibleAmount = 1 - fadeInDistance / windowHeight;
         opacity = Math.min(Math.max(visibleAmount, 0), 1);
       }
@@ -112,26 +108,6 @@ export const Home = () => {
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // === Slide in .section-grid elements ===
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            if (entry.target === aboutGridRef.current) setAboutVisible(true);
-            if (entry.target === achievementsGridRef.current) setAchievementsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    if (aboutGridRef.current) observer.observe(aboutGridRef.current);
-    if (achievementsGridRef.current) observer.observe(achievementsGridRef.current);
-
-    return () => observer.disconnect();
   }, []);
 
   const handleMouseEnter = () => setIsPaused(true);
@@ -167,21 +143,15 @@ export const Home = () => {
             aria-hidden="true"
           />
         ))}
-        <div
-          className="hero-overlay"
-          style={{
-            background: `linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, ${Math.min(overlayOpacity + 0.3, 1)}) 0%,
-              rgba(0, 0, 0, ${overlayOpacity}) 50%,
-              rgba(0, 0, 0, ${Math.max(overlayOpacity - 0.2, 0)}) 100%
-            )`
-          }}
-        />
+        <div className="hero-overlay" />
         <div className="hs-greeting" aria-live="polite">
           <h1>{current.title}</h1>
-          <Link to={current.cta.link} className="button hsg-search-meats-btn">
+          <p className="hero-subtitle">{current.subtitle}</p>
+          <Link to={current.cta.link} className="hero-cta-link">
             {current.cta.text}
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1 8h14M9 2l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </Link>
         </div>
         <div className="hero-dots">
@@ -222,24 +192,18 @@ export const Home = () => {
         style={{ opacity: sectionOpacity, transition: 'opacity 0.6s ease' }}
       >
         <div className='grey-overlay'></div>
+        
+        {/* Corporate About Section */}
         <section
           ref={aboutUs}
           className="about-us-section"
           aria-labelledby="heritage-heading"
         >
-          <div className={`section-grid-box slide-in-left ${aboutVisible ? 'visible' : ''}`}>
-            <div
-              ref={aboutGridRef}
-              className={`section-grid slide-in-left ${aboutVisible ? 'visible' : ''}`}
-            >
-              <img
-                src={aboutUsImg}
-                alt="Our Owners in Lincolnshire"
-                loading="lazy"
-                className="section-image"
-              />
-              <div className="section-info">
+          <div className="corporate-container">
+            <div className="corporate-content-wrapper">
+              <div className="corporate-text-block">
                 <h2 id="heritage-heading">Our Heritage</h2>
+                <div className="corporate-divider"></div>
                 <p>
                   At The Lincolnshire Game Company, we are passionate about delivering
                   sustainably sourced, wild game of the highest quality.
@@ -248,41 +212,70 @@ export const Home = () => {
                   Since 2013, we've been a trusted name providing game meat that is
                   both delicious and ethically sourced.
                 </p>
-                <Link to="/about-us" className="button">
-                  Discover Our Story
+                <Link to="/about-us" className="corporate-link">
+                  Learn More About Us →
+                </Link>
+              </div>
+              <div className="corporate-image-block">
+                <img
+                  src={aboutUsImg}
+                  alt="Our Owners in Lincolnshire"
+                  loading="lazy"
+                  className="corporate-image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Corporate Achievements Section */}
+        <section
+          className="achievements-section"
+          id="achievements"
+          aria-labelledby="achievements-heading"
+        >
+          <div className="corporate-container">
+            <div className="corporate-content-wrapper reverse">
+              <div className="corporate-image-block">
+                <div className="awards-showcase">
+                  <img
+                    src={awardsAndApprovedImg}
+                    alt="Our awards"
+                    loading="lazy"
+                    className="corporate-image"
+                  />
+                </div>
+              </div>
+              <div className="corporate-text-block">
+                <h2 id="achievements-heading">Recognised for Excellence</h2>
+                <div className="corporate-divider"></div>
+                <p>
+                  We ensure exceptional taste and quality in every product we offer,
+                  recognised by top industry awards.
+                </p>
+                <Link to="/awards" className="corporate-link">
+                  View Our Achievements →
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        <section
-          className="achievements-section"
-          id="achievements"
-          aria-labelledby="achievements-heading"
-        >
-          <div className={`section-grid-box slide-in-left ${achievementsVisible ? 'visible' : ''}`}>
-            <div
-              ref={achievementsGridRef}
-              className={`section-grid slide-in-left ${achievementsVisible ? 'visible' : ''}`}
-            >
-              <div className="section-info">
-                <h2>Recognised for Excellence</h2>
-                <p>
-                  We ensure exceptional taste and quality in every product we offer,
-                  recognised by top industry awards.
-                </p>
-                <Link to="/awards" className="button achievements-btn">
-                  View Achievements
-                </Link>
+        {/* Corporate Stats Bar */}
+        <section className="corporate-stats">
+          <div className="corporate-container">
+            <div className="stats-grid">
+              <div className="stat-item">
+                <div className="stat-number">10+</div>
+                <div className="stat-label">Years of Excellence</div>
               </div>
-              <div className="awards-image-container">
-                <img
-                  src={awardsAndApprovedImg}
-                  alt="Our awards"
-                  loading="lazy"
-                  className="awards-image"
-                />
+              <div className="stat-item">
+                <div className="stat-number">100%</div>
+                <div className="stat-label">Sustainably Sourced</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">Award</div>
+                <div className="stat-label">Winning Quality</div>
               </div>
             </div>
           </div>

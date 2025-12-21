@@ -59,6 +59,7 @@ export const HamburguerMenuCanvas = ({ hamburguerMenuOpen, closeHamburguerMenu }
                 viewCategories ? {transform: 'translateX(-100vw)'} : {}
             }>
                 <Link className="navbar-link nbl-hm" to='/' onClick={ () => closeHamburguerMenu() }> Home </Link>
+                <Link className="navbar-link nbl-hm" to='/contact' onClick={ () => closeHamburguerMenu() }> Contact </Link>
                 <Link className="navbar-link nbl-hm" to='/about-us' onClick={ () => closeHamburguerMenu() }> About </Link>
                 <Link className="navbar-link nbl-hm" to='/shop/all' onClick={ () => closeHamburguerMenu() }> Shop </Link>
                 <button className="navbar-link nbl-hm nbl-hm-cat" onClick={ () => setViewCategories(true) }> More </button>

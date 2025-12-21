@@ -1,5 +1,5 @@
 /* ==========================================================================  
-   HERO / CAROUSEL  
+   HERO / CAROUSEL - ELEGANT DESIGN
    ========================================================================== */
 .hero-section {
   width: 100%;
@@ -22,10 +22,20 @@
   transition: opacity 2s ease;
   pointer-events: none;
   z-index: 0;
+  animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
 .hero-bg-img.active {
   opacity: 1;
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
 }
 
 .hero-arrow {
@@ -68,8 +78,37 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  transition: background 0.3s ease;
   z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+/* Animated gradient accent */
+.hero-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(241, 182, 71, 0.08) 0%,
+    transparent 60%
+  );
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
 }
 
 .hs-greeting {
@@ -84,46 +123,61 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5em;
+  gap: 1em;
   animation: fadeIn 1s ease-in;
 }
 
 .hs-greeting h1 {
   color: var(--white-100);
-  font-weight: 400;
-  font-size: clamp(2.8rem, 6vw, 4rem);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
   margin: 0;
   animation: slideUp 1s ease-out;
-}
-
-.hsg-search-meats-btn {
-  font-size: var(--fs-lg);
-  padding: 1em 2.5em;
-  width: auto;
-  border: 2px solid transparent;
-  border-radius: var(--radius-md);
-  animation: popIn 1s ease-out;
-  background-color: var(--primary);
-  color: var(--white-100);
-  box-shadow: var(--shadow-dark);
-  transition: all var(--transition-base);
-  font-weight: var(--fw-semibold);
+  letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 300;
   letter-spacing: 1px;
-  cursor: pointer;
+  margin: 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  animation: slideUp 1.2s ease-out;
 }
 
-.hsg-search-meats-btn:hover {
-  transform: translateY(-3px);
-  background-color: var(--primary-dark);
-  box-shadow: var(--shadow-lg);
-  color: var(--white-100);
+.hero-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  color: rgba(241, 182, 71, 0.95);
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.8em 0;
+  margin-top: 0.5em;
+  border-bottom: 2px solid rgba(241, 182, 71, 0.4);
+  transition: all 0.3s ease;
+  animation: popIn 1.4s ease-out;
+  text-decoration: none;
 }
 
-.hsg-search-meats-btn:focus-visible {
-  outline: 2px solid var(--accent-gold);
-  outline-offset: 2px;
+.hero-cta-link:hover {
+  color: rgba(241, 182, 71, 1);
+  border-bottom-color: rgba(241, 182, 71, 0.8);
+  transform: translateX(5px);
+  text-decoration: none;
+}
+
+.hero-cta-link svg {
+  transition: transform 0.3s ease;
+}
+
+.hero-cta-link:hover svg {
+  transform: translateX(3px);
 }
 
 .hero-dots {
@@ -177,27 +231,7 @@
 }
 
 /* ==========================================================================  
-   SECTION GRID BASE  
-   ========================================================================== */
-.section-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5em;
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  align-items: center;
-}
-
-.section-image {
-  max-width: 100%;
-  height: auto;  
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* ==========================================================================  
-   ABOUT / ACHIEVEMENTS / TESTIMONIALS  
+   ABOUT / ACHIEVEMENTS WRAPPER
    ========================================================================== */
 .about-achievements-wrapper {
   position: relative;
@@ -206,10 +240,8 @@
   background-position: center;
   background-attachment: fixed;
   z-index: 0;
-  padding: 2em 0;
-
-  /* ADDED for fade effect */
-  transition: opacity 0.2s ease;
+  padding: 5em 0;
+  transition: opacity 0.6s ease;
 }
 
 .about-achievements-wrapper > section {
@@ -221,86 +253,178 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    180deg,
+    rgba(11, 11, 11, 0.93) 0%,
+    rgba(11, 11, 11, 0.95) 100%
+  );
   z-index: 1;
 }
 
-.section-grid-box {
-  background: rgba(0, 0, 0, 0.4); /* dark translucent */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 12px;
-  padding: 3em 2em;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin: 2em auto;
-  width: 90%;
-  max-width: 1100px;
-  border: 1px solid rgba(255, 255, 255, 0.08); /* subtle white border */
-}
+/* ==========================================================================  
+   CORPORATE LAYOUT - ABOUT/ACHIEVEMENTS
+   ========================================================================== */
 
-.about-us-section,
-.achievements-section,
-.testimonials-section {
-  padding: 3em 1em;
-}
-
-.about-us-section .section-info p,
-.achievements-section .section-info p,
-.partnerships-page .partnership-benefits p {
-  font-weight: 400;
-}
-
-.about-us-section .section-image {
-  max-width: 400px;
-  width: 100%;
+/* Container for corporate sections */
+.corporate-container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2em;
 }
 
-.section-info h2 {
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  color: var(--white-50);
-  text-align: left;
-  margin-bottom: 0.5em;
+/* Content wrapper for side-by-side layout */
+.corporate-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  align-items: center;
+  padding: 4em 0;
+  border-bottom: 1px solid rgba(111, 128, 132, 0.15);
 }
 
-.about-us-section .section-info p,
-.achievements-section .section-info p {
-  text-align: left;
+.corporate-content-wrapper:last-child {
+  border-bottom: none;
+}
+
+/* Text content block */
+.corporate-text-block {
   max-width: 600px;
-  margin: 0 auto 1em;
-  color: var(--white-100);
-  line-height: 1.6;
-  font-size: 0.95rem;
 }
 
-.about-us-section .section-info .button,
-.achievements-section .section-info .button {
-  display: inline-block;
+.corporate-text-block h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 300;
+  color: var(--white-100);
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.corporate-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(241, 182, 71, 0.9) 0%,
+    rgba(241, 182, 71, 0.3) 100%
+  );
+  margin-bottom: 1.5em;
+}
+
+.corporate-text-block p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+
+.corporate-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  color: rgba(241, 182, 71, 0.95);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1em;
+  padding: 0.75em 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.corporate-link:hover {
+  color: rgba(241, 182, 71, 1);
+  border-bottom-color: rgba(241, 182, 71, 0.6);
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+/* Image block */
+.corporate-image-block {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 1.5em;
+}
+
+.corporate-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(111, 128, 132, 0.2);
+  transition: all 0.3s ease;
+}
+
+.corporate-image:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  border-color: rgba(241, 182, 71, 0.3);
+}
+
+/* Awards showcase */
+.awards-showcase {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2em;
+  border-radius: 4px;
+  border: 1px solid rgba(111, 128, 132, 0.15);
+  border-left: 3px solid rgba(241, 182, 71, 0.6);
+}
+
+.awards-showcase .corporate-image {
+  max-height: 300px;
+  object-fit: contain;
+  margin: 0 auto;
+  border: none;
+  box-shadow: none;
+}
+
+/* Section spacing */
+.about-us-section,
+.achievements-section {
+  padding: 1.5em 0;
 }
 
 /* ==========================================================================  
-   ACHIEVEMENTS  
+   CORPORATE STATS BAR
    ========================================================================== */
-.achievements-btn {
-  margin-top: 1em;
+.corporate-stats {
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(111, 128, 132, 0.2);
+  border-bottom: 1px solid rgba(111, 128, 132, 0.2);
+  padding: 3em 0;
 }
 
-.awards-image-container {
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2em;
   text-align: center;
 }
 
-.awards-image {
-  display: inline-block;
-  max-width: 100%;
-  max-height: 280px;
-  object-fit: contain;
-  border-radius: 8px;
+.stat-item {
+  padding: 1.5em;
+  border-left: 2px solid rgba(241, 182, 71, 0.3);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  border-left-color: rgba(241, 182, 71, 0.8);
+  transform: translateY(-3px);
+}
+
+.stat-number {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: rgba(241, 182, 71, 0.95);
+  margin-bottom: 0.3em;
+  letter-spacing: 1px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 400;
 }
 
 /* ==========================================================================  
@@ -370,29 +494,54 @@
 }
 
 /* ==========================================================================  
-   ANIMATIONS ADDED  
+   RESPONSIVE - MOBILE OPTIMIZATION
    ========================================================================== */
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-60px);
-  transition: opacity 1.6s ease, transform 1.8s ease; /* transform {time} */
-}
-
-.slide-in-left.visible {
-  opacity: 1;
-  transform: translateX(0);
+@media (max-width: 767px) {
+  .corporate-container {
+    padding: 0 1.5em;
+  }
+  
+  .corporate-content-wrapper {
+    padding: 3em 0;
+  }
+  
+  .corporate-text-block h2 {
+    font-size: 1.6rem;
+  }
+  
+  .stat-item {
+    padding: 1em;
+  }
+  
+  .about-achievements-wrapper {
+    padding: 3em 0;
+  }
+  
+  .hero-arrow.left {
+    left: 1rem;
+  }
+  
+  .hero-arrow.right {
+    right: 1rem;
+  }
 }
 
 /* ==========================================================================  
-   RESPONSIVE  
+   RESPONSIVE - TABLET & DESKTOP
    ========================================================================== */
 @media (min-width: 768px) {
-  .section-grid {
+  .corporate-content-wrapper {
     grid-template-columns: 1fr 1fr;
+    gap: 4em;
   }
-
-  .features-grid {
-    gap: 6em;
+  
+  /* Reverse layout for achievements section */
+  .corporate-content-wrapper.reverse {
+    direction: rtl;
+  }
+  
+  .corporate-content-wrapper.reverse > * {
+    direction: ltr;
   }
 
   .testimonials-grid {
@@ -401,5 +550,16 @@
 
   .testimonials-grid blockquote {
     flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .corporate-content-wrapper {
+    gap: 5em;
+    padding: 5em 0;
+  }
+  
+  .corporate-text-block {
+    max-width: 550px;
   }
 }
