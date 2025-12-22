@@ -1,8 +1,15 @@
+/* ==============================
+   Page Base
+   ============================== */
 .awards-page {
   color: var(--white-50);
   background: var(--mainBackground);
+  font-family: var(--font-sans);
 }
 
+/* ==============================
+   Hero Section
+   ============================== */
 .awards-hero {
   position: relative;
   padding: var(--space-lg) var(--space-md);
@@ -11,48 +18,10 @@
   border-bottom: 1px solid var(--viewLines);
   background: linear-gradient(135deg, rgba(31, 31, 31, 1) 0%, rgba(20, 20, 20, 1) 100%);
   z-index: 1;
-  min-height: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-}
-
-/* Decorative background pattern */
-.awards-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    linear-gradient(90deg, var(--accent-gold) 0%, transparent 20%),
-    linear-gradient(-90deg, var(--accent-gold) 0%, transparent 20%);
-  opacity: 0.03;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.awards-hero::after {
-  content: '';
-  position: absolute;
-  bottom: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(241, 182, 71, 0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.awards-hero h1,
-.awards-hero p {
-  position: relative;
-  z-index: 2;
-  animation: slideUp 0.8s ease-out;
 }
 
 .awards-hero h1 {
@@ -60,112 +29,22 @@
   font-weight: var(--fw-bold);
   margin-bottom: var(--space-md);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  padding-bottom: var(--space-md);
-  border-bottom: 2px solid var(--accent-gold);
-  display: inline-block;
 }
 
-.awards-hero p {
-  display: none;
+.corporate-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(241, 182, 71, 0.9),
+    rgba(241, 182, 71, 0.3)
+  );
+  margin-bottom: 1.5em;
 }
 
-.awards-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--space-2xl) var(--space-md);
-  gap: var(--space-2xl);
-}
-
-@media (min-width: 768px) {
-  .awards-content {
-    flex-direction: row;
-    justify-content: center;
-    padding: var(--space-3xl) var(--space-2xl);
-    gap: var(--space-3xl);
-  }
-}
-
-.awards-text {
-  max-width: 600px;
-  animation: fadeInUp 0.8s ease-out 0.2s both;
-}
-
-.awards-text h2 {
-  font-size: var(--fs-3xl);
-  font-weight: var(--fw-bold);
-  margin-bottom: var(--space-lg);
-  text-transform: uppercase;
-  color: var(--white-100);
-}
-
-.awards-text p {
-  font-size: var(--fs-base);
-  margin-bottom: var(--space-lg);
-  line-height: var(--lh-relaxed);
-  color: var(--white-50);
-}
-
-.awards-image {
-  animation: fadeInUp 0.8s ease-out 0.3s both;
-}
-
-.awards-image img {
-  width: 100%;
-  max-width: 250px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  transition: all var(--transition-base);
-}
-
-.awards-image img:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
-}
-
-/* Button style */
-.awards-cta {
-  background-color: var(--primary);
-  padding: 0.875em 2em;
-  border-radius: var(--radius-sm);
-  color: var(--white-100);
-  text-align: center;
-  box-shadow: var(--shadow-dark);
-  transition: all var(--transition-base);
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: var(--fw-semibold);
-  border: none;
-  font-size: var(--fs-base);
-
-  display: inline-block;
-  margin: var(--space-lg) auto;
-}
-
-.awards-cta:hover {
-  background-color: var(--primary-dark);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-  color: var(--white-100);
-}
-
-.awards-cta:focus-visible {
-  outline: 2px solid var(--accent-gold);
-  outline-offset: 2px;
-}
-
-/* ============================================================================
-   FEATURES
-   ============================================================================ */
-
-.features-section {
-  background: linear-gradient(135deg, rgba(31, 31, 31, 0.8), rgba(20, 20, 20, 0.8));
-  padding: var(--space-3xl) var(--space-md);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
+/* ==============================
+   Features / Icons
+   ============================== */
 .features-grid {
   display: flex;
   justify-content: center;
@@ -173,39 +52,27 @@
   margin: 0 auto;
   flex-wrap: wrap;
   max-width: 1200px;
+  padding: var(--space-3xl) var(--space-md);
 }
 
 .feature-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-md);
   text-align: center;
-  padding: var(--space-xl);
+  padding: var(--space-lg);
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all var(--transition-base);
   flex: 1 1 auto;
   min-width: 200px;
-  animation: fadeInUp 0.8s ease-out both;
-}
-
-.feature-item:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.feature-item:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.feature-item:nth-child(3) {
-  animation-delay: 0.3s;
 }
 
 .feature-item:hover {
   background: rgba(111, 128, 132, 0.1);
-  border-color: var(--primary);
+  border-color: var(--accent-gold);
   transform: translateY(-8px);
   box-shadow: 0 12px 28px rgba(111, 128, 132, 0.2);
 }
@@ -213,9 +80,8 @@
 .feature-icon {
   width: 48px;
   height: 48px;
-  color: var(--primary);
+  color: rgba(255,255,255,0.7);
   transition: all var(--transition-base);
-  margin-bottom: var(--space-sm);
 }
 
 .feature-item:hover .feature-icon {
@@ -232,55 +98,101 @@
   font-size: var(--fs-lg);
 }
 
-/* ============================================================================
-   ANIMATIONS
-   ============================================================================ */
+/* ==============================
+   Awards Content Section
+   ============================== */
+.awards-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl);
+  padding: var(--space-3xl) var(--space-md);
+}
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+.awards-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+.awards-text .intro {
+  font-weight: var(--fw-semibold);
+  color: var(--white-100);
+  margin-bottom: var(--space-md);
+}
+
+.awards-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+}
+
+.awards-image img:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* CTA Button */
+.awards-cta {
+  background-color: var(--primary);
+  padding: 0.875em 2em;
+  border-radius: var(--radius-sm);
+  color: var(--white-100);
+  text-align: center;
+  box-shadow: var(--shadow-dark);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: var(--fw-semibold);
+  border: none;
+  font-size: var(--fs-base);
+  display: inline-block;
+  margin: var(--space-lg) auto;
+}
+
+.awards-cta:hover {
+  background-color: var(--primary-dark);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   Responsive - Awards Content
+   ============================== */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .awards-content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    gap: var(--space-xl);
+    padding: var(--space-3xl) var(--space-2xl);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .awards-text {
+    text-align: left;
   }
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ============================================================================
-   RESPONSIVE
-   ============================================================================ */
-
+/* ==============================
+   Responsive - Features / Icons
+   ============================== */
 @media (max-width: 767px) {
   .features-grid {
-    gap: var(--space-2xl);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--space-lg);
     padding: var(--space-lg);
   }
-
-  .feature-item {
-    flex: 1 1 auto;
-    min-width: 80px;
-    max-width: 120px;
+  .feature-item:nth-child(3) {
+    grid-column: 1 / -1; /* third icon full width */
   }
-
-  .feature-icon {
-    width: 36px;
-    height: 36px;
-  }
-
   .feature-item h3 {
-    font-size: 0.9rem;
-    margin-top: 0.4rem;
+    font-size: 1rem;
+  }
+  .feature-item p {
+    font-size: 0.85rem;
   }
 }

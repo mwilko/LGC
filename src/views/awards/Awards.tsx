@@ -9,48 +9,66 @@ import {
 } from '@heroicons/react/24/outline';
 
 export const Awards = () => {
-  // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, []);
 
   return (
     <div className="awards-page">
+      {/* Hero Section */}
       <header className="awards-hero">
+        <h1>Our Achievements</h1>
+        <div className="corporate-divider"></div>
+      </header>
+
+      {/* Features / Icons Section */}
+      <section className="awards-features">
         <div className="features-grid">
           <div className="feature-item">
             <GlobeEuropeAfricaIcon className="feature-icon" />
             <h3>Sustainable</h3>
+            <p>Ethically sourced, environmentally responsible.</p>
           </div>
           <div className="feature-item">
             <MapPinIcon className="feature-icon" />
             <h3>Traceable</h3>
+            <p>Full traceability from field to table.</p>
           </div>
           <div className="feature-item">
             <BoltIcon className="feature-icon" />
             <h3>Quality</h3>
+            <p>Consistently award-winning taste and excellence.</p>
           </div>
         </div>
-      </header>
+      </section>
 
-      <section className="awards-content">
-        <div className="awards-text">
-          <h2>Our Achievements</h2>
-          <p>
-            Since our founding, The Lincolnshire Game Company has been honoured with multiple awards and
-            accreditations for our dedication to quality, sustainability, and ethical sourcing. From regional
-            food awards to national recognitions, we are proud to set the standard in wild game meat.
-          </p>
-          <p>
-            Our products have been approved by leading industry bodies, and our processes meet the highest standards
-            for traceability and environmental responsibility.
-          </p>
-          <Link to="/shop/all" className="button awards-cta">
-            Explore Our Produce
-          </Link>
-        </div>
-        <div className="awards-image">
-          <img src={awardsImg} alt="Our awards and certifications" />
+      {/* Awards Content Section (Styled like Home page Heritage section) */}
+      <section className="achievements-section">
+        <div className="corporate-container">
+          <div className="corporate-content-wrapper reverse">
+            <div className="corporate-image-block">
+              <img
+                src={awardsImg}
+                alt="Our awards and certifications"
+                className="corporate-image"
+              />
+            </div>
+            <div className="corporate-text-block">
+              <h2>Recognised for Excellence</h2>
+              <div className="corporate-divider"></div>
+              <p>
+                Recognised and trusted for excellence in wild game meat.
+              </p>
+              <p>
+                Since our founding, The Lincolnshire Game Company has received multiple awards and
+                accreditations for quality, sustainability, and ethical sourcing. From regional
+                recognitions to national awards, we are proud to lead the industry.
+              </p>
+              <Link to="/shop/all" className="corporate-link">
+                Explore Our Produce →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

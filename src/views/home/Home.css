@@ -1,4 +1,4 @@
-/* ==========================================================================  
+/* ==========================================================================
    HERO / CAROUSEL - ELEGANT DESIGN
    ========================================================================== */
 .hero-section {
@@ -25,17 +25,11 @@
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
-.hero-bg-img.active {
-  opacity: 1;
-}
+.hero-bg-img.active { opacity: 1; }
 
 @keyframes slowZoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
 }
 
 .hero-arrow {
@@ -59,62 +53,35 @@
   transform: translateY(-50%) scale(1.1);
 }
 
-.hero-arrow svg {
-  display: block;
-  width: 20px;
-  height: 20px;
-  stroke: white;
-}
+.hero-arrow svg { width: 20px; height: 20px; stroke: white; }
 
-.hero-arrow.left {
-  left: 2.5rem;
-}
-
-.hero-arrow.right {
-  right: 2.5rem;
-}
+.hero-arrow.left { left: 2.5rem; }
+.hero-arrow.right { right: 2.5rem; }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%);
 }
 
-/* Animated gradient accent */
 .hero-overlay::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(241, 182, 71, 0.08) 0%,
-    transparent 60%
-  );
+  background: radial-gradient(circle at 50% 50%, rgba(241,182,71,0.08) 0%, transparent 60%);
   animation: pulseGlow 8s ease-in-out infinite;
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.1);
-  }
+  0%,100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
 }
 
 .hs-greeting {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
@@ -131,7 +98,7 @@
   color: var(--white-100);
   font-weight: 300;
   font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
   margin: 0;
   animation: slideUp 1s ease-out;
   letter-spacing: 3px;
@@ -139,12 +106,12 @@
 }
 
 .hero-subtitle {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(1rem,2vw,1.3rem);
   font-weight: 300;
   letter-spacing: 1px;
   margin: 0;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.3);
   animation: slideUp 1.2s ease-out;
 }
 
@@ -152,33 +119,27 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6em;
-  color: rgba(241, 182, 71, 0.95);
-  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  color: rgba(241,182,71,0.95);
+  font-size: clamp(0.9rem,1.5vw,1.05rem);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 0.8em 0;
   margin-top: 0.5em;
-  border-bottom: 2px solid rgba(241, 182, 71, 0.4);
+  border-bottom: 2px solid rgba(241,182,71,0.4);
   transition: all 0.3s ease;
   animation: popIn 1.4s ease-out;
   text-decoration: none;
 }
 
 .hero-cta-link:hover {
-  color: rgba(241, 182, 71, 1);
-  border-bottom-color: rgba(241, 182, 71, 0.8);
+  color: rgba(241,182,71,1);
+  border-bottom-color: rgba(241,182,71,0.8);
   transform: translateX(5px);
-  text-decoration: none;
 }
 
-.hero-cta-link svg {
-  transition: transform 0.3s ease;
-}
-
-.hero-cta-link:hover svg {
-  transform: translateX(3px);
-}
+.hero-cta-link svg { transition: transform 0.3s ease; }
+.hero-cta-link:hover svg { transform: translateX(3px); }
 
 .hero-dots {
   position: absolute;
@@ -188,7 +149,7 @@
   display: flex;
   gap: var(--space-sm);
   padding: var(--space-sm) var(--space-lg);
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
   border-radius: var(--radius-full);
   backdrop-filter: blur(4px);
   box-shadow: var(--shadow-md);
@@ -196,41 +157,22 @@
 }
 
 .hero-dot {
-  width: 12px;
-  height: 12px;
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  width: 12px; height: 12px;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.7);
   border-radius: 50%;
   cursor: pointer;
   transition: all var(--transition-base);
 }
 
-.hero-dot.active {
-  background: var(--primary);
-  transform: scale(1.2);
-  box-shadow: 0 0 8px var(--primary);
-}
+.hero-dot.active { background: var(--primary); transform: scale(1.2); box-shadow: 0 0 8px var(--primary); }
+.hero-dot:hover { background: rgba(255,255,255,0.7); }
 
-.hero-dot:hover {
-  background: rgba(255, 255, 255, 0.7);
-}
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes slideUp { from {transform:translateY(20px);opacity:0;} to {transform:translateY(0);opacity:1;} }
+@keyframes popIn { from {transform:scale(0.8);opacity:0;} to {transform:scale(1);opacity:1;} }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes popIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-/* ==========================================================================  
+/* ==========================================================================
    ABOUT / ACHIEVEMENTS WRAPPER
    ========================================================================== */
 .about-achievements-wrapper {
@@ -244,35 +186,21 @@
   transition: opacity 0.6s ease;
 }
 
-.about-achievements-wrapper > section {
-  position: relative;
-  z-index: 2;
-}
+.about-achievements-wrapper > section { position: relative; z-index: 2; }
 
 .grey-overlay {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(11, 11, 11, 0.93) 0%,
-    rgba(11, 11, 11, 0.95) 100%
-  );
+  background: linear-gradient(180deg, rgba(11,11,11,0.93) 0%, rgba(11,11,11,0.95) 100%);
   z-index: 1;
 }
 
-/* ==========================================================================  
+/* ==========================================================================
    CORPORATE LAYOUT - ABOUT/ACHIEVEMENTS
    ========================================================================== */
+.corporate-container { max-width: 1200px; margin: 0 auto; padding: 0 2em; }
 
-/* Container for corporate sections */
-.corporate-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2em;
-}
-
-/* Content wrapper for side-by-side layout */
 .corporate-content-wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -282,14 +210,9 @@
   border-bottom: 1px solid rgba(111, 128, 132, 0.15);
 }
 
-.corporate-content-wrapper:last-child {
-  border-bottom: none;
-}
+.corporate-content-wrapper:last-child { border-bottom: none; }
 
-/* Text content block */
-.corporate-text-block {
-  max-width: 600px;
-}
+.corporate-text-block { max-width: 600px; }
 
 .corporate-text-block h2 {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
@@ -341,10 +264,7 @@
   transform: translateX(5px);
 }
 
-/* Image block */
-.corporate-image-block {
-  position: relative;
-}
+.corporate-image-block { position: relative; }
 
 .corporate-image {
   width: 100%;
@@ -360,7 +280,6 @@
   border-color: rgba(241, 182, 71, 0.3);
 }
 
-/* Awards showcase */
 .awards-showcase {
   background: rgba(0, 0, 0, 0.3);
   padding: 2em;
@@ -377,13 +296,10 @@
   box-shadow: none;
 }
 
-/* Section spacing */
 .about-us-section,
-.achievements-section {
-  padding: 1.5em 0;
-}
+.achievements-section { padding: 1.5em 0; }
 
-/* ==========================================================================  
+/* ==========================================================================
    CORPORATE STATS BAR
    ========================================================================== */
 .corporate-stats {
@@ -427,15 +343,34 @@
   font-weight: 400;
 }
 
-/* ==========================================================================  
-   TESTIMONIALS  
+/* ==========================================================================
+   TESTIMONIALS
    ========================================================================== */
 .testimonials-section {
+  position: relative;
   background: var(--black-75);
   padding: 4em 1em;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 40% 40%, rgba(241,182,71,0.1) 0%, transparent 60%),
+              radial-gradient(circle at 70% 70%, rgba(241,182,71,0.08) 0%, transparent 60%);
+  z-index: 0;
+  animation: testimonialsFlair 12s ease-in-out infinite alternate;
+}
+
+@keyframes testimonialsFlair {
+  0%,100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.6; }
 }
 
 .testimonials-grid {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -458,16 +393,22 @@
   text-align: right;
 }
 
-/* ==========================================================================  
-   BESTSELLERS  
+@media (min-width: 768px) {
+  .testimonials-grid { flex-direction: row; }
+  .testimonials-grid blockquote { flex: 1; }
+}
+
+@media (max-width: 767px) {
+  .testimonials-grid { flex-direction: column; }
+}
+
+/* ==========================================================================
+   BESTSELLERS
    ========================================================================== */
 .bestsellers-section {
   padding: 4em 1em;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)
-  ),
-  url('../../assets/images/british-landscape.jpeg');
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('../../assets/images/british-landscape.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -482,84 +423,48 @@
   color: var(--white-100);
 }
 
-.bs-cta {
-  display: flex;
-  justify-content: center;
-  margin-top: 2em;
-}
+.bs-cta { display: flex; justify-content: center; margin-top: 2em; }
 
-.bs-btn {
-  display: block;
-  margin-top: 1em auto 0 auto;
-}
+.bs-btn { display: block; margin-top: 1em auto 0 auto; }
 
-/* ==========================================================================  
-   RESPONSIVE - MOBILE OPTIMIZATION
-   ========================================================================== */
-@media (max-width: 767px) {
-  .corporate-container {
-    padding: 0 1.5em;
-  }
-  
-  .corporate-content-wrapper {
-    padding: 3em 0;
-  }
-  
-  .corporate-text-block h2 {
-    font-size: 1.6rem;
-  }
-  
-  .stat-item {
-    padding: 1em;
-  }
-  
-  .about-achievements-wrapper {
-    padding: 3em 0;
-  }
-  
-  .hero-arrow.left {
-    left: 1rem;
-  }
-  
-  .hero-arrow.right {
-    right: 1rem;
-  }
-}
-
-/* ==========================================================================  
-   RESPONSIVE - TABLET & DESKTOP
+/* ==========================================================================
+   RESPONSIVE
    ========================================================================== */
 @media (min-width: 768px) {
-  .corporate-content-wrapper {
-    grid-template-columns: 1fr 1fr;
-    gap: 4em;
-  }
-  
-  /* Reverse layout for achievements section */
-  .corporate-content-wrapper.reverse {
-    direction: rtl;
-  }
-  
-  .corporate-content-wrapper.reverse > * {
-    direction: ltr;
-  }
+  .corporate-content-wrapper { grid-template-columns: 1fr 1fr; gap: 4em; }
+  .corporate-content-wrapper.reverse { direction: rtl; }
+  .corporate-content-wrapper.reverse > * { direction: ltr; }
+  .testimonials-grid { flex-direction: row; }
+  .testimonials-grid blockquote { flex: 1; }
+}
 
-  .testimonials-grid {
-    flex-direction: row;
-  }
-
-  .testimonials-grid blockquote {
-    flex: 1;
-  }
+@media (max-width: 767px) {
+  .corporate-container { padding: 0 1.5em; }
+  .corporate-content-wrapper { padding: 3em 0; }
+  .corporate-text-block h2 { font-size: 1.6rem; }
+  .stat-item { padding: 1em; }
+  .about-achievements-wrapper { padding: 3em 0; }
+  .hero-arrow.left { left: 1rem; }
+  .hero-arrow.right { right: 1rem; }
+  .testimonials-grid { flex-direction: column; }
 }
 
 @media (min-width: 1024px) {
-  .corporate-content-wrapper {
-    gap: 5em;
-    padding: 5em 0;
+  .corporate-content-wrapper { gap: 5em; padding: 5em 0; }
+  .corporate-text-block { max-width: 550px; }
+
+  /* Center Our Heritage section on large screens */
+  .about-us-section .corporate-content-wrapper {
+    justify-content: center;
+    gap: 3em;
   }
-  
-  .corporate-text-block {
-    max-width: 550px;
+
+  .about-us-section .corporate-text-block,
+  .about-us-section .corporate-image-block {
+    flex: 0 0 auto;
+  }
+
+  .about-us-section .corporate-image {
+    max-width: 500px;
   }
 }
