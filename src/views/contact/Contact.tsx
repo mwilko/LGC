@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
+import contactHeroImg from '../../assets/images/showcase_game_fair.jpg';
 
-// Initialize EmailJS with your public key
 emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY || '');
 
 export const Contact = () => {
@@ -16,13 +16,9 @@ export const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
     if (!formRef.current) return;
 
     const formData = new FormData(formRef.current);
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const message = formData.get('message') as string;
 
     setIsSubmitting(true);
     setSubmitMessage('');
@@ -33,89 +29,88 @@ export const Contact = () => {
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID || '',
         {
           to_email: 'orders@lincolnshiregame.co.uk',
-          // to_email: 'mjswilkinson@outlook.com',
-          subject: `LGC-Web: ${name}`,
-          message: message,
-          reply_to: email,
-          from_name: name,
+          from_name: formData.get('name'),
+          reply_to: formData.get('email'),
+          message: formData.get('message'),
+          subject: `Website Enquiry`,
         }
       );
 
-      setSubmitMessage('Message sent successfully! We\'ll get back to you soon.');
-      if (formRef.current) {
-        formRef.current.reset();
-      }
-    } catch (error) {
-      console.error('Failed to send email:', error);
-      setSubmitMessage('Failed to send message. Please try again or call us at (+44) 1205 822882.');
+      setSubmitMessage('Thank you for your enquiry. We aim to respond within one working day.');
+      formRef.current.reset();
+    } catch {
+      setSubmitMessage('Unable to send message. Please call us on (+44) 1205 822882.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="contact-wrapper">
-      <div className="contact-overlay">
-        <div className="contact-content">
+    <div className="contact-page">
+      {/* Hero */}
+      <section className="contact-hero"
+       style={{ backgroundImage: `url(${contactHeroImg})` }}
+       >
+        <div className="contact-hero-overlay" />
+        <div className="contact-hero-content">
           <h1>Contact Us</h1>
-          <p>
-            Have questions or want to work with us? Fill out the form below. <br />
-            Prefer to give us a call? (+44) 1205 822882
-          </p>
-
-          <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
-            <div className="contact-form-group">
-              <input 
-                type="text" 
-                id="name"
-                name="name"
-                placeholder="Your Name" 
-                required 
-                disabled={isSubmitting}
-              />
-              <label htmlFor="name">Your Name</label>
-            </div>
-
-            <div className="contact-form-group">
-              <input 
-                type="email" 
-                id="email"
-                name="email"
-                placeholder="Your Email" 
-                required 
-                disabled={isSubmitting}
-              />
-              <label htmlFor="email">Your Email</label>
-            </div>
-
-            <div className="contact-form-group">
-              <textarea 
-                id="message"
-                name="message"
-                placeholder="Your Message" 
-                rows={6} 
-                required 
-                disabled={isSubmitting}
-              />
-              <label htmlFor="message">Your Message</label>
-            </div>
-
-            <button 
-              type="submit" 
-              className="contact-submit-btn"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </button>
-
-            {submitMessage && (
-              <p className={`submit-message ${submitMessage.includes('successfully') ? 'success' : 'error'}`}>
-                {submitMessage}
-              </p>
-            )}
-          </form>
+          <p>Trade enquiries, orders, and general questions</p>
         </div>
-      </div>
+      </section>
+
+      {/* Content */}
+      <section className="contact-content">
+        <div className="corporate-container">
+          <div className="contact-grid">
+
+            {/* Contact Info */}
+            <div className="contact-info">
+              <h2>Get in Touch</h2>
+              <div className="corporate-divider"></div>
+
+              <p>
+                For trade enquiries, product information, or general questions,
+                please use the form or contact us directly.
+              </p>
+
+              <ul className="contact-details">
+                <li><strong>Phone:</strong> (+44) 1205 822882</li>
+                <li><strong>Email:</strong> orders@lincolnshiregame.co.uk</li>
+                <li><strong>Response time:</strong> Phone response is immediate - email response within 2 working days</li>
+              </ul>
+            </div>
+
+            {/* Form */}
+            <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input id="name" name="name" type="text" required disabled={isSubmitting} />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input id="email" name="email" type="email" required disabled={isSubmitting} />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea id="message" name="message" rows={5} required disabled={isSubmitting} />
+              </div>
+
+              <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending…' : 'Send Enquiry'}
+              </button>
+
+              {submitMessage && (
+                <p className={`submit-message ${submitMessage.includes('Thank') ? 'success' : 'error'}`}>
+                  {submitMessage}
+                </p>
+              )}
+            </form>
+
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
