@@ -1,155 +1,355 @@
+/* ==========================================================================
+   SHOP PAGE - COMPLETE STYLES
+   ========================================================================== */
+
+/* ==========================================================================
+   SHOP BANNER
+   ========================================================================== */
 .shop-banner {
     background: 
-      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+      ),
       url(../../assets/images/Venison\ Skewers\ -\ Garlic\ Paprika.jpg) center/cover no-repeat;
+    background-attachment: fixed;
     width: 100%;
-    padding: var(--space-2xl) 1em;
-    min-height: 180px;
+    min-height: 350px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid var(--viewLines);
     overflow: hidden;
 }
 
-/* Decorative background lines */
 .shop-banner::before {
-  display: none;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(241, 182, 71, 0.08) 0%,
+        transparent 60%
+    );
+    animation: pulseGlow 8s ease-in-out infinite;
 }
 
-.shop-banner::after {
-  display: none;
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
 }
 
-.shop-banner h2 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    color: var(--white-100);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    margin: 0;
-    animation: fadeInDown 0.8s ease-out;
-    position: relative;
+.shop-banner-content {
+    text-align: center;
     z-index: 2;
-    padding-bottom: var(--space-sm);
-    border-bottom: 2px solid var(--accent-gold);
-    display: inline-block;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.shop-banner-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    color: var(--white-100);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    margin: 0 0 0.5em 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.shop-banner-content p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   SHOP MAIN
+   ========================================================================== */
+.shop {
+    min-height: 100vh;
 }
 
 .shop-main {
     background-color: var(--mainBackground);
-    padding: var(--space-2xl);
-    margin-bottom: var(--space-3xl);
+    padding: 4em 0;
 }
 
-.sm-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-2xl);
-    margin: auto;
-    margin-bottom: var(--space-2xl);
-    max-width: 1680px;
+.shop-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2em;
 }
 
-.sm-header h1 {
-    color: var(--white-50);
-    font-weight: var(--fw-regular);
-    text-transform: uppercase;
-    width: 675px;
+/* ==========================================================================
+   SHOP HEADER
+   ========================================================================== */
+.shop-header {
     text-align: center;
-    letter-spacing: 1px;
-    font-size: var(--fs-lg);
-    transition: color var(--transition-base);
+    margin-bottom: 3em;
 }
 
-.smh-line {
-    width: 100%;
+.shop-header h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 300;
+    color: var(--white-100);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+    position: relative;
+    display: inline-block;
+}
+
+.shop-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
     height: 2px;
-    border-radius: 1px;
-    background-color: var(--viewLines);
+    background: linear-gradient(
+        90deg,
+        rgba(241, 182, 71, 0.9) 0%,
+        rgba(241, 182, 71, 0.3) 100%
+    );
 }
 
-/* ============================================================================
-   CATEGORY BUTTONS
-   ============================================================================ */
+.shop-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    margin-top: 1.5em;
+}
 
-.sm-cat-wrapper {
+/* ==========================================================================
+   CATEGORY FILTER
+   ========================================================================== */
+.category-filter {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: var(--space-2xl);
-    margin-bottom: var(--space-3xl);
+    gap: 1rem;
+    margin-bottom: 4em;
+    padding: 2em;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid rgba(241, 182, 71, 0.1);
 }
 
-.sm-cat {
-    position: relative;
-    border: none;
-    background-color: transparent;
-    color: #696969;
-    font-size: var(--fs-sm);
-    font-weight: var(--fw-regular);
+.category-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(241, 182, 71, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.8em 1.5em;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 0.5em 0;
-    
-    transition: color var(--transition-base);
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
 }
 
-/* Animated underline on hover and active */
-.sm-cat::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary);
-    transition: width var(--transition-base);
+.category-btn:hover {
+    background: rgba(30, 30, 30, 0.8);
+    border-color: rgba(241, 182, 71, 0.5);
+    color: rgba(241, 182, 71, 0.95);
+    transform: translateY(-2px);
 }
 
-.sm-cat:hover {
-    color: var(--white-50);
+.category-btn.active {
+    background: linear-gradient(
+        135deg,
+        rgba(241, 182, 71, 0.2) 0%,
+        rgba(241, 182, 71, 0.1) 100%
+    );
+    border-color: rgba(241, 182, 71, 0.6);
+    color: rgba(241, 182, 71, 1);
 }
 
-.sm-cat:hover::after {
-    width: 100%;
+.category-label {
+    font-weight: 600;
 }
 
-/* Active state (when selected) */
-.sm-cat[style*="color: var(--white-50)"]::after {
-    width: 100%;
+.category-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 0.4em;
+    background: rgba(241, 182, 71, 0.2);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
-.shop-legend {
+.category-btn.active .category-count {
+    background: rgba(241, 182, 71, 0.3);
+    color: rgba(241, 182, 71, 1);
+}
+
+/* ==========================================================================
+   PRODUCTS SECTION
+   ========================================================================== */
+.products-section {
+    margin-bottom: 3em;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgba(241, 182, 71, 0.2);
+}
+
+.products-header h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white-100);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.product-count {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   SHOP FOOTER
+   ========================================================================== */
+.shop-footer {
+    background: linear-gradient(
+        135deg,
+        rgba(20, 20, 20, 0.8) 0%,
+        rgba(15, 15, 15, 0.9) 100%
+    );
+    border-top: 1px solid rgba(241, 182, 71, 0.2);
+    padding: 4em 2em;
     text-align: center;
-    color: var(--white-50);
-    font-weight: var(--fw-light);
-    width: 75%;
-    margin: auto;
-    margin-bottom: var(--space-2xl);
-    font-size: var(--fs-sm);
-    max-width: 480px;
-    line-height: var(--lh-relaxed);
 }
 
-/* ============================================================================
+.shop-footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.shop-footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--white-100);
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+}
+
+.shop-footer-content p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 2em;
+}
+
+.shop-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    color: rgba(241, 182, 71, 0.95);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.8em 2em;
+    border: 2px solid rgba(241, 182, 71, 0.4);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.shop-contact-btn:hover {
+    background: rgba(241, 182, 71, 0.1);
+    color: rgba(241, 182, 71, 1);
+    border-color: rgba(241, 182, 71, 0.8);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* ==========================================================================
    RESPONSIVE
-   ============================================================================ */
+   ========================================================================== */
+@media (max-width: 768px) {
+    .shop-banner {
+        min-height: 250px;
+    }
 
-@media (min-width: 598px) {
-    .sm-header h1 {
-        font-size: var(--fs-xl);
+    .shop-container {
+        padding: 0 1.5em;
+    }
+
+    .category-filter {
+        padding: 1.5em 1em;
+        gap: 0.75rem;
+    }
+
+    .category-btn {
+        padding: 0.7em 1.2em;
+        font-size: 0.85rem;
+    }
+
+    .products-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+
+    .shop-footer {
+        padding: 3em 1.5em;
     }
 }
 
-@media (min-width: 798px) {
-    .sm-cat-wrapper {
-        gap: 3em;
+@media (max-width: 480px) {
+    .shop-banner-content h1 {
+        font-size: 2rem;
     }
 
-    .shop-legend {
-        margin-bottom: 2em;
+    .shop-banner-content p {
+        font-size: 0.9rem;
+    }
+
+    .category-filter {
+        padding: 1em;
+    }
+
+    .category-btn {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 140px;
+        justify-content: space-between;
     }
 }
