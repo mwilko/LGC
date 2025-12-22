@@ -296,7 +296,7 @@
   box-shadow: none;
 }
 
-.about-us-section,
+.about-us-section { padding: 1.5em 0; }
 .achievements-section { padding: 1.5em 0; }
 
 /* ==========================================================================
@@ -452,19 +452,32 @@
 @media (min-width: 1024px) {
   .corporate-content-wrapper { gap: 5em; padding: 5em 0; }
   .corporate-text-block { max-width: 550px; }
+}
 
-  /* Center Our Heritage section on large screens */
+/* ==========================================================================
+   ABOUT US SECTION - STACKED LAYOUT FOR MEDIUM / SMALL SCREENS
+   ========================================================================== */
+@media (max-width: 1023px) {
   .about-us-section .corporate-content-wrapper {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 3em;
+    align-items: center;
+    gap: 2.5em;
+    text-align: center;
   }
 
-  .about-us-section .corporate-text-block,
+  .about-us-section .corporate-text-block {
+    max-width: 90%;
+  }
+
   .about-us-section .corporate-image-block {
-    flex: 0 0 auto;
+    width: 100%;
   }
 
   .about-us-section .corporate-image {
-    max-width: 500px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 }

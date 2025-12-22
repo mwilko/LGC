@@ -147,7 +147,7 @@ export const Home = () => {
         <div className="hs-greeting" aria-live="polite">
           <h1>{current.title}</h1>
           <p className="hero-subtitle">{current.subtitle}</p>
-          <Link to={current.cta.link} className="hero-cta-link">
+          <Link to={current.cta.link} className="corporate-link">
             {current.cta.text}
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M1 8h14M9 2l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -196,11 +196,11 @@ export const Home = () => {
         {/* Corporate About Section */}
         <section
           ref={aboutUs}
-          className="about-us-section"
+          className="achievements-section"
           aria-labelledby="heritage-heading"
         >
           <div className="corporate-container">
-            <div className="corporate-content-wrapper">
+            <div className="corporate-content-wrapper reverse">
               <div className="corporate-text-block">
                 <h2 id="heritage-heading">Our Heritage</h2>
                 <div className="corporate-divider"></div>
