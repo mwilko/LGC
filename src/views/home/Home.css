@@ -165,7 +165,7 @@
   transition: all var(--transition-base);
 }
 
-.hero-dot.active { background: var(--primary); transform: scale(1.2); box-shadow: 0 0 8px var(--primary); }
+.hero-dot.active { background: var(--accent-gold); transform: scale(1.2); box-shadow: 0 0 8px var(--accent-gold); }
 .hero-dot:hover { background: rgba(255,255,255,0.7); }
 
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
