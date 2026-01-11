@@ -12,13 +12,10 @@ export const Sponsors = () => {
   return (
     <div className="sponsorships-page">
       <header className="sponsorships-hero">
-        <div className="hero-content">
+        <div className="sponsorships-hero-content">
+          <span className="sponsorships-hero-subtitle">COMMUNITY & IMPACT</span>
           <h1>Strategic Partnerships & Sponsorships</h1>
-          <p className="hero-subtitle">
-            Lincolnshire Game proudly partners with events and organisations that share our core values—
-            sustainable field sports, heritage conservation, and community education.
-          </p>
-          <div className="hero-accent"></div>
+          <p>Lincolnshire Game proudly partners with events and organisations that share our core values—sustainable field sports, heritage conservation, and community education.</p>
         </div>
       </header>
 

@@ -1,198 +1,340 @@
-/* ==============================
-   Page Base
-   ============================== */
 .awards-page {
-  color: var(--white-50);
   background: var(--mainBackground);
-  font-family: var(--font-sans);
+  color: var(--white-50);
 }
 
-/* ==============================
-   Hero Section
-   ============================== */
+/* ============================================================================
+   HERO SECTION
+   ============================================================================ */
+
 .awards-hero {
   position: relative;
-  padding: var(--space-lg) var(--space-md);
+  padding: 4rem 1rem;
   text-align: center;
   color: var(--white-100);
-  border-bottom: 1px solid var(--viewLines);
-  background: linear-gradient(135deg, rgba(31, 31, 31, 1) 0%, rgba(20, 20, 20, 1) 100%);
+  background: linear-gradient(135deg, rgba(20, 20, 20, 1) 0%, rgba(15, 15, 15, 1) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+/* Decorative gradient orbs */
+.awards-hero::before {
+  content: '';
+  position: absolute;
+  top: -300px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(241, 182, 71, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  animation: float 20s ease-in-out infinite;
+}
+
+.awards-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(111, 128, 132, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+.awards-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.awards-hero-subtitle {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  animation: slideUp 0.8s ease-out;
 }
 
 .awards-hero h1 {
-  font-size: clamp(1.75rem, 5vw, 3rem);
+  position: relative;
+  z-index: 2;
+  font-size: clamp(2.5rem, 7vw, 4rem);
   font-weight: var(--fw-bold);
-  margin-bottom: var(--space-md);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: var(--white-100);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.8s ease-out 0.1s both;
 }
 
-.corporate-divider {
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    rgba(241, 182, 71, 0.9),
-    rgba(241, 182, 71, 0.3)
-  );
-  margin-bottom: 1.5em;
-}
-
-/* ==============================
-   Features / Icons
-   ============================== */
-.features-grid {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-3xl);
+.awards-hero p {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
   margin: 0 auto;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  padding: var(--space-3xl) var(--space-md);
+  line-height: 1.6;
+  animation: slideUp 0.8s ease-out 0.2s both;
 }
 
-.feature-item {
+/* ============================================================================
+   ACHIEVEMENTS SECTION
+   ============================================================================ */
+
+.achievements-section {
+  padding: 3rem 1rem;
+  background: var(--mainBackground);
+}
+
+.achievements-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.achievements-card-wrapper {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.achievements-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(25, 25, 25, 0.95), rgba(20, 20, 20, 0.95));
+  border: 1px solid rgba(241, 182, 71, 0.15);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+.achievements-card:hover {
+  border-color: rgba(241, 182, 71, 0.25);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+}
+
+.achievements-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(241, 182, 71, 0.1);
+}
+
+.awards-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.achievements-image-wrapper:hover .awards-image {
+  transform: scale(1.04);
+}
+
+.achievements-text-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--space-md);
-  text-align: center;
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all var(--transition-base);
-  flex: 1 1 auto;
-  min-width: 200px;
+  gap: 1.2rem;
+  padding: 0 0.5rem;
 }
 
-.feature-item:hover {
-  background: rgba(111, 128, 132, 0.1);
-  border-color: var(--accent-gold);
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(111, 128, 132, 0.2);
-}
-
-.feature-icon {
-  width: 48px;
-  height: 48px;
-  color: rgba(255,255,255,0.7);
-  transition: all var(--transition-base);
-}
-
-.feature-item:hover .feature-icon {
-  color: var(--accent-gold);
-  transform: scale(1.2);
-}
-
-.feature-item h3 {
+.achievements-text-wrapper h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
   font-weight: var(--fw-bold);
   color: var(--white-100);
   margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: var(--fs-lg);
+  line-height: 1.3;
 }
 
-/* ==============================
-   Awards Content Section
-   ============================== */
-.awards-content {
-  display: flex;
-  flex-direction: column;
+.card-divider {
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(241, 182, 71, 0.9), rgba(241, 182, 71, 0.3));
+  border-radius: 1px;
+}
+
+.achievements-text-wrapper p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.cta-link {
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-2xl);
-  padding: var(--space-3xl) var(--space-md);
-}
-
-.awards-text {
-  max-width: 600px;
-  text-align: center;
-}
-
-.awards-text .intro {
-  font-weight: var(--fw-semibold);
-  color: var(--white-100);
-  margin-bottom: var(--space-md);
-}
-
-.awards-image img {
-  width: 100%;
-  max-width: 350px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  transition: all var(--transition-base);
-}
-
-.awards-image img:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-xl);
-}
-
-/* CTA Button */
-.awards-cta {
-  background-color: var(--primary);
-  padding: 0.875em 2em;
-  border-radius: var(--radius-sm);
-  color: var(--white-100);
-  text-align: center;
-  box-shadow: var(--shadow-dark);
-  transition: all var(--transition-base);
-  cursor: pointer;
+  gap: 0.5rem;
+  color: var(--accent-gold);
   text-decoration: none;
+  font-weight: var(--fw-semibold);
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: var(--fw-semibold);
-  border: none;
-  font-size: var(--fs-base);
-  display: inline-block;
-  margin: var(--space-lg) auto;
+  padding: 0.8rem 0;
+  border-bottom: 2px solid rgba(241, 182, 71, 0.3);
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-top: 0.5rem;
 }
 
-.awards-cta:hover {
-  background-color: var(--primary-dark);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
+.cta-link:hover {
+  color: var(--white-100);
+  border-bottom-color: var(--accent-gold);
+  transform: translateX(4px);
 }
 
-/* ==============================
-   Responsive - Awards Content
-   ============================== */
-@media (min-width: 768px) and (max-width: 1200px) {
-  .awards-content {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    align-items: center;
-    gap: var(--space-xl);
-    padding: var(--space-3xl) var(--space-2xl);
-  }
-  .awards-text {
-    text-align: left;
-  }
-}
+/* ============================================================================
+   RESPONSIVE: TABLET
+   ============================================================================ */
 
-/* ==============================
-   Responsive - Features / Icons
-   ============================== */
-@media (max-width: 767px) {
-  .features-grid {
-    display: grid;
+@media (max-width: 1024px) {
+  .achievements-card {
+    gap: 1.8rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: var(--space-lg);
-    padding: var(--space-lg);
+    padding: 2rem;
   }
-  .feature-item:nth-child(3) {
-    grid-column: 1 / -1; /* third icon full width */
+
+  .achievements-text-wrapper h2 {
+    font-size: clamp(1.3rem, 3.5vw, 2rem);
   }
-  .feature-item h3 {
-    font-size: 1rem;
+
+  .achievements-section {
+    padding: 2.5rem 1.2rem;
   }
-  .feature-item p {
+}
+
+/* ============================================================================
+   RESPONSIVE: SMALL TABLET / LANDSCAPE PHONE
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .awards-hero {
+    padding: 3rem 1.2rem;
+  }
+
+  .awards-hero h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .awards-hero p {
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+  }
+
+  .achievements-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.8rem;
+  }
+
+  .achievements-section {
+    padding: 2rem 1.2rem;
+  }
+
+  .achievements-text-wrapper h2 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+  }
+
+  .achievements-text-wrapper p {
+    font-size: clamp(0.85rem, 1.3vw, 0.95rem);
+  }
+}
+
+/* ============================================================================
+   RESPONSIVE: MOBILE
+   ============================================================================ */
+
+@media (max-width: 480px) {
+  .awards-page {
+    background: var(--mainBackground);
+  }
+
+  .awards-hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .awards-hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .awards-hero p {
     font-size: 0.85rem;
+  }
+
+  .achievements-card {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+  }
+
+  .achievements-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .achievements-container {
+    padding: 0;
+  }
+
+  .achievements-image-wrapper {
+    margin-bottom: 0;
+  }
+
+  .achievements-text-wrapper h2 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    margin-top: 0.5rem;
+  }
+
+  .achievements-text-wrapper p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .card-divider {
+    width: 40px;
+  }
+
+  .cta-link {
+    font-size: 0.8rem;
+    padding: 0.6rem 0;
+  }
+}
+
+/* ============================================================================
+   ANIMATIONS
+   ============================================================================ */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
   }
 }

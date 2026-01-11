@@ -13,11 +13,15 @@ export const Partnerships = () => {
     <div className="partnerships-page">
       {/* Hero Section */}
       <header className="partnerships-hero">
-        <h1>Our Partnerships</h1>
+        <div className="partnerships-hero-content">
+          <span className="partnerships-hero-subtitle">COLLABORATION & GROWTH</span>
+          <h1>Our Partnerships</h1>
+          <p>Building strong relationships with industry leaders and community organisations to advance sustainable practices.</p>
+        </div>
       </header>
 
       {/* Partnership Content Section */}
-      <section className="achievements-section">
+      <section className="partnerships-section">
         <div className="corporate-container">
           <div className="corporate-content-wrapper">
             <div className="corporate-image-block">
