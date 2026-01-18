@@ -28,8 +28,62 @@
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap.xml" type="application/xml" />
     
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json" src="/schema.json"></script>
+    <!-- JSON-LD Structured Data for Better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.roamingfree.org/",
+          "name": "The Lincolnshire Game Company",
+          "alternateName": ["Lincolnshire Game", "Roaming Free"],
+          "description": "Premium game meats and heritage breeds from Lincolnshire including venison and handcrafted meat products. Sustainably sourced, traceable from field to table.",
+          "url": "https://www.roamingfree.org/",
+          "telephone": "",
+          "email": "contact@roamingfree.org",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Lincolnshire",
+            "addressCountry": "GB"
+          },
+          "areaServed": "GB",
+          "image": "https://www.roamingfree.org/src/assets/images/lgc_logo_new_trans.png",
+          "priceRange": "$$",
+          "knowsAbout": [
+            "Game meat",
+            "Venison",
+            "Heritage breeds",
+            "Roaming free",
+            "Sustainable meat",
+            "Lincolnshire foods",
+            "Premium meat",
+            "Wild game",
+            "Traceable meat",
+            "UK meat supplier"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.roamingfree.org/",
+          "name": "The Lincolnshire Game Company",
+          "url": "https://www.roamingfree.org/",
+          "logo": "https://www.roamingfree.org/src/assets/images/lgc_logo_new_trans.png",
+          "description": "Premium game meat supplier from Lincolnshire specializing in venison and heritage breeds",
+          "sameAs": [
+            "https://www.facebook.com/lincolnshiregamecompany",
+            "https://www.instagram.com/lincolnshiregame",
+            "https://twitter.com/lincolnshirgame"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "email": "contact@roamingfree.org"
+          }
+        }
+      ]
+    }
+    </script>
     
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
