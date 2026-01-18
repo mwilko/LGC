@@ -73,8 +73,6 @@ export const Home = () => {
       if (!hero) return;
       const rect = hero.getBoundingClientRect();
       const winH = window.innerHeight;
-      let prog = (winH - rect.bottom) / (winH * 0.8);
-      prog = Math.min(Math.max(prog, 0), 1);
     };
     window.addEventListener('scroll', onScroll);
     onScroll();

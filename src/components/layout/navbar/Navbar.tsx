@@ -1,11 +1,10 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import lgcLogo from 'assets/images/lgc_logo_new_trans.png';
 import { ReactComponent as HamburguerIcon } from 'assets/icons/hamburguer-menu.svg';
 import { ReactComponent as DropdownItemIcon } from 'assets/icons/arrow-right-circle.svg';
 import { ReactComponent as CloseIcon } from 'assets/icons/x.svg';
 import { HamburguerMenuCanvas } from './components/HamburguerMenuCanvas/HamburguerMenuCanvas';
-import { LSModalContext } from 'contexts/LSModalContext';
 import './NavBar.css';
 
 export const NavBar = () => {
