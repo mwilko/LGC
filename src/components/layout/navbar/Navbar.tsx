@@ -11,7 +11,6 @@ import './NavBar.css';
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-  const { openModal } = useContext(LSModalContext);
 
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
   const closeMenu = () => setIsMenuOpen(false);

@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ItemListContainer } from 'components/common/itemListContainer/ItemListContainer';
-import Logo from 'assets/images/lgc_logo_new_trans.png';
 import heroImg1 from 'assets/images/Venison Kofta - Garlic Paprika.jpg';
 import heroImg2 from 'assets/images/Venison Skewers - Garlic Paprika.jpg';
 import heroImg3 from 'assets/images/avacado_dish.jpg';
@@ -39,7 +38,6 @@ const heroSlides = [
 
 export const Home = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [overlayOpacity, setOverlayOpacity] = useState(0.6);
   const [isPaused, setIsPaused] = useState(false);
   const [sectionOpacity, setSectionOpacity] = useState(0);
 
@@ -77,7 +75,6 @@ export const Home = () => {
       const winH = window.innerHeight;
       let prog = (winH - rect.bottom) / (winH * 0.8);
       prog = Math.min(Math.max(prog, 0), 1);
-      setOverlayOpacity(0.3 + 0.7 * prog);
     };
     window.addEventListener('scroll', onScroll);
     onScroll();

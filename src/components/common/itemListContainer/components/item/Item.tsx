@@ -15,7 +15,7 @@ type props = {
 };
 
 export const Item = ({ product }: props) => {
-  const { id, name, price, category, img } = product;
+  const { id, name, price, img } = product;
 
   return (
     <Link to={`/product/${id}`}>

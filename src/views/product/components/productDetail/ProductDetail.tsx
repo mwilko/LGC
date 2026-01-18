@@ -1,4 +1,3 @@
-import { useState } from 'react';
 // Router
 import { Link } from 'react-router-dom';
 // Interfaces
@@ -14,7 +13,7 @@ type props = {
 };
 
 export const ProductDetail = ({ product }: props) => {
-  const { id, name, price, description, img, category } = product;
+  const { name, price, description, img } = product;
 
 //   // Optional: manage selected quantity if needed (not tied to a cart)
 //   const [selectedQty, setSelectedQty] = useState(1);
