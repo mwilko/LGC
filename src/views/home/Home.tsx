@@ -71,8 +71,6 @@ export const Home = () => {
     const hero = heroRef.current;
     const onScroll = () => {
       if (!hero) return;
-      const rect = hero.getBoundingClientRect();
-      const winH = window.innerHeight;
     };
     window.addEventListener('scroll', onScroll);
     onScroll();

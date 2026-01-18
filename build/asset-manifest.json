@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.89ea9d61.css",
+    "main.js": "/static/js/main.535dbcfa.js",
+    "static/js/787.b73c6c38.chunk.js": "/static/js/787.b73c6c38.chunk.js",
+    "static/media/Venison Kofta - Garlic Paprika.jpg": "/static/media/Venison Kofta - Garlic Paprika.b627fb43f4578d363996.jpg",
+    "static/media/Venison Skewers - Garlic Paprika.jpg": "/static/media/Venison Skewers - Garlic Paprika.cd909069e5cac803a4e7.jpg",
+    "static/media/british-landscape.jpeg": "/static/media/british-landscape.79f8e854b97d77f0525a.jpeg",
+    "static/media/awards_and_approved.png": "/static/media/awards_and_approved.0a3359f31a92890213b5.png",
+    "static/media/game_resturant.png": "/static/media/game_resturant.ae677e79f25a13a317cd.png",
+    "static/media/wood-background.jpg": "/static/media/wood-background.ff74775fa533d7d54f85.jpg",
+    "static/media/avacado_dish.jpg": "/static/media/avacado_dish.fee0134a7db0ab4dc146.jpg",
+    "static/media/showcase_game_fair.jpg": "/static/media/showcase_game_fair.5fe0987aee6bd980f617.jpg",
+    "static/media/sim_t_game_fair.jpg": "/static/media/sim_t_game_fair.fa9c8fed3aa52019d4d0.jpg",
+    "static/media/gun_salute.png": "/static/media/gun_salute.d8244f880b794da0ba21.png",
+    "static/media/lgc_logo_new_trans.png": "/static/media/lgc_logo_new_trans.e30e9bc4714cedc3861b.png",
+    "static/media/jose_pfp.jpeg": "/static/media/jose_pfp.55d616d095539833f0d8.jpeg",
+    "static/media/s_lgc_logo.png": "/static/media/s_lgc_logo.52d7a96afed8f510375e.png",
+    "static/media/lgc_transparent.png": "/static/media/lgc_transparent.020efa4c56ee573657f4.png",
+    "static/media/altas_quintas_pfp.jpg": "/static/media/altas_quintas_pfp.f9d7bdfa32e233665afb.jpg",
+    "static/media/instagram.svg": "/static/media/instagram.69926b9802e69bb7bd031d1c4202e97c.svg",
+    "index.html": "/index.html",
+    "static/media/linkedin.svg": "/static/media/linkedin.eb6cb1bc2e12529632f90017c6364448.svg",
+    "static/media/facebook.svg": "/static/media/facebook.63ac2d4e4b7165172cc1ce06f4a4d52d.svg",
+    "static/media/error.svg": "/static/media/error.1aef3f421b89162bd318f9423b33362e.svg",
+    "static/media/x_social.svg": "/static/media/x_social.3b712904cea894e6aa445fef7670edd3.svg",
+    "static/media/info.svg": "/static/media/info.ddc37a97f78bf1eae27769e52f3490c2.svg",
+    "static/media/arrow-right-circle.svg": "/static/media/arrow-right-circle.f340fdd57da13c5f56445815d0ca7c2f.svg",
+    "static/media/go-back.svg": "/static/media/go-back.af659ae74b3ae185ef38a5d744011a3e.svg",
+    "static/media/hamburguer-menu.svg": "/static/media/hamburguer-menu.410fdd8cef23ebe5a64833b44418d5db.svg",
+    "static/media/x.svg": "/static/media/x.2ebf078128e57496e88d4714bd2b5dd6.svg",
+    "static/media/arrow-left.svg": "/static/media/arrow-left.27a015514e9ca2e8fc7b5e0b701695e6.svg",
+    "main.89ea9d61.css.map": "/static/css/main.89ea9d61.css.map",
+    "main.535dbcfa.js.map": "/static/js/main.535dbcfa.js.map",
+    "787.b73c6c38.chunk.js.map": "/static/js/787.b73c6c38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89ea9d61.css",
+    "static/js/main.535dbcfa.js"
+  ]
+}
