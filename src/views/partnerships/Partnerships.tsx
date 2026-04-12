@@ -14,9 +14,9 @@ export const Partnerships = () => {
       {/* Hero Section */}
       <header className="partnerships-hero">
         <div className="partnerships-hero-content">
-          <span className="partnerships-hero-subtitle">COLLABORATION & GROWTH</span>
           <h1>Our Partnerships</h1>
           <p>Building strong relationships with industry leaders and community organisations to advance sustainable practices.</p>
+          <span className="partnerships-hero-subtitle">COLLABORATION & GROWTH</span>
         </div>
       </header>
 
