@@ -64,12 +64,6 @@ export const ProductDetailContainer = () => {
   return (
     <div className="product-detail">
       <div className="product-detail-gotoshop">
-        <Link to="/shop/all">
-          <button className="gotoshop-btn">
-            <GobackIcon className="goback-icon" />
-            <span>Shop</span>
-          </button>
-        </Link>
         {product && <ProductDetail product={product} />}
       </div>
     </div>
