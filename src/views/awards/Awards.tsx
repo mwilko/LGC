@@ -11,41 +11,86 @@ export const Awards = () => {
   return (
     <div className="awards-page">
       {/* Hero Section */}
-      <header className="awards-hero">
-        <div className="awards-hero-content">
-          <span className="awards-hero-subtitle">RECOGNITION & EXCELLENCE</span>
-          <h1>Our Achievements</h1>
-          <p>Award-winning excellence in quality, sustainability, and ethical sourcing</p>
+      <section className="awards-hero">
+        <div className="container">
+          <h1>Award Winning Excellence</h1>
+          <p>Recognised for quality, sustainability, and ethical practice</p>
         </div>
-      </header>
+      </section>
 
-      {/* Achievements Content Section */}
-      <section className="achievements-section">
-        <div className="achievements-container">
-          <div className="achievements-card-wrapper">
-            <div className="achievements-card">
-              <div className="achievements-image-wrapper">
-                <img
-                  src={awardsImg}
-                  alt="Our awards and certifications"
-                  className="awards-image"
-                />
-              </div>
-              <div className="achievements-text-wrapper">
-                <h2>Recognised for Excellence</h2>
-                <div className="card-divider"></div>
-                <p>
-                  The Lincolnshire Game Company has received multiple awards and accreditations for quality, sustainability, and ethical sourcing.
-                </p>
-                <p>
-                  From regional recognitions to national accolades, we're proud to be at the forefront of the wild game industry, delivering consistently exceptional products and service.
-                </p>
-                <Link to="/shop/all" className="cta-link">
-                  Explore Our Produce →
-                </Link>
-              </div>
+      {/* Featured Image & Content */}
+      <section className="featured-section">
+        <div className="container">
+          <div className="featured-layout">
+            <div className="featured-image">
+              <img src={awardsImg} alt="Awards and certifications" />
+            </div>
+            <div className="featured-text">
+              <h2>Our Recognition</h2>
+              <p>
+                The Lincolnshire Game Company has earned recognition from industry leaders and culinary experts for our unwavering commitment to quality, taste, and ethical sourcing practices.
+              </p>
+              <p>
+                Every award reflects our dedication to sustainable wildlife management, rigorous quality standards, and exceptional customer service. We're proud to represent the highest standards in the game industry.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Awards Grid */}
+      <section className="awards-grid-section">
+        <div className="container">
+          <div className="awards-cards">
+            <div className="award-card">
+              <h3>Award-Winning Produce</h3>
+              <p>Recognised by industry bodies for consistently exceptional quality, taste, and ethical sourcing practices.</p>
+            </div>
+            <div className="award-card">
+              <h3>100% Ethical Sourcing</h3>
+              <p>Every product fully traceable from field to table with transparent supply chains and sustainable wildlife management.</p>
+            </div>
+            <div className="award-card">
+              <h3>Premium Quality Assured</h3>
+              <p>Rigorous quality standards and expert processes ensure consistently exceptional flavour and texture.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="certifications-section">
+        <div className="container">
+          <h2>Our Certifications</h2>
+          <div className="certifications-list">
+            <div className="cert">
+              <h4>Red Tractor</h4>
+              <span>Food Assurance & Quality</span>
+            </div>
+            <div className="cert">
+              <h4>RSPB Partner</h4>
+              <span>Wildlife Conservation</span>
+            </div>
+            <div className="cert">
+              <h4>Soil Association</h4>
+              <span>Organic & Sustainable</span>
+            </div>
+            <div className="cert">
+              <h4>ISO 9001</h4>
+              <span>Quality Management</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section">
+        <div className="container">
+          <h2>Experience Premium Quality</h2>
+          <p>Discover award-winning game products sourced with integrity</p>
+          <Link to="/shop/all" className="btn btn-gold">
+            Shop Now
+          </Link>
         </div>
       </section>
     </div>

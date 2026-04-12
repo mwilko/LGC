@@ -18,7 +18,7 @@ export const ProductDetail = ({ product }: props) => {
 //   // Optional: manage selected quantity if needed (not tied to a cart)
 //   const [selectedQty, setSelectedQty] = useState(1);
 
-  console.log('img:', img);
+  // console.log('img:', img);
 
 
   return (
