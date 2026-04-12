@@ -8,6 +8,14 @@
 
 A modern, professional e-commerce platform for premium wild game product sourcing, with full traceability and sustainability at its core.
 
+Site can be viewed from either URL. Redirecting to 'roamingfree.org'.
+
+https://www.roamingfree.org/
+
+https://www.roamingfree.uk/
+
+coming soon --> https://www.lincolnshiregame.co.uk
+
 ## Overview
 
 The Lincolnshire Game Company website is a TypeScript/React application designed to showcase and facilitate the distribution of responsibly sourced, fully traceable wild game products. The platform emphasizes heritage, quality, and ethical sourcing while providing customers with comprehensive product information and seamless ordering capabilities.
