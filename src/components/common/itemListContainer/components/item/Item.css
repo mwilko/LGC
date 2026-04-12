@@ -107,7 +107,7 @@
 }
 
 .item-card:hover h4 {
-    color: var(--primary);    
+    color: var(--accent-gold);    
 }
 
 .item-card:hover span {

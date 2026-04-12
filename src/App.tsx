@@ -1,6 +1,8 @@
 // Toastify
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// Vercel Analytics
+import { Analytics } from '@vercel/analytics/react';
 // Components
 import { NavBar } from 'components/layout/navbar/Navbar';
 import { Footer } from 'components/layout/footer/Footer';
@@ -33,6 +35,9 @@ function App() {
                 pauseOnHover
                 theme='dark'
             />
+
+            {/* Vercel Analytics */}
+            <Analytics />
             
         </div>
     );

@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import contactHeroImg from '../../assets/images/showcase_game_fair.jpg';
-
 emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY || '');
 
 export const Contact = () => {
@@ -38,7 +37,8 @@ export const Contact = () => {
 
       setSubmitMessage('Thank you for your enquiry. We aim to respond within one working day.');
       formRef.current.reset();
-    } catch {
+    } catch (error) {
+      console.error('EmailJS Error:', error);
       setSubmitMessage('Unable to send message. Please call us on (+44) 1205 822882.');
     } finally {
       setIsSubmitting(false);

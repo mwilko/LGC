@@ -1,75 +1,19 @@
-// import { createContext, useEffect, useState } from 'react';
-// // Toasts
-// import { onAddToast } from 'utils/toasts';
-// import { noStockToast } from 'utils/toasts';
-// // Interfaces
-// import { Product } from 'interfaces/product.d';
-// // Contexts
-// import { ICartContext } from 'interfaces/cartContext';
+/**
+ * CartContext.tsx
+ * 
+ * PHASE 2 FEATURE - Not yet implemented
+ * 
+ * Specification: docs/API_DATA_SPECIFICATIONS.md#Section-1.2
+ * Feature Spec: docs/FEATURE_SPECIFICATIONS.md#Section-8.1
+ * 
+ * This context will manage shopping cart state when e-commerce
+ * features are activated in Phase 2.
+ * 
+ * Deferred implementation - placeholder only
+ */
 
-
-// const DEFAULT_PRODUCT = {
-//     id: 'customID0238920',
-//     name: 'Wagyu Tomahawk 1kg',
-//     price: 38.60,
-//     description: 'It is the product of the best Australian and Uruguayan Wagyu genetics, from cattle raised in the recognized natural grasslands of Uruguay, fattened and finished with special diets in Feedlot. It encompasses a product of the highest quality and consistency, which is exported from Uruguay to the most demanding markets in the world.',
-//     img: 'tomahawk-wagyu.jpg',
-//     category: 'wagyu',
-//     cartAmount: 5,
-//     stock: 13
-// }
-
-// export const CartContext = createContext<ICartContext>({
-//     products: [],
-//     expressShipping: false,
-//     setExpressShipping: () => {},
-//     cardPayment: false,
-//     setCardPayment: () => {},
-//     addProduct: () => {},
-//     quickAdd: () => {},
-//     increaseProduct: () => {},
-//     removeProduct: () => {},
-//     decreaseProduct: () => {},
-//     clear: () => {},
-//     isInCart: () => false,
-//     getProduct: () => DEFAULT_PRODUCT,
-//     cartLength: () => 0,
-//     getSubtotal: () => 0,
-//     getTotal: () => 0
-// });
-
-// type props = {
-//     children: JSX.Element | JSX.Element[];
-// }
-
-// export const CartContextProvider = ({ children }: props) => {
-
-//     /* This state is an array of products that
-//     represents the products in the cart. */
-//     const [products, setProducts] = useState<Product[]>([]);
-
-//     /* This state is true if the user selects express
-//     shipping or false for standard shipping. */
-//     const [expressShipping, setExpressShipping] = useState(false);
-
-//     /* This state is true if the user selects card
-//     payment or false for on delivery payment. */
-//     const [cardPayment, setCardPayment] = useState(false);
-
-//     /* This function adds an amount of a product to the cart. */
-//     const addProduct = (product: Product, amount: number) => {
-//         /* Check if the product is already in the cart,
-//         if is in the cart => update his quantity
-//         otherwise => add the product to the cart. */
-//         if (isInCart(product.id)) {
-//             /* Product already on the cart => get the index of
-//             the product on the products array. Creates an auxiliary
-//             array and updates the product cartAmount. Finally set the products state. */
-//             let prod = getProduct(product.id);
-//             let index = products.indexOf(prod);
-
-//             let productsCopy = [...products];
-//             productsCopy[index].cartAmount += amount;
+export const CartContext = null;
+export const CartContextProvider = null;
 
 //             setProducts(productsCopy);
 //             setProductsLS(productsCopy);

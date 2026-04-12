@@ -1,5 +1,8 @@
 .product-detail-card {
     background-color: #232323;
+    background: linear-gradient(135deg, #232323 0%, #1a1a1a 50%, #232323 100%);
+    background-size: 200% 200%;
+    animation: subtleGradientShift 15s ease infinite;
     padding: 1.2em 1.4em;
     display: flex;
     flex-direction: column;
@@ -7,36 +10,96 @@
     color: var(--white-50);
 }
 
+@keyframes subtleGradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .pdc-main {
     display: flex;
     flex-direction: column;
     gap: 0.6em;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pdcm-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
 }
 
 .pdcm-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.6s ease;
+}
+
+.pdcm-img:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.pdcm-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(241, 182, 71, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+.pdcm-img:hover::after {
+    opacity: 1;
 }
 
 .pdcm-data {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .pdcm-data h3 {
     font-weight: 300;
     text-transform: uppercase;
     font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, var(--white-100) 0%, var(--accent-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .pdcm-data > span {
     font-weight: 300;
     text-transform: uppercase;
-    color: var(--white-50);
+    color: var(--accent-gold);
     margin-top: -5px;
     font-size: 0.95rem;
+    letter-spacing: 1px;
 }
 
 .pdcm-data hr {
@@ -50,6 +113,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.8em;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .pdc-description h4 {
@@ -57,11 +121,25 @@
     font-size: 1.08rem;
     text-transform: uppercase;
     margin-top: 1em;
+    position: relative;
+    padding-bottom: 0.75em;
+}
+
+.pdc-description h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--accent-gold);
+    border-radius: 1px;
 }
 
 .pdc-description p {
     font-size: 0.8rem;
     color: var(--white-25);
+    line-height: 1.6;
 }
 
 /* Finish Buying */
@@ -75,18 +153,21 @@
     font-size: 0.85rem;
     letter-spacing: 0.2px;
     color: var(--white-25);
+    animation: fadeInUp 0.8s ease-out 0.5s both;
 }
 
 .fb-buttons {
     display: flex;
     flex-direction: column;
     gap: 0.6em;
+    animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
 .fb-btn {
     text-transform: uppercase;
     font-size: 1rem;
     border: 1px solid var(--white-50);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .fb-continue-shopping-btn {
@@ -96,10 +177,32 @@
     border: 1px solid var(--white-50);
     color: var(--white-50) !important;
     box-shadow: none !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fb-continue-shopping-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 182, 71, 0.15);
+    transition: left 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: -1;
 }
 
 .fb-continue-shopping-btn:hover {
-    background-color: #333333 !important;
+    background-color: transparent !important;
+    border-color: var(--accent-gold);
+    color: var(--accent-gold) !important;
+    transform: translateX(4px);
+}
+
+.fb-continue-shopping-btn:hover::before {
+    left: 0;
 }
 
 @media (min-width: 598px) {

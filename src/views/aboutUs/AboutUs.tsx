@@ -10,7 +10,7 @@ export const AboutUs = () => {
   return (
     <div className="about-page">
       {/* Hero / Banner */}
-      <section className="about-hero" aria-labelledby="about-hero-heading">
+      <section className="about-hero" style={{ backgroundImage: `url(${aboutUsImg})` }} aria-labelledby="about-hero-heading">
         <div className="about-hero-overlay" />
         <div className="about-hero-content">
           <h1 id="about-hero-heading">About Lincolnshire Game</h1>

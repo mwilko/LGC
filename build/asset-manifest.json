@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.89ea9d61.css",
-    "main.js": "/static/js/main.535dbcfa.js",
+    "main.js": "/static/js/main.98765a46.js",
     "static/js/787.b73c6c38.chunk.js": "/static/js/787.b73c6c38.chunk.js",
     "static/media/Venison Kofta - Garlic Paprika.jpg": "/static/media/Venison Kofta - Garlic Paprika.b627fb43f4578d363996.jpg",
     "static/media/Venison Skewers - Garlic Paprika.jpg": "/static/media/Venison Skewers - Garlic Paprika.cd909069e5cac803a4e7.jpg",
@@ -18,24 +18,24 @@
     "static/media/s_lgc_logo.png": "/static/media/s_lgc_logo.52d7a96afed8f510375e.png",
     "static/media/lgc_transparent.png": "/static/media/lgc_transparent.020efa4c56ee573657f4.png",
     "static/media/altas_quintas_pfp.jpg": "/static/media/altas_quintas_pfp.f9d7bdfa32e233665afb.jpg",
-    "static/media/instagram.svg": "/static/media/instagram.69926b9802e69bb7bd031d1c4202e97c.svg",
     "index.html": "/index.html",
+    "static/media/instagram.svg": "/static/media/instagram.69926b9802e69bb7bd031d1c4202e97c.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.eb6cb1bc2e12529632f90017c6364448.svg",
     "static/media/facebook.svg": "/static/media/facebook.63ac2d4e4b7165172cc1ce06f4a4d52d.svg",
-    "static/media/error.svg": "/static/media/error.1aef3f421b89162bd318f9423b33362e.svg",
-    "static/media/x_social.svg": "/static/media/x_social.3b712904cea894e6aa445fef7670edd3.svg",
-    "static/media/info.svg": "/static/media/info.ddc37a97f78bf1eae27769e52f3490c2.svg",
-    "static/media/arrow-right-circle.svg": "/static/media/arrow-right-circle.f340fdd57da13c5f56445815d0ca7c2f.svg",
-    "static/media/go-back.svg": "/static/media/go-back.af659ae74b3ae185ef38a5d744011a3e.svg",
-    "static/media/hamburguer-menu.svg": "/static/media/hamburguer-menu.410fdd8cef23ebe5a64833b44418d5db.svg",
-    "static/media/x.svg": "/static/media/x.2ebf078128e57496e88d4714bd2b5dd6.svg",
-    "static/media/arrow-left.svg": "/static/media/arrow-left.27a015514e9ca2e8fc7b5e0b701695e6.svg",
+    "static/media/error.svg": "/static/media/error.bd2c9ba37ffbf6276e5899fd648d6d06.svg",
+    "static/media/x_social.svg": "/static/media/x_social.a2eb1abc9414f49be9876e0b6df55c46.svg",
+    "static/media/info.svg": "/static/media/info.4cceffb8130c150dc25ca0023500a450.svg",
+    "static/media/arrow-right-circle.svg": "/static/media/arrow-right-circle.0bbf6d6d78268dcd15ea9aab9bd59c40.svg",
+    "static/media/go-back.svg": "/static/media/go-back.4296027bd7f493ada64baee4a9d2df4a.svg",
+    "static/media/hamburguer-menu.svg": "/static/media/hamburguer-menu.d816dbe5fe8a25bbf2b38f8b09442139.svg",
+    "static/media/x.svg": "/static/media/x.04be7fdc34f32a9edf10981a1f8ebf64.svg",
+    "static/media/arrow-left.svg": "/static/media/arrow-left.fab67a7faddfd41752f3aac52d15b349.svg",
     "main.89ea9d61.css.map": "/static/css/main.89ea9d61.css.map",
-    "main.535dbcfa.js.map": "/static/js/main.535dbcfa.js.map",
+    "main.98765a46.js.map": "/static/js/main.98765a46.js.map",
     "787.b73c6c38.chunk.js.map": "/static/js/787.b73c6c38.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.89ea9d61.css",
-    "static/js/main.535dbcfa.js"
+    "static/js/main.98765a46.js"
   ]
 }
