@@ -14,9 +14,9 @@ export const Blogs = () => {
     <div className="blogs-page">
       <header className="blogs-hero">
         <div className="blogs-hero-content">
-          <span className="blogs-hero-subtitle">STORIES & INSIGHTS</span>
           <h1>From the Field to Your Table</h1>
           <p>Discover our thoughts on sustainable hunting, wild food, and behind-the-scenes stories from Lincolnshire Game.</p>
+          <span className="blogs-hero-subtitle">STORIES & INSIGHTS</span>
         </div>
       </header>
 
