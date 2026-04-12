@@ -16,8 +16,18 @@
 .awards-hero {
   padding: 4rem 2rem;
   text-align: center;
-  background: var(--mainBackground);
+  background: linear-gradient(135deg, rgba(31, 31, 31, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%),
+              url('../../assets/images/british-landscape.jpeg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-attachment: fixed;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .awards-hero h1 {
