@@ -72,6 +72,13 @@
   line-height: 1.7;
 }
 
+.about-page .corporate-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--accent-gold);
+  margin-bottom: 1.25rem;
+}
+
 .about-page .corporate-image-block {
   min-height: 0;
   overflow: hidden;

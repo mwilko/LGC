@@ -11,7 +11,6 @@ export const Partnerships = () => {
 
   return (
     <div className="partnerships-page">
-      {/* Hero Section */}
       <header className="partnerships-hero">
         <div className="partnerships-hero-content">
           <h1>Our Partnerships</h1>
@@ -20,74 +19,70 @@ export const Partnerships = () => {
         </div>
       </header>
 
-      {/* Partnership Content Section */}
-      <section className="partnerships-section">
-        <div className="corporate-container">
-          <div className="corporate-content-wrapper">
-            <div className="corporate-image-block">
-              <img
-                src={partner1}
-                alt="Jose Soto - Senior Chef Lecturer at Westminster Kingsway College"
-                className="corporate-image"
-              />
-            </div>
-            <div className="corporate-text-block">
-              <h2>Jose Luis Souto</h2>
-              <div className="corporate-divider"></div>
-              <p>
-                As Senior Chef Lecturer of Westminster Kingsway College, we work closely with Jose and he is a proud promoter of our produce at Lincolnshire Game.
-              </p>
-              <p>
-                Jose is also the author of The Game Larder Books in collaboration with us, which showcases everything game.
-              </p>
-              <a
-                href="https://www.waterstones.com/author/jose-souto/3973804"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-cta-link"
-              >
-                The Game Larder Book →
-              </a>
-            </div>
+      <section className="partnerships-section" aria-label="Our partners">
+        <article className="partnership-card" aria-labelledby="partner-souto">
+          <div className="partnership-card__media">
+            <img
+              src={partner1}
+              alt="Jose Luis Souto preparing game at a cooking demonstration"
+              className="partnership-card__image"
+              loading="lazy"
+            />
           </div>
-        </div>
+          <div className="partnership-card__content">
+            <p className="partnership-card__eyebrow">Culinary expertise</p>
+            <h2 id="partner-souto">Jose Luis Souto</h2>
+            <p>
+              As Senior Chef Lecturer of Westminster Kingsway College, we work closely with Jose and he is a proud promoter of our produce at Lincolnshire Game.
+            </p>
+            <p>
+              Jose is also the author of The Game Larder Books in collaboration with us, which showcases everything game.
+            </p>
+            <a
+              href="https://www.waterstones.com/author/jose-souto/3973804"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-button site-button--secondary"
+            >
+              The Game Larder Book →
+            </a>
+          </div>
+        </article>
 
-        <div className="corporate-container">
-          <div className="corporate-content-wrapper reverse">
-            <div className="corporate-image-block">
-              <img
-                src={partner2}
-                alt="Atlas Quintas - Finest Portuguese Wines"
-                className="corporate-image"
-              />
-            </div>
-            <div className="corporate-text-block">
-              <h2>Atlas Quintas</h2>
-              <div className="corporate-divider"></div>
-              <p>
-                Atlas Quintas crafts high-altitude wines from Portugal’s Serra de São Mamede, bringing refined structure and bold character to the table—qualities that align perfectly with our game at Lincolnshire Game.
-              </p>
-              <p>
-                Our partnership celebrates the harmony between wild-sourced British produce and sustainably made Portuguese wine, regularly featured in our tastings and chef collaborations.
-              </p>
-              <a
-                href="https://altasquintas.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-cta-link"
-              >
-                Visit Site →
-              </a>
-            </div>
+        <article className="partnership-card" aria-labelledby="partner-quintas">
+          <div className="partnership-card__media partnership-card__media--logo">
+            <img
+              src={partner2}
+              alt="Atlas Quintas - Finest Portuguese Wines"
+              className="partnership-card__image"
+              loading="lazy"
+            />
           </div>
-        </div>
+          <div className="partnership-card__content">
+            <p className="partnership-card__eyebrow">Food & wine</p>
+            <h2 id="partner-quintas">Atlas Quintas</h2>
+            <p>
+              Atlas Quintas crafts high-altitude wines from Portugal’s Serra de São Mamede, bringing refined structure and bold character to the table—qualities that align perfectly with our game at Lincolnshire Game.
+            </p>
+            <p>
+              Our partnership celebrates the harmony between wild-sourced British produce and sustainably made Portuguese wine, regularly featured in our tastings and chef collaborations.
+            </p>
+            <a
+              href="https://altasquintas.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-button site-button--secondary"
+            >
+              Visit Site →
+            </a>
+          </div>
+        </article>
       </section>
 
-      {/* Call to Action */}
       <div className="partnerships-cta">
-        <Link to="/contact" className="hero-cta-link button-inline">
-          Become a Partner
-        </Link>
+        <h2>Interested in working together?</h2>
+        <p>Speak to our team about partnership opportunities.</p>
+        <Link to="/contact" className="site-button">Become a Partner</Link>
       </div>
     </div>
   );
