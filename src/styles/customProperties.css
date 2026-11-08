@@ -1,5 +1,4 @@
-/* Calistoga & Lora */
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+/* Lora */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
 /* Custom Properties */
@@ -34,8 +33,8 @@
     --viewLines: #414141;
 
     /* ===== TYPOGRAPHY ===== */
-    --mainFont: 'Calistoga', cursive;
-    --bodyFont: 'Lora', Georgia, serif;
+    --mainFont: 'Lora', Georgia, serif;
+    --bodyFont: Arial, Helvetica, sans-serif;
     
     /* Font weights */
     --fw-light: 300;

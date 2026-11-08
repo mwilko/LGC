@@ -1,151 +1,68 @@
 .item-card {
     display: flex;
     flex-direction: column;
-    gap: var(--space-lg);
-    max-width: 230px;
-    cursor: pointer;
-    transition: all var(--transition-base);
-    
-    /* Subtle lift on hover */
+    width: 100%;
+    gap: 1.25rem;
+    color: var(--white-100);
 }
 
 .item-card:hover {
-    transform: translateY(-6px);
+    color: var(--white-100);
+    text-decoration: none;
 }
 
 .ic-img {
-    position: relative;
-    overflow: hidden;
-    min-height: 150px;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-base);
-}
-
-.ic-img img {
-    object-fit: cover;
-    height: 160px;
-    max-width: 160px;
-    transition: transform var(--transition-base);
-    display: block;
-}
-
-.item-card:hover .ic-img {
-    box-shadow: var(--shadow-lg);
-}
-
-.item-card:hover .ic-img img {
-    transform: scale(1.08);
-}
-
-.item-card:hover .ic-overlay {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.item-card:hover .ic-overlay .quick-add-btn,
-.item-card:hover .ic-overlay .product-detail-btn {
-    transform: translateX(0);
-}
-
-.ic-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 97.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    gap: 0.6em;
-    padding: 0.6em;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
-    opacity: 0;
-    pointer-events: none;
-    transition: all var(--transition-base);
-    overflow: hidden;
-}
-
-.quick-add-btn, .product-detail-btn {
-    border: none;
-    background: transparent;
-    transform: translateX(50px);
-    transition: all var(--transition-base);
-    padding: var(--space-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.quick-add-btn:hover,
-.product-detail-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #1c1c1c;
+    border: 1px solid var(--viewLines);
     border-radius: var(--radius-sm);
+    transition: border-color var(--transition-base);
 }
 
-.quick-add-btn .quick-add-icon, 
-.product-detail-btn .info-icon {
-    width: 24px;
-    height: 24px;
-    color: var(--white-50);
-    transition: all var(--transition-base);
+.ic-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.quick-add-btn:hover .quick-add-icon,
-.product-detail-btn:hover .info-icon {
-    color: var(--accent-gold);
-    transform: scale(1.1);
-}
-
-.ic-name-price {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6em;
-    transition: all var(--transition-base);
-}
-
-.item-card:hover h4 {
-    color: var(--accent-gold);    
-}
-
-.item-card:hover span {
-    color: var(--accent-gold);    
-}
-
-.ic-name-price h4 {
-    text-transform: uppercase;
+.ic-img--placeholder {
+    padding: 1.25rem;
     text-align: center;
-    color: var(--white-50);
-    font-weight: var(--fw-light);
-    font-size: 0.6rem;
-    transition: all var(--transition-base);
-    line-height: var(--lh-tight);
-    margin: 0;
 }
 
-.ic-name-price span {
-    text-transform: uppercase;
-    color: var(--white-25);
-    font-weight: var(--fw-semibold);
-    font-size: 0.6rem;
-    transition: all var(--transition-base);
-    margin: 0;
-    letter-spacing: 1px;
+.ic-img--placeholder > span {
+    font-family: var(--mainFont);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    color: var(--accent-gold);
 }
 
-@media (min-width: 460px) {
-    .ic-name-price h4 {
-        font-size: var(--fs-sm);
-    }
-    
-    .ic-name-price span {
-        font-size: 0.85rem;
-    }
+.item-card:hover .ic-img,
+.item-card:focus-visible .ic-img {
+    border-color: var(--accent-gold);
+}
 
-    .ic-img img {
-        height: 210px;
-        max-width: 210px;
-    }
+.ic-name-price h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+}
+
+.ic-name-price p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #b5b5b5;
+    margin: 0 0 0.75rem;
+}
+
+.item-card__link {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--accent-gold);
+    font-size: 0.95rem;
+    font-weight: 600;
 }

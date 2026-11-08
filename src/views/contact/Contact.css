@@ -1,428 +1,163 @@
-/* ==========================================================================
-   PAGE WRAPPER
-   ========================================================================== */
-
 .contact-page {
   background: var(--mainBackground);
   color: var(--white-100);
 }
 
-/* ==========================================================================
-   HERO
-   ========================================================================== */
-
 .contact-hero {
   position: relative;
-  height: 50vh;          /* taller on large screens */
-  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-size: cover;       
-  background-position: 45% 65%; /* slightly left and 10% down */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow: hidden;
+  min-height: 260px;
+  padding: 3rem 1.5rem;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  isolation: isolate;
 }
 
 .contact-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.7)
-  ),
-  radial-gradient(circle at 20% 50%, rgba(241, 182, 71, 0.05) 0%, transparent 50%);
-  animation: subtleGradientShift 15s ease infinite;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
 }
 
 .contact-hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  padding: 0 1.5em;
+  max-width: 40rem;
 }
 
 .contact-hero-content h1 {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  font-weight: 700;
-  text-transform: none;
-  letter-spacing: 0px;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--accent-gold);
-  display: inline-block;
-  animation: slideUp 0.8s ease-out both;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  margin: 0 0 1rem;
 }
 
 .contact-hero-content p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-  letter-spacing: 0px;
-  margin-top: 0.5rem;
-  animation: slideUp 0.8s ease-out 0.1s both;
+  color: var(--white-50);
+  margin: 0;
 }
 
-/* ==========================================================================
-   CONTENT
-   ========================================================================== */
-
 .contact-content {
-  padding: 4rem 0;
-  background: var(--mainBackground);
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.contact-container {
+  width: min(100% - 3rem, 1200px);
+  margin: 0 auto;
 }
 
 .contact-grid {
   display: grid;
-  gap: 3rem;
-  grid-template-columns: 1fr 1fr; /* desktop default */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--space-md);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
 }
-
-/* ==========================================================================
-   CONTACT INFO (LEFT COLUMN)
-   ========================================================================== */
 
 .contact-info h2 {
-  font-size: clamp(1.5rem, 3.2vw, 2rem);
-  font-weight: 700;
-  text-transform: none;
-  letter-spacing: 0px;
-  margin-bottom: 1rem;
-  color: var(--white-100);
-  animation: slideUp 0.8s ease-out both;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 0;
 }
 
-.corporate-divider {
-  width: 60px;
-  height: 3px;
-  background: var(--accent-gold);
-  margin-bottom: 1.5rem;
-  animation: slideUp 0.8s ease-out 0.1s both;
-}
-
-.contact-info p {
-  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.8;
-  margin-bottom: 1.5em;
-  animation: slideUp 0.8s ease-out 0.2s both;
+.contact-info p,
+.contact-details {
+  color: #d1d1d1;
 }
 
 .contact-details {
-  list-style: none;
   padding: 0;
-  margin: 0;
-  animation: slideUp 0.8s ease-out 0.3s both;
+  margin: 1.5rem 0 0;
 }
 
-.contact-details li {
-  margin-bottom: 1em;
-  font-size: clamp(0.9rem, 1.6vw, 1rem);
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
+.contact-details a {
+  color: var(--white-100);
+  overflow-wrap: anywhere;
+  text-decoration: underline;
 }
 
-.contact-details li strong {
+.contact-details a:hover {
   color: var(--accent-gold);
-  font-weight: 600;
 }
-
-/* ==========================================================================
-   FORM CONTAINER
-   ========================================================================== */
 
 .contact-form {
-  background: 
-    radial-gradient(circle at 20% 0%, rgba(241, 182, 71, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 100% 80%, rgba(42, 157, 143, 0.05) 0%, transparent 50%),
-    linear-gradient(135deg, rgba(31, 31, 31, 0.8) 0%, rgba(25, 25, 25, 0.8) 100%);
-  border: 1px solid rgba(241, 182, 71, 0.15);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 100%;
-  box-sizing: border-box;
-  max-width: 100%;
-  animation: slideUp 0.8s ease-out 0.2s both;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--viewLines);
+  border-radius: var(--radius-sm);
+  background: #1c1c1c;
 }
 
-.contact-form:hover {
-  border-color: rgba(241, 182, 71, 0.3);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+.contact-product {
+  margin: 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--viewLines);
+  color: var(--accent-gold);
 }
 
-/* ==========================================================================
-   FORM GROUPS
-   ========================================================================== */
-
-.form-group {
+.contact-form .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.4em;
+  gap: 0.5rem;
 }
 
-.form-group label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
-  color: rgba(255, 255, 255, 0.8);
+.contact-form label {
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
-/* ==========================================================================
-   INPUTS
-   ========================================================================== */
-
-.form-group input,
-.form-group textarea {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(241, 182, 71, 0.2);
-  border-radius: var(--radius-md);
-  padding: 0.75em 1em;
-  font-size: clamp(0.9rem, 1.6vw, 1rem);
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #777;
+  border-radius: var(--radius-sm);
+  background: #111;
   color: var(--white-100);
-  font-family: inherit;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-size: 1rem;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.35);
+.contact-form textarea {
+  resize: vertical;
+  min-height: 160px;
 }
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  background: rgba(255, 255, 255, 0.06);
-  border-color: var(--accent-gold);
-  box-shadow: 0 0 0 3px rgba(241, 182, 71, 0.1);
-}
-
-/* ==========================================================================
-   SUBMIT BUTTON
-   ========================================================================== */
 
 .contact-form button {
-  margin-top: 0.5rem;
   align-self: flex-start;
-  background: linear-gradient(135deg, var(--accent-gold), rgba(241, 182, 71, 0.9));
-  color: var(--black-100);
-  border: 2px solid var(--accent-gold);
-  border-radius: var(--radius-md);
-  padding: 0.875rem 2rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-form button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  transition: left 0.4s ease;
-  z-index: 0;
-}
-
-.contact-form button:hover:not(:disabled)::before {
-  left: 100%;
-}
-
-.contact-form button:hover:not(:disabled) {
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold));
-  box-shadow: 0 8px 24px rgba(241, 182, 71, 0.4);
-  transform: translateY(-3px);
 }
 
 .contact-form button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+  opacity: 0.65;
+  cursor: wait;
 }
 
-/* ==========================================================================
-   SUBMIT MESSAGE
-   ========================================================================== */
-
 .submit-message {
-  margin-top: 1rem;
   padding: 1rem;
-  border-radius: var(--radius-md);
-  font-size: 0.9rem;
+  margin: 0;
   line-height: 1.6;
-  animation: slideUp 0.6s ease-out;
+  color: var(--white-100);
 }
 
 .submit-message.success {
-  color: var(--white-100);
-  background: rgba(93, 222, 219, 0.15);
+  background: rgba(93, 222, 219, 0.1);
   border-left: 3px solid #5ddedb;
 }
 
 .submit-message.error {
-  color: var(--white-100);
-  background: rgba(252, 165, 165, 0.15);
+  background: rgba(252, 165, 165, 0.1);
   border-left: 3px solid #fca5a5;
 }
 
-/* ==========================================================================
-   ANIMATIONS
-   ========================================================================== */
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes subtleGradientShift {
-  0%, 100% {
-    background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.7)
-    ),
-    radial-gradient(circle at 20% 50%, rgba(241, 182, 71, 0.05) 0%, transparent 50%);
-  }
-  50% {
-    background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.65)
-    ),
-    radial-gradient(circle at 80% 50%, rgba(241, 182, 71, 0.08) 0%, transparent 50%);
-  }
-}
-
-/* ==========================================================================
-   RESPONSIVE
-   ========================================================================== */
-
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
   .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .contact-form {
-    padding: 1.5rem;
-  }
-
-  .contact-hero {
-    background-position: 50% 50%;
-    height: 45vh;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-content {
-    padding: 3rem 0;
-  }
-
-  .contact-grid {
-    gap: 1.5rem;
-  }
-
-  .contact-form {
-    padding: 1.25rem;
-    gap: 1.25rem;
-  }
-
-  .contact-hero {
-    background-position: center top;
-    height: 40vh;
-    min-height: 280px;
-  }
-
-  .contact-hero-content h1 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .contact-info h2 {
-    font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2.5rem, 5vw, 5rem);
   }
 }
 
 @media (max-width: 480px) {
-  .contact-page {
-    background: var(--mainBackground);
-  }
-
-  .contact-content {
-    padding: 2rem 0;
-  }
-
-  .contact-grid {
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-
-  .contact-form {
-    padding: 1rem;
-    gap: 1rem;
-    border-radius: var(--radius-md);
-  }
-
   .contact-form button {
     width: 100%;
-    padding: 0.75rem 1.5rem;
-  }
-
-  .contact-hero {
-    background-position: center center;
-    height: 35vh;
-    min-height: 240px;
-  }
-
-  .contact-hero-content {
-    padding: 0 1rem;
-  }
-
-  .contact-hero-content h1 {
-    font-size: clamp(1.3rem, 5vw, 1.6rem);
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .contact-hero-content p {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-  }
-
-  .contact-info {
-    animation: slideUp 0.8s ease-out both;
-  }
-
-  .contact-info h2 {
-    font-size: clamp(1.1rem, 4vw, 1.3rem);
-    margin-bottom: 0.75rem;
-  }
-
-  .contact-details li {
-    font-size: clamp(0.85rem, 2vw, 0.95rem);
-    margin-bottom: 0.75rem;
   }
 }
