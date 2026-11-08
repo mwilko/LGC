@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Sponsors.css';
 import sponsor1 from 'assets/images/s_lgc_logo.png';
 import sponsor2 from 'assets/images/showcase_game_fair.jpg';
@@ -53,9 +54,7 @@ export const Sponsors = () => {
             <li>Educational demos</li>
             <li>Culinary showcases</li>
           </ul>
-          <a href="https://example.com/showcase-fair" target="_blank" rel="noopener noreferrer" className="sponsor-link">
-            Learn More →
-          </a>
+          <Link to="/contact" className="sponsor-link">Enquire About Events &rarr;</Link>
         </div>
 
         <div className="sponsor-card">
@@ -72,9 +71,7 @@ export const Sponsors = () => {
             <li>Professional development</li>
             <li>Regional outreach</li>
           </ul>
-          <a href="https://example.com/simulated-training" target="_blank" rel="noopener noreferrer" className="sponsor-link">
-            Learn More →
-          </a>
+          <Link to="/contact" className="sponsor-link">Ask About Training &rarr;</Link>
         </div>
       </section>
 
@@ -82,7 +79,7 @@ export const Sponsors = () => {
         <div className="cta-content">
           <h2>Interested in Partnering With Us?</h2>
           <p>We're always looking for like-minded organisations to collaborate with. Get in touch to discuss sponsorship opportunities.</p>
-          <a href="/contact" className="cta-button">Get In Touch</a>
+          <Link to="/contact" className="cta-button">Get In Touch</Link>
         </div>
       </section>
     </div>

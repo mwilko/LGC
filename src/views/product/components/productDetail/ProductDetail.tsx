@@ -1,72 +1,46 @@
-// Router
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-// Interfaces
 import { Product } from 'interfaces/product';
-// Styles
-import './ProductDetail.css';
-// Images
 import lgcLogo from 'assets/images/lgc_transparent.png';
-
+import lgcAltLogo from 'assets/images/lgc_logo_new_trans.png';
+import './ProductDetail.css';
 
 type props = {
   product: Product;
 };
 
 export const ProductDetail = ({ product }: props) => {
-  const { name, price, description, img } = product;
+  const { id, name, description, img } = product;
+  const [imageFailed, setImageFailed] = useState(false);
+  const hasPhoto = img && img !== lgcLogo && img !== lgcAltLogo && !imageFailed;
 
-//   // Optional: manage selected quantity if needed (not tied to a cart)
-//   const [selectedQty, setSelectedQty] = useState(1);
-
-  // console.log('img:', img);
-
+  useEffect(() => setImageFailed(false), [img]);
 
   return (
-    <div className="product-detail-card">
-
-      {/* Product main info */}
+    <article className="product-detail-card" aria-labelledby="product-heading">
+      <Link to="/shop/all" className="product-detail-card__back">
+        <span aria-hidden="true">&larr;</span> Back to Our Produce
+      </Link>
       <div className="pdc-main">
-        <div className="pdcm-img">
-            <img
-            src={img || lgcLogo}
-            alt={name}
-            onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = lgcLogo;
-            }}
-            />
+        <div className={`pdcm-img${hasPhoto ? '' : ' pdcm-img--placeholder'}`}>
+          {hasPhoto ? (
+            <img src={img} alt={name} onError={() => setImageFailed(true)} />
+          ) : (
+            <span aria-hidden="true">{name}</span>
+          )}
         </div>
-
         <div className="pdcm-data">
-          <h3>{name}</h3>
-          <span>£ {price.toFixed(2)}</span> {/* Display price with 2 decimal places */}
-          <hr />
-
-          {/* Quantity selector if needed */}
-          {/* <div className="qty-selector">
-            <label htmlFor="qty">Quantity:</label>
-            <input
-              type="number"
-              id="qty"
-              min="1"
-              value={selectedQty}
-              onChange={(e) => setSelectedQty(parseInt(e.target.value) || 1)}
-            />
-          </div> */}
-
-          {/* Example action buttons */}
-          <div className="fb-buttons">
-            <Link to="/shop" className="button fb-continue-shopping-btn">
-              Back to Shop
-            </Link>
-          </div>
+          <p className="product-detail-card__eyebrow">The Lincolnshire Game Company</p>
+          <h1 id="product-heading">{name}</h1>
+          <p>{description || `Speak to our team about ${name.toLowerCase()}, including available formats and your requirements.`}</p>
+          <p className="product-detail-card__availability">
+            Contact us for availability, pack sizes and current pricing.
+          </p>
+          <Link to={`/contact?product=${encodeURIComponent(id)}`} className="site-button">
+            Enquire About This Product
+          </Link>
         </div>
       </div>
-
-      {/* Product description */}
-      <div className="pdc-description">
-        <h4>Description</h4>
-        <p>{description}</p>
-      </div>
-    </div>
+    </article>
   );
 };

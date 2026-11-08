@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import aboutUsImg from '../../assets/images/showcase_game_fair.jpg';
 import './AboutUs.css';
 
@@ -13,8 +14,8 @@ export const AboutUs = () => {
       <section className="about-hero" style={{ backgroundImage: `url(${aboutUsImg})` }} aria-labelledby="about-hero-heading">
         <div className="about-hero-overlay" />
         <div className="about-hero-content">
-          <h1 id="about-hero-heading">About Lincolnshire Game</h1>
-          <p>Tradition, traceability, and uncompromising quality</p>
+          <h1 id="about-hero-heading">The Lincolnshire Game Company</h1>
+          <p>Our people, our produce and our approach</p>
         </div>
       </section>
 
@@ -56,9 +57,8 @@ export const AboutUs = () => {
               <h2>Standards & Responsibility</h2>
               <div className="corporate-divider"></div>
               <p>
-                We operate in full compliance with UK and EU food regulations,
-                adhering to recognised industry certifications and best practices
-                at every stage of production.
+                Knowing where your food comes from matters. Speak to our team
+                about product origins, traceability and how our produce is handled.
               </p>
               <p>
                 Animal welfare, environmental responsibility, and transparency
@@ -70,20 +70,21 @@ export const AboutUs = () => {
 
             <div className="corporate-stats-card">
               <div className="stat">
-                <span className="stat-value">100%</span>
-                <span className="stat-label">Traceable Supply Chain</span>
+                <span className="stat-value">Sourcing</span>
+                <span className="stat-label">Ask about product origins</span>
               </div>
               <div className="stat">
-                <span className="stat-value">UK</span>
-                <span className="stat-label">Ethically Sourced</span>
+                <span className="stat-value">Produce</span>
+                <span className="stat-label">Find the right formats for you</span>
               </div>
               <div className="stat">
-                <span className="stat-value">10+</span>
-                <span className="stat-label">Years of Expertise</span>
+                <span className="stat-value">People</span>
+                <span className="stat-label">Talk directly to our team</span>
               </div>
             </div>
           </div>
 
+          <Link to="/contact" className="site-button">Speak to Our Team</Link>
         </div>
       </section>
     </div>

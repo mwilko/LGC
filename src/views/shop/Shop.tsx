@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 // Data
 import { products } from 'data/products';
 // Components
@@ -38,8 +38,8 @@ export const Shop = () => {
         { id: 'all', label: 'All Products', count: products.length },
         { id: 'venison', label: 'Venison', count: products.filter(p => p.category === 'venison').length },
         { id: 'poultry', label: 'Poultry', count: products.filter(p => p.category === 'poultry').length },
-        { id: 'standard', label: 'Standard', count: products.filter(p => p.category === 'standard').length },
-        { id: 'other', label: 'Other', count: products.filter(p => p.category === 'other').length },
+        { id: 'standard', label: 'Other Meats', count: products.filter(p => p.category === 'standard').length },
+        { id: 'other', label: 'Accompaniments', count: products.filter(p => p.category === 'other').length },
     ];
 
     const getCategoryTitle = () => {
@@ -47,8 +47,8 @@ export const Shop = () => {
             case 'all': return 'All Products';
             case 'venison': return 'Venison';
             case 'poultry': return 'Poultry';
-            case 'standard': return 'Standard Meats';
-            case 'other': return 'Other Products';
+            case 'standard': return 'Other Meats';
+            case 'other': return 'Accompaniments';
             default: return 'All Products';
         }
     };
@@ -57,8 +57,8 @@ export const Shop = () => {
         <div className="shop">
             <div className="shop-banner">
                 <div className="shop-banner-content">
-                    <h1>Premium Game Meats</h1>
-                    <p>Sustainably sourced, exceptional quality</p>
+                    <h1>Our Produce</h1>
+                    <p>Discover the selection from The Lincolnshire Game Company</p>
                 </div>
             </div>
 
@@ -67,7 +67,7 @@ export const Shop = () => {
                     <div className="shop-header">
                         <h2>Product Catalogue</h2>
                         <p className="shop-subtitle">
-                            Browse our selection of premium game meats
+                            Explore our produce, then contact us for available cuts, pack sizes and current pricing.
                         </p>
                     </div>
 
@@ -77,6 +77,7 @@ export const Shop = () => {
                                 key={cat.id}
                                 onClick={() => handleClickCategory(cat.id)}
                                 className={`category-btn ${category === cat.id ? 'active' : ''}`}
+                                aria-pressed={category === cat.id}
                             >
                                 <span className="category-label">{cat.label}</span>
                                 <span className="category-count">{cat.count}</span>
@@ -101,9 +102,7 @@ export const Shop = () => {
                     <p>
                         Our team is here to help with product enquiries, custom orders, and bulk purchases.
                     </p>
-                    <a href="/contact" className="shop-contact-btn">
-                        Contact Us
-                    </a>
+                    <Link to="/contact" className="site-button">Make an Enquiry</Link>
                 </div>
             </div>
         </div>

@@ -47,37 +47,12 @@ export const Awards = () => {
               <p>Recognised by industry bodies for consistently exceptional quality, taste, and ethical sourcing practices.</p>
             </div>
             <div className="award-card">
-              <h3>100% Ethical Sourcing</h3>
-              <p>Every product fully traceable from field to table with transparent supply chains and sustainable wildlife management.</p>
+              <h3>Provenance Matters</h3>
+              <p>Our team can help with questions about product origins, sourcing and handling.</p>
             </div>
             <div className="award-card">
               <h3>Premium Quality Assured</h3>
               <p>Rigorous quality standards and expert processes ensure consistently exceptional flavour and texture.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications */}
-      <section className="certifications-section">
-        <div className="container">
-          <h2>Our Certifications</h2>
-          <div className="certifications-list">
-            <div className="cert">
-              <h4>Red Tractor</h4>
-              <span>Food Assurance & Quality</span>
-            </div>
-            <div className="cert">
-              <h4>RSPB Partner</h4>
-              <span>Wildlife Conservation</span>
-            </div>
-            <div className="cert">
-              <h4>Soil Association</h4>
-              <span>Organic & Sustainable</span>
-            </div>
-            <div className="cert">
-              <h4>ISO 9001</h4>
-              <span>Quality Management</span>
             </div>
           </div>
         </div>
@@ -89,7 +64,7 @@ export const Awards = () => {
           <h2>Experience Premium Quality</h2>
           <p>Discover award-winning game products sourced with integrity</p>
           <Link to="/shop/all" className="btn btn-gold">
-            Shop Now
+            Explore Our Produce
           </Link>
         </div>
       </section>

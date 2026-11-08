@@ -1,6 +1,5 @@
 .product-detail {
-    padding: var(--space-2xl);
-    margin-bottom: var(--space-3xl);
+    padding: clamp(2rem, 5vw, 4rem) 1.5rem;
 }
 
 .product-detail-gotoshop {
@@ -9,7 +8,7 @@
     gap: var(--space-lg);
     width: 100%;
     margin: auto;
-    max-width: 800px;
+    max-width: 1200px;
 }
 
 .gotoshop-btn {
@@ -73,11 +72,4 @@
 .gotoshop-btn:focus-visible {
     outline: 2px solid var(--accent-gold);
     outline-offset: 2px;
-}
-
-@media (min-width: 598px) {
-    .product-detail-gotoshop {
-        margin-top: 6em;
-        margin-bottom: 4em;
-    }
 }

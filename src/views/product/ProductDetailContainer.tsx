@@ -51,11 +51,9 @@ export const ProductDetailContainer = () => {
       <div className="loader-error" style={{ textAlign: 'center', color: '#6b6b6b' }}>
         <GobackIcon style={{ width: '32px' }} />
         <h3 className="error-title">Product not available</h3>
-        <Link to="/shop/all">
-          <button className="gotoshop-btn">
+        <Link to="/shop/all" className="gotoshop-btn">
             <GobackIcon className="goback-icon" />
-            <span>Back to Shop</span>
-          </button>
+            <span>Back to Our Produce</span>
         </Link>
       </div>
     );
@@ -64,7 +62,7 @@ export const ProductDetailContainer = () => {
   return (
     <div className="product-detail">
       <div className="product-detail-gotoshop">
-        {product && <ProductDetail product={product} />}
+        {product && <ProductDetail key={product.id} product={product} />}
       </div>
     </div>
   );

@@ -31,8 +31,8 @@ export const Blogs = () => {
               <span className="blog-category">Sustainability</span>
               <h3>Sustainability in Wild Game</h3>
               <p>How we ensure every product we offer is responsibly sourced and environmentally conscious. Learn about our commitment to preserving ecosystems...</p>
-              <Link to="/blog/sustainability-in-wild-game" className="blog-read-more">
-                <span>Read Story</span>
+              <Link to="/about-us" className="blog-read-more">
+                <span>Explore Our Approach</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M6 12l6-6-6-6"/>
                 </svg>
@@ -48,8 +48,8 @@ export const Blogs = () => {
               <span className="blog-category">Behind the Scenes</span>
               <h3>A Day in the Life of a Gamekeeper</h3>
               <p>Follow along with our team in the field as we trace the path from land to table...</p>
-              <Link to="/blog/day-in-the-life" className="blog-read-more">
-                <span>Read Story</span>
+              <Link to="/contact" className="blog-read-more">
+                <span>Speak to Our Team</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M6 12l6-6-6-6"/>
                 </svg>
@@ -65,8 +65,8 @@ export const Blogs = () => {
               <span className="blog-category">Recipes & Tips</span>
               <h3>Cooking Wild: Our Recipe Guide</h3>
               <p>Explore our favourite ways to prepare venison, pheasant, and more with simple, delicious recipes...</p>
-              <Link to="/blog/cooking-wild-guide" className="blog-read-more">
-                <span>Read Story</span>
+              <Link to="/shop/venison" className="blog-read-more">
+                <span>Explore Our Venison</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M6 12l6-6-6-6"/>
                 </svg>

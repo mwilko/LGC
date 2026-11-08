@@ -14,11 +14,13 @@ import 'styles/styles.ts';
 function App() {
     return (
         <div className="App">
-
+            <a href="#main-content" className="skip-link site-button">Skip to content</a>
             <NavBar />
 
             {/* Routes */}
-            <AppRoutes />
+            <main id="main-content" tabIndex={-1}>
+                <AppRoutes />
+            </main>
 
             <Footer />
 

@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import { products } from 'data/products';
 import './Contact.css';
 import contactHeroImg from '../../assets/images/showcase_game_fair.jpg';
 emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY || '');
@@ -8,6 +10,16 @@ export const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | ''>('');
+  const [searchParams] = useSearchParams();
+  const enquiryProduct = products.find(product => product.id === searchParams.get('product'));
+  const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    setMessage(enquiryProduct ? `Hello, I'd like to enquire about ${enquiryProduct.name}.\n\n` : '');
+    setSubmitMessage('');
+    setSubmitStatus('');
+  }, [enquiryProduct]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,6 +33,7 @@ export const Contact = () => {
 
     setIsSubmitting(true);
     setSubmitMessage('');
+    setSubmitStatus('');
 
     try {
       await emailjs.send(
@@ -31,15 +44,18 @@ export const Contact = () => {
           from_name: formData.get('name'),
           reply_to: formData.get('email'),
           message: formData.get('message'),
-          subject: `Website Enquiry`,
+          subject: enquiryProduct ? `Website Enquiry: ${enquiryProduct.name}` : 'Website Enquiry',
         }
       );
 
-      setSubmitMessage('Thank you for your enquiry. We aim to respond within one working day.');
+      setSubmitMessage('Thank you for your enquiry. Our team will be in touch.');
+      setSubmitStatus('success');
       formRef.current.reset();
+      setMessage('');
     } catch (error) {
       console.error('EmailJS Error:', error);
       setSubmitMessage('Unable to send message. Please call us on (+44) 1205 822882.');
+      setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
@@ -60,13 +76,12 @@ export const Contact = () => {
 
       {/* Content */}
       <section className="contact-content">
-        <div className="corporate-container">
+        <div className="contact-container">
           <div className="contact-grid">
 
             {/* Contact Info */}
             <div className="contact-info">
               <h2>Get in Touch</h2>
-              <div className="corporate-divider"></div>
 
               <p>
                 For trade enquiries, product information, or general questions,
@@ -74,35 +89,36 @@ export const Contact = () => {
               </p>
 
               <ul className="contact-details">
-                <li><strong>Phone:</strong> (+44) 1205 822882</li>
-                <li><strong>Email:</strong> orders@lincolnshiregame.co.uk</li>
-                <li><strong>Response time:</strong> Phone response is immediate - email response within 2 working days</li>
+                <li><strong>Phone:</strong> <a href="tel:+441205822882">(+44) 1205 822882</a></li>
+                <li><strong>Email:</strong> <a href="mailto:orders@lincolnshiregame.co.uk">orders@lincolnshiregame.co.uk</a></li>
+                <li>For time-sensitive enquiries, please call our team.</li>
               </ul>
             </div>
 
             {/* Form */}
-            <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
+            <form className="contact-form" ref={formRef} onSubmit={handleSubmit} aria-label="Enquiry form">
+              {enquiryProduct && <p className="contact-product">Enquiring about <strong>{enquiryProduct.name}</strong></p>}
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input id="name" name="name" type="text" required disabled={isSubmitting} />
+                <input id="name" name="name" type="text" autoComplete="name" required disabled={isSubmitting} />
               </div>
 
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="email" required disabled={isSubmitting} />
+                <input id="email" name="email" type="email" autoComplete="email" required disabled={isSubmitting} />
               </div>
 
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" rows={5} required disabled={isSubmitting} />
+                <textarea id="message" name="message" rows={5} value={message} onChange={event => setMessage(event.target.value)} required disabled={isSubmitting} />
               </div>
 
-              <button type="submit" disabled={isSubmitting}>
+              <button type="submit" className="site-button" disabled={isSubmitting}>
                 {isSubmitting ? 'Sending…' : 'Send Enquiry'}
               </button>
 
               {submitMessage && (
-                <p className={`submit-message ${submitMessage.includes('Thank') ? 'success' : 'error'}`}>
+                <p className={`submit-message ${submitStatus}`} role={submitStatus === 'error' ? 'alert' : 'status'}>
                   {submitMessage}
                 </p>
               )}
